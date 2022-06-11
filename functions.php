@@ -13,4 +13,6 @@ function db()
 function login()
 {
     db();
+
+    extract($_POST);
 }
