@@ -46,20 +46,39 @@
                                                 <li class="sidebar-menu-item">
                                                     <a class="sidebar-menu-button"
                                                        href="masters.php">
-                                                        <span class="sidebar-menu-text">Masters</span>
+                                                        <span class="sidebar-menu-text">Counselling Training</span>
                                                     </a>
                                                 </li>
                                                 <li class="sidebar-menu-item">
                                                     <a class="sidebar-menu-button"
                                                        href="phd.php">
-                                                        <span class="sidebar-menu-text">PhD</span>
+                                                        <span class="sidebar-menu-text">Couns. Session Booking</span>
                                                     </a>
                                                 </li>
-                                                
+
+                                               
                                                 
                                                 
                                     </ul>
-                                        
+                                    <li class="sidebar-menu-item active">
+                                            <a class="sidebar-menu-button"
+                                               href="payment.php">
+                                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">credit_card</i> Payment
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item active">
+                                            <a class="sidebar-menu-button"
+                                               href="#">
+                                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">dvr</i> Quiz
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item active">
+                                            <a class="sidebar-menu-button"
+                                               href="certification.php">
+                                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">class</i> Certification
+                                            </a>
+                                        </li>
+                                                
                                         
                                     </ul>
                                     <!-- Account menu -->
