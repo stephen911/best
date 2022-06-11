@@ -260,7 +260,7 @@
                                                         <div class="col-md-9">
                                                             <input id="schname"
                                                                    type="text"
-                                                                   placeholder="Name of "
+                                                                   placeholder="Name of School"
                                                                    value=""
                                                                    class="form-control">
                                                         </div>
@@ -285,7 +285,7 @@
                                                     <label id="label-highestEduLevel" for="highestEduLevel"
                                                         class="col-md-3 col-form-label form-label">What district or Municipality are you coming from</label>
                                                     <div class="col-md-9">
-                                                        <select id="custom-select1" class="form-control custom-select">
+                                                        <select id="custom-select9" class="form-control custom-select">
                                                             <option selected value="none">Choose your district or Municipality
                                                             </option>
                                                             <option value="adenta">Adenta Municipality</option>
@@ -316,8 +316,8 @@
 
                                             </div>
 </div>
-<div class="list-group-item">
-                                            <div class="form-group m-0" role="group"
+<div id="east" class="list-group-item">
+                                            <div id="east" class="form-group m-0" role="group"
                                                 aria-labelledby="label-highestEduLevel">
                                                 <div class="form-row">
                                                     <label id="label-highestEduLevel" for="highestEduLevel"
