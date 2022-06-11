@@ -15,4 +15,5 @@ function login()
     db();
 
     extract($_POST);
+    $email = mysqli_real_escape_string($conn, $email);
 }
