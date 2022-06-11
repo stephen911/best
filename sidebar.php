@@ -72,12 +72,15 @@
                                                 <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">dvr</i> Quiz
                                             </a>
                                         </li>
+<<<<<<< HEAD
                                         <li class="sidebar-menu-item active">
                                             <a class="sidebar-menu-button"
                                                href="certification.php">
                                                 <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">class</i> Certification
                                             </a>
                                         </li>
+=======
+>>>>>>> edb5c9562afc9ab6b8a75e5de7a7462c765ad579
                                                 
                                         
                                     </ul>
