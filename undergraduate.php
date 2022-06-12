@@ -1,4 +1,14 @@
+<?php
+ include 'functions.php';
+ checker();
+ $user = users();
+//  var_dump($_SESSION['id']);
 
+if (isset($_POST['btnupdate'])) {
+    extract($_POST);
+    updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $lincesed, $nameofaschool, $rregion, $district, $foodpref, $heard);
+}
+?>
 <!DOCTYPE html>
 <html lang="en"
       dir="ltr">
@@ -68,7 +78,7 @@
         </div>
 
         <!-- Header Layout -->
-        <?php include ("navbar.php") ?>
+        <?php include 'navbar.php'; ?>
 
             <!-- // END Header -->
 
@@ -123,6 +133,7 @@
                                 </div>
                             </div>
                                     <h1 class="h2">NTC CPD Training</h1>
+                                    <form action="" method="POST">
                                     <div class="card">
                                         <div class="list-group list-group-fit">
                                         <div class="list-group-item">
@@ -133,8 +144,8 @@
                                                             </label>
                                                         <div class="col-md-9">
                                                             <select id="custom-select"
-                                                                class="form-control custom-select">
-                                                                <option selected>Dr.</option>
+                                                                class="form-control custom-select" name="title">
+                                                                <option selected value="<?php echo  ($user['title'] == '') ? '' : $user['title']; ?>"><?php echo  ($user['title'] == '') ? 'Select your title' : $user['title']; ?></option>
                                                                 <option value="1">Fr.</option>
                                                                 <option value="2">Sis.</option>
                                                                 <option value="1">Mr.</option>
@@ -159,8 +170,14 @@
                                                             <input id="certname"
                                                                    type="text"
                                                                    placeholder="Name to be shown on Certificate"
-                                                                   value=""
-                                                                   class="form-control">
+                                                                   value="<?php echo  ($user['name'] == '') ? '' : $user['name']; ?>"
+                                                                   class="form-control" name="name">
+
+                                                                   <input id="certname"
+                                                                   type="hidden"
+                                                                   placeholder="Name to be shown on Certificate"
+                                                                   value="<?php echo  $user['id']; ?>"
+                                                                   class="form-control" name="id">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -173,8 +190,8 @@
                                                             </label>
                                                         <div class="col-md-9">
                                                             <select id="custom-select"
-                                                                class="form-control custom-select">
-                                                                <option selected>Male</option>
+                                                                class="form-control custom-select" name="gender">
+                                                                <option selected value="<?php echo  ($user['gender'] == '') ? '' : $user['gender']; ?>"><?php echo  ($user['gender'] == '') ? 'Select Gender' : $user['gender']; ?></option>
                                                                 <option value="1">Female</option>
                                                                 <option value="2">Prefer not to say</option>
                                                                 
@@ -199,8 +216,8 @@
                                                                 <input id="email"
                                                                        type="email"
                                                                        placeholder="Your email address"
-                                                                       value=""
-                                                                       class="form-control form-control-prepended">
+                                                                       value="<?php echo  ($user['email'] == '') ? '' : $user['email']; ?>"
+                                                                       class="form-control form-control-prepended" name="email">
                                                                 <div class="input-group-prepend">
                                                                     <div class="input-group-text">
                                                                         <i class="material-icons">email</i>
@@ -224,8 +241,8 @@
                                                             <input id="phonenumber"
                                                                    type="text"
                                                                    placeholder="Your phone number"
-                                                                   value=""
-                                                                   class="form-control">
+                                                                   value="<?php echo  ($user['contact'] == '') ? '' : $user['contact']; ?>"
+                                                                   class="form-control" name="contact">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -242,8 +259,8 @@
                                                             <input id="telegram"
                                                                    type="text"
                                                                    placeholder="Your telegram number"
-                                                                   value=""
-                                                                   class="form-control">
+                                                                   value="<?php echo  ($user['telegram'] == '') ? '' : $user['telegram']; ?>"
+                                                                   class="form-control" name="telegram">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -255,13 +272,13 @@
                                                     <div class="form-row">
                                                         <label id="label-lastname"
                                                                for="lastname"
-                                                               class="col-md-3 col-form-label form-label">Nation teachers council license number</label>
+                                                               class="col-md-3 col-form-label form-label">National teachers council license number</label>
                                                         <div class="col-md-9">
                                                             <input id="lastname"
                                                                    type="text"
                                                                    placeholder="No. should be like PT/000660/2022"
-                                                                   value=""
-                                                                   class="form-control">
+                                                                   value="<?php echo  ($user['lincesed'] == '') ? '' : $user['lincesed']; ?>"
+                                                                   class="form-control" name="lincesed">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -278,8 +295,8 @@
                                                             <input id="schname"
                                                                    type="text"
                                                                    placeholder="Name of School"
-                                                                   value=""
-                                                                   class="form-control">
+                                                                   value="<?php echo  ($user['nameofschool'] == '') ? '' : $user['nameofschool']; ?>"
+                                                                   class="form-control" name="nameofschool">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -300,13 +317,13 @@
                                                     <label id="label-region" for="region"
                                                         class="col-md-3 col-form-label form-label">Region</label>
                                                     <div class="col-md-9">
-                                                        <select id="custom-select8" class="form-control custom-select">
-                                                            <option selected value="none">Select you region
+                                                        <select id="custom-select8" class="form-control custom-select" name="region">
+                                                            <option selected value="<?php echo  ($user['region'] == '') ? '' : $user['region']; ?>"><?php echo  ($user['region'] == '') ? 'Select you region' : $user['region']; ?>
                                                             </option>
-                                                            <option value="adenta">Greater Accra</option>
-                                                            <option value="east">Ashanti Region</option>
-                                                            <option value="madina">Eastern Region</option>
-                                                            <option value="other">Central Region</option>
+                                                            <option value="Greater Accra">Greater Accra</option>
+                                                            <option value="Ashanti Region">Ashanti Region</option>
+                                                            <option value="Eastern Region">Eastern Region</option>
+                                                            <option value="Central Region">Central Region</option>
 
                                                         </select>
                                                     </div>
@@ -322,8 +339,8 @@
                                                     <label id="label-highestEduLevel" for="highestEduLevel"
                                                         class="col-md-3 col-form-label form-label">District or Municipality</label>
                                                     <div class="col-md-9">
-                                                        <select id="custom-select9" class="form-control custom-select">
-                                                            <option selected value="none">Choose your District or Municipality
+                                                        <select id="custom-select9" class="form-control custom-select" name="district">
+                                                            <option selected value="<?php echo  ($user['district'] == '') ? '' : $user['district']; ?>"> <?php echo  ($user['district'] == '') ? 'Choose your District or Municipality' : $user['district']; ?>
                                                             </option>
                                                             <option value="adenta">Adenta Municipality</option>
                                                             <option value="east">Ga - East Municipality</option>
@@ -346,7 +363,7 @@
                                                             class="col-md-3 col-form-label form-label">specify</label>
                                                         <div class="col-md-9">
                                                             <input id="specify" type="text" placeholder="Specify your district or municipality"
-                                                                value="" class="form-control">
+                                                                value="<?php echo  ($user['dother'] == '') ? '' : $user['dother']; ?>" class="form-control" name="dother">
                                                         </div>
                                                     </div>
 
@@ -361,8 +378,8 @@
                                                     <label id="label-venuepref" for="venuepref"
                                                         class="col-md-3 col-form-label form-label">Venue Preference</label>
                                                     <div class="col-md-9">
-                                                        <select id="custom-select2" class="form-control custom-select">
-                                                            <option selected value="none">Choose a venue of your choice
+                                                        <select id="custom-select2" class="form-control custom-select" name="venue">
+                                                            <option selected value="<?php echo  ($user['venue'] == '') ? '' : $user['venue']; ?>"><?php echo  ($user['venue'] == '') ? 'Choose a venue of your choice' : $user['venue']; ?>
                                                             </option>
                                                             <option value="ashongmang">Ashongmang Presby Church</option>
                                                             <option value="kwabenya">Kwabenya SHS</option>
@@ -381,8 +398,8 @@
                                                     <label id="label-foodpref" for="foodpref"
                                                         class="col-md-3 col-form-label form-label">Food Preference</label>
                                                     <div class="col-md-9">
-                                                        <select id="custom-select2" class="form-control custom-select">
-                                                            <option selected value="none">Choose food Preference
+                                                        <select id="custom-select2" class="form-control custom-select" name="foodpref">
+                                                            <option selected  value="<?php echo  ($user['foodpref'] == '') ? '' : $user['foodpref']; ?>">Choose food Preference <?php echo  ($user['foodpref'] == '') ? 'Choose food Preference ' : $user['foodpref']; ?>
                                                             </option>
                                                             <option value="waakye">Waakye with chicken</option>
                                                             <option value="jollof">Jollof with chicken</option>
@@ -402,8 +419,8 @@
                                                     <label id="label-heard" for="heard"
                                                         class="col-md-3 col-form-label form-label">How did you hear/know of this training</label>
                                                     <div class="col-md-9">
-                                                        <select id="custom-select2" class="form-control custom-select">
-                                                            <option selected value="none">select how you heard about this training
+                                                        <select id="custom-select2" class="form-control custom-select" name="heard">
+                                                            <option  selected value="<?php echo  ($user['heard'] == '') ? '' : $user['heard']; ?>">select how you heard about this training<?php echo  ($user['heard'] == 'select how you heard about this training') ? '' : $user['heard']; ?>
                                                             </option>
                                                             <option value="website">TUCEE Website</option>
                                                             <option value="gnacc">GNACC Website</option>
@@ -420,10 +437,21 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        
                                             
                                             
                                         </div>
+
+                                        
                                     </div>
+
+                                    
+                                    <div class="page-nav__content">
+                                                <button type="submit" name="btnupdate" class="btn btn-success">Save</button>
+                                            </div>  
+
+                                    </form>
                                     <!-- <div class="card border-left-3 border-left-primary card-2by1">
                                 <div class="card-body">
                                     <div class="media flex-wrap align-items-center">
@@ -451,6 +479,7 @@
                                     </div>
                                     
                                 </div>
+
                                 <div id="page-nav"
                                      class="col-lg-auto page-nav">
                                     <div data-perfect-scrollbar>
@@ -484,7 +513,7 @@
 
                     </div>
 
-                    <?php include ("sidebar.php") ?>
+                    <?php include 'sidebar.php'; ?>
 
                 <!-- App Settings FAB -->
                 
