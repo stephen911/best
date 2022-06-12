@@ -1,6 +1,7 @@
 <?php
  include 'functions.php';
  checker();
+ var_dump($_SESSION['id']);
 ?>
 <!DOCTYPE html>
 <html lang="en"
