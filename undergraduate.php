@@ -92,7 +92,7 @@
                                 <div class="card-body">
                                     <div class="media flex-wrap align-items-center">
                                         <div class="media-left">
-                                            <i class="material-icons text-muted-light">credit_card</i>
+                                            <i class="material-icons text-muted-light">account_box</i>
                                         </div>
                                         <div class="media-body"
                                              style="min-width: 180px">
@@ -101,6 +101,23 @@
                                         <div class="media-right mt-2 mt-xs-plus-0">
                                             <a class="btn btn-success"
                                                href="dashboard.php">Go to Dashboard</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card border-left-3 border-left-primary card-2by1">
+                                <div class="card-body">
+                                    <div class="media flex-wrap align-items-center">
+                                        <div class="media-left">
+                                            <i class="material-icons text-muted-light">credit_card</i>
+                                        </div>
+                                        <div class="media-body"
+                                             style="min-width: 180px">
+                                             <small>Please we humbly entreat you to make payment right away to book your seat. Please call +233 246 535 961 when you have successfully made payment. Thank you</small>
+                                        </div>
+                                        <div class="media-right mt-2 mt-xs-plus-0">
+                                            <a class="btn btn-success"
+                                               href="dashboard.php">Pay Now</a>
                                         </div>
                                     </div>
                                 </div>
@@ -307,7 +324,7 @@
                                                         <label id="label-specify" for="specify"
                                                             class="col-md-3 col-form-label form-label">specify</label>
                                                         <div class="col-md-9">
-                                                            <input id="specify" type="text" placeholder="Specify"
+                                                            <input id="specify" type="text" placeholder="Specify your district or municipality"
                                                                 value="" class="form-control">
                                                         </div>
                                                     </div>
@@ -318,9 +335,9 @@
 </div>
 <div id="east" class="list-group-item">
                                             <div id="east" class="form-group m-0" role="group"
-                                                aria-labelledby="label-highestEduLevel">
+                                                aria-labelledby="label-venuepref">
                                                 <div class="form-row">
-                                                    <label id="label-highestEduLevel" for="highestEduLevel"
+                                                    <label id="label-venuepref" for="venuepref"
                                                         class="col-md-3 col-form-label form-label">Venue Preference</label>
                                                     <div class="col-md-9">
                                                         <select id="custom-select2" class="form-control custom-select">
@@ -337,18 +354,18 @@
                                         </div>
                                         <div class="list-group-item">
                                             <div class="form-group m-0" role="group"
-                                                aria-labelledby="label-highestEduLevel">
+                                                aria-labelledby="label-foodpref">
                                                 <div class="form-row">
-                                                    <label id="label-highestEduLevel" for="highestEduLevel"
+                                                    <label id="label-foodpref" for="foodpref"
                                                         class="col-md-3 col-form-label form-label">Food Preference</label>
                                                     <div class="col-md-9">
                                                         <select id="custom-select2" class="form-control custom-select">
                                                             <option selected value="none">Choose food Preference
                                                             </option>
-                                                            <option value="ashongmang">Waakye with chicken</option>
-                                                            <option value="kwabenya">Jollof with chicken</option>
-                                                            <option value="ashongmang">plain rice with chicken</option>
-                                                            <option value="kwabenya">Ga-kenkey with Sardine</option>
+                                                            <option value="waakye">Waakye with chicken</option>
+                                                            <option value="jollof">Jollof with chicken</option>
+                                                            <option value="rice">plain rice with chicken</option>
+                                                            <option value="kenkey">Ga-kenkey with Sardine</option>
                                                             
 
                                                         </select>
@@ -358,22 +375,22 @@
                                         </div>
                                         <div class="list-group-item">
                                             <div class="form-group m-0" role="group"
-                                                aria-labelledby="label-highestEduLevel">
+                                                aria-labelledby="label-heard">
                                                 <div class="form-row">
-                                                    <label id="label-highestEduLevel" for="highestEduLevel"
-                                                        class="col-md-3 col-form-label form-label">How di you hear/know of this trainingg</label>
+                                                    <label id="label-heard" for="heard"
+                                                        class="col-md-3 col-form-label form-label">How did you hear/know of this training</label>
                                                     <div class="col-md-9">
                                                         <select id="custom-select2" class="form-control custom-select">
                                                             <option selected value="none">Choose food Preference
                                                             </option>
-                                                            <option value="ashongmang">TUCEE Website</option>
-                                                            <option value="kwabenya">GNACC Website</option>
-                                                            <option value="ashongmang">Facebook</option>
-                                                            <option value="kwabenya">WhatsApp</option>
-                                                            <option value="ashongmang">Instagram</option>
-                                                            <option value="kwabenya">Friend</option>
-                                                            <option value="ashongmang">Radio</option>
-                                                            <option value="kwabenya">other</option>
+                                                            <option value="website">TUCEE Website</option>
+                                                            <option value="gnacc">GNACC Website</option>
+                                                            <option value="facebook">Facebook</option>
+                                                            <option value="whatsapp">WhatsApp</option>
+                                                            <option value="instagram">Instagram</option>
+                                                            <option value="friend">Friend</option>
+                                                            <option value="radio">Radio</option>
+                                                            <option value="other">other</option>
                                                             
 
                                                         </select>
@@ -385,6 +402,20 @@
                                             
                                         </div>
                                     </div>
+                                    <!-- <div class="card border-left-3 border-left-primary card-2by1">
+                                <div class="card-body">
+                                    <div class="media flex-wrap align-items-center">
+                                        <div class="media-left">
+                                            <i class="material-icons text-muted-light">credit_card</i>
+                                        </div>
+                                        <div class="media-body"
+                                             style="min-width: 180px">
+                                             <small>Please we humbly entreat you to make payment right away to book your seat. Please call +233 246 535 961 when you have successfully made payment. Thank you</small>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div> -->
 
 
                                     <div class="card">
