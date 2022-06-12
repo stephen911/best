@@ -91,15 +91,15 @@
                                 <div class="card-body">
                                     <div class="media flex-wrap align-items-center">
                                         <div class="media-left">
-                                            <i class="material-icons text-muted-light">credit_card</i>
+                                            <i class="material-icons text-muted-light">account_box</i>
                                         </div>
                                         <div class="media-body"
                                              style="min-width: 180px">
-                                            Your subscription ends on <strong>25 February 2015</strong>
+                                            Your are welcomed! <strong>Dr. Hawa Adams</strong>
                                         </div>
                                         <div class="media-right mt-2 mt-xs-plus-0">
                                             <a class="btn btn-success"
-                                               href="student-account-billing-upgrade.html">Upgrade</a>
+                                               href="certification.php">Go to Certification</a>
                                         </div>
                                     </div>
                                 </div>
@@ -110,7 +110,7 @@
                                     
                                         
 
-                                    <div class="card">
+                                    <!-- <div class="card">
                                         <div class="card-header">
                                             <div class="media align-items-center">
                                                 <div class="media-body">
@@ -130,14 +130,14 @@
                                             <li class="list-group-item"
                                                 style="z-index: initial;">
                                                 <div class="d-flex align-items-center">
-                                                    <a href="student-take-course.html"
+                                                    <a href="#"
                                                        class="avatar avatar-4by3 avatar-sm mr-3">
                                                         <img src="assets/images/gulp.png"
                                                              alt="course"
                                                              class="avatar-img rounded">
                                                     </a>
                                                     <div class="flex">
-                                                        <a href="student-take-course.html"
+                                                        <a href="#"
                                                            class="text-body"><strong>Learn Vue.js Fundamentals</strong></a>
                                                         <div class="d-flex align-items-center">
                                                             <div class="progress"
@@ -161,7 +161,7 @@
                                                         </a>
                                                         <div class="dropdown-menu dropdown-menu-right">
                                                             <a class="dropdown-item"
-                                                               href="student-take-course.html">Continue</a>
+                                                               href="#">Continue</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -170,14 +170,14 @@
                                             <li class="list-group-item"
                                                 style="z-index: initial;">
                                                 <div class="d-flex align-items-center">
-                                                    <a href="student-take-course.html"
+                                                    <a href="#"
                                                        class="avatar avatar-4by3 avatar-sm mr-3">
                                                         <img src="assets/images/vuejs.png"
                                                              alt="course"
                                                              class="avatar-img rounded">
                                                     </a>
                                                     <div class="flex">
-                                                        <a href="student-take-course.html"
+                                                        <a href="#"
                                                            class="text-body"><strong>Angular in Steps</strong></a>
                                                         <div class="d-flex align-items-center">
                                                             <div class="progress"
@@ -201,7 +201,7 @@
                                                         </a>
                                                         <div class="dropdown-menu dropdown-menu-right">
                                                             <a class="dropdown-item"
-                                                               href="student-take-course.html">Continue</a>
+                                                               href="#">Continue</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -210,14 +210,14 @@
                                             <li class="list-group-item"
                                                 style="z-index: initial;">
                                                 <div class="d-flex align-items-center">
-                                                    <a href="student-take-course.html"
+                                                    <a href="#"
                                                        class="avatar avatar-4by3 avatar-sm mr-3">
                                                         <img src="assets/images/nodejs.png"
                                                              alt="course"
                                                              class="avatar-img rounded">
                                                     </a>
                                                     <div class="flex">
-                                                        <a href="student-take-course.html"
+                                                        <a href="#"
                                                            class="text-body"><strong>Bootstrap Foundations</strong></a>
                                                         <div class="d-flex align-items-center">
                                                             <div class="progress"
@@ -241,25 +241,25 @@
                                                         </a>
                                                         <div class="dropdown-menu dropdown-menu-right">
                                                             <a class="dropdown-item"
-                                                               href="student-take-course.html">Continue</a>
+                                                               href="#">Continue</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </li>
 
                                         </ul>
-                                    </div>
+                                    </div> -->
 
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="media align-items-center">
                                                 <div class="media-body">
-                                                    <h4 class="card-title">Quizzes</h4>
-                                                    <p class="card-subtitle">Your Performance</p>
+                                                    <h4 class="card-title">Personal Info</h4>
+                                                    <p class="card-subtitle">Your Personal Information</p>
                                                 </div>
                                                 <div class="media-right">
                                                     <a class="btn btn-sm btn-primary"
-                                                       href="#">Quiz results</a>
+                                                       href="quiz.php">Take Quiz</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -270,15 +270,15 @@
                                                 <div class="media align-items-center">
                                                     <div class="media-body">
                                                         <a class="text-body"
-                                                           href="student-quiz-results.html"><strong>Title of quiz goes here?</strong></a><br>
+                                                           href="#"><strong>Email Address</strong></a><br>
                                                         <div class="d-flex align-items-center">
-                                                            <small class="text-black-50 text-uppercase mr-2">Course</small>
-                                                            <a href="student-take-course.html">Basics of HTML</a>
+                                                            <!-- <small class="text-black-50 text-uppercase mr-2">Course</small> -->
+                                                            <a href="#">hawaadams@gmail.com</a>
                                                         </div>
                                                     </div>
                                                     <div class="media-right text-center d-flex align-items-center">
-                                                        <span class="text-black-50 mr-3">Good</span>
-                                                        <h4 class="mb-0">5.8</h4>
+                                                        <!-- <span class="text-black-50 mr-3">Good</span>
+                                                        <h4 class="mb-0">5.8</h4> -->
                                                     </div>
                                                 </div>
                                             </li>
@@ -287,15 +287,47 @@
                                                 <div class="media align-items-center">
                                                     <div class="media-body">
                                                         <a class="text-body"
-                                                           href="student-quiz-results.html"><strong>Directives &amp; Routing</strong></a><br>
+                                                           href="#"><strong>Phone Number</strong></a><br>
                                                         <div class="d-flex align-items-center">
-                                                            <small class="text-black-50 text-uppercase mr-2">Course</small>
-                                                            <a href="student-take-course.html">Angular in Steps</a>
+                                                            <!-- <small class="text-black-50 text-uppercase mr-2">Course</small> -->
+                                                            <a href="#">0244567890</a>
                                                         </div>
                                                     </div>
                                                     <div class="media-right text-center d-flex align-items-center">
-                                                        <span class="text-black-50 mr-3">Great</span>
-                                                        <h4 class="mb-0 text-success">9.8</h4>
+                                                        <!-- <span class="text-black-50 mr-3">Great</span>
+                                                        <h4 class="mb-0 text-success">9.8</h4> -->
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="media align-items-center">
+                                                    <div class="media-body">
+                                                        <a class="text-body"
+                                                           href="#"><strong>Telegram Phone Number</strong></a><br>
+                                                        <div class="d-flex align-items-center">
+                                                            <!-- <small class="text-black-50 text-uppercase mr-2">Course</small> -->
+                                                            <a href="#">0246778956</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media-right text-center d-flex align-items-center">
+                                                        <!-- <span class="text-black-50 mr-3">Failed</span>
+                                                        <h4 class="mb-0 text-danger">2.8</h4> -->
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="media align-items-center">
+                                                    <div class="media-body">
+                                                        <a class="text-body"
+                                                           href="#"><strong>Name of School</strong></a><br>
+                                                        <div class="d-flex align-items-center">
+                                                            <!-- <small class="text-black-50 text-uppercase mr-2">Course</small> -->
+                                                            <a href="#">kwabenya primany School</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media-right text-center d-flex align-items-center">
+                                                        <!-- <span class="text-black-50 mr-3">Failed</span>
+                                                        <h4 class="mb-0 text-danger">2.8</h4> -->
                                                     </div>
                                                 </div>
                                             </li>
@@ -304,23 +336,56 @@
                                                 <div class="media align-items-center">
                                                     <div class="media-body">
                                                         <a class="text-body"
-                                                           href="student-quiz-results.html"><strong>Responsive &amp; Retina</strong></a><br>
+                                                           href="#"><strong>Nation teachers council license number</strong></a><br>
                                                         <div class="d-flex align-items-center">
-                                                            <small class="text-black-50 text-uppercase mr-2">Course</small>
-                                                            <a href="student-take-course.html">Bootstrap Foundations</a>
+                                                            <!-- <small class="text-black-50 text-uppercase mr-2">Course</small> -->
+                                                            <a href="#">PT/000660/2022</a>
                                                         </div>
                                                     </div>
                                                     <div class="media-right text-center d-flex align-items-center">
-                                                        <span class="text-black-50 mr-3">Failed</span>
-                                                        <h4 class="mb-0 text-danger">2.8</h4>
+                                                        <!-- <span class="text-black-50 mr-3">Failed</span>
+                                                        <h4 class="mb-0 text-danger">2.8</h4> -->
                                                     </div>
                                                 </div>
                                             </li>
+                                            <li class="list-group-item">
+                                                <div class="media align-items-center">
+                                                    <div class="media-body">
+                                                        <a class="text-body"
+                                                           href="#"><strong>Region</strong></a><br>
+                                                        <div class="d-flex align-items-center">
+                                                            <!-- <small class="text-black-50 text-uppercase mr-2">Course</small> -->
+                                                            <a href="#">Greater Accra</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media-right text-center d-flex align-items-center">
+                                                        <!-- <span class="text-black-50 mr-3">Failed</span>
+                                                        <h4 class="mb-0 text-danger">2.8</h4> -->
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="media align-items-center">
+                                                    <div class="media-body">
+                                                        <a class="text-body"
+                                                           href="#"><strong>District</strong></a><br>
+                                                        <div class="d-flex align-items-center">
+                                                            <!-- <small class="text-black-50 text-uppercase mr-2">Course</small> -->
+                                                            <a href="#">Adenta</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media-right text-center d-flex align-items-center">
+                                                        <!-- <span class="text-black-50 mr-3">Failed</span>
+                                                        <h4 class="mb-0 text-danger">2.8</h4> -->
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            
 
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-lg-5">
+                                <!-- <div class="col-lg-5">
 
                                     
 
@@ -443,7 +508,7 @@
 
                                         </ul>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
 
                         </div>
