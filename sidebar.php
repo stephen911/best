@@ -68,7 +68,7 @@
                                         </li>
                                         <li class="sidebar-menu-item active">
                                             <a class="sidebar-menu-button"
-                                               href="#">
+                                               href="quiz.php">
                                                 <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">dvr</i> Quiz
                                             </a>
                                         </li>

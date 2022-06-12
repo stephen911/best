@@ -70,7 +70,7 @@
                         <a class="nav-link dropdown-toggle"
                            data-toggle="dropdown"
                            href="#"
-                           role="button"><img src="assets/images/people/50/guy-6.jpg"
+                           role="button"><img src="assets/images/people/50/tucee_avatar.png"
                                  alt="Avatar"
                                  class="rounded-circle"
                                  width="40"></a>
