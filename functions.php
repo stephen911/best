@@ -41,8 +41,8 @@ function login($email, $password)
 function logout()
 {
     session_start();
-    session_destroy();
-    // unset($_SESSION['id']);
+    // session_destroy();
+    unset($_SESSION['id']);
     echo '<script>window.location="index.php"</script>';
 }
 
