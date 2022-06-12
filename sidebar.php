@@ -147,7 +147,7 @@
                                         
                                         <li class="sidebar-menu-item">
                                             <a class="sidebar-menu-button"
-                                               href="index.php">
+                                               href="logout.php">
                                                 <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">lock_open</i> Logout
                                             </a>
                                         </li>
