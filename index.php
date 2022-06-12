@@ -1,3 +1,7 @@
+<?php include 'functions.php';
+if (isset($_POST['btnlogin']));
+?>
+
 <!DOCTYPE html>
 <html lang="en"
       dir="ltr">
@@ -99,7 +103,7 @@
                                            type="password"
                                            required=""
                                            class="form-control form-control-prepended"
-                                           placeholder="Your password">
+                                           placeholder="Your password" name="password">
                                     <div class="input-group-prepend">
                                         <div class="input-group-text">
                                             <span class="far fa-key"></span>
@@ -109,7 +113,7 @@
                             </div>
                             <div class="form-group ">
                                 <button type="submit"
-                                        class="btn btn-primary btn-block">Login</button>
+                                        class="btn btn-primary btn-block" name="btnlogin">Login</button>
                             </div>
                             <div class="text-center">
                                 <a href="forgot-password.php"

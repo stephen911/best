@@ -97,7 +97,7 @@
                                                     <!-- <strong class="text-danger">$25.00</strong> <a href="#">#8331</a> -->
                                                 </div>
                                                 <div class="media-right">
-                                                    <a href="payment-info.php"
+                                                    <a href="#"
                                                        class="btn btn-success float-right">Pay Now</a>
                                                 </div>
                                             </div>
@@ -263,13 +263,14 @@
                                         <div class="page-section pt-lg-32pt">
                                             <ul class="nav page-nav__menu">
                                                 
-                                                <li class="nav-item">
-                                                    <a href="student-account-billing-payment-information.php"
-                                                       class="nav-link">Payment Information</a>
-                                                </li>
+                                                
                                                 <li class="nav-item">
                                                     <a href="student-billing.php"
                                                        class="nav-link active">Payment History</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="certification.php"
+                                                       class="nav-link">Certification</a>
                                                 </li>
                                                 
                                             </ul>
@@ -285,14 +286,7 @@
 
 
                 <!-- App Settings FAB -->
-                <div id="app-settings">
-                    <app-settings layout-active="default"
-                                  :layout-location="{
-      'fixed': 'fixed-student-billing.php',
-      'default': 'student-billing.php'
-    }"
-                                  sidebar-variant="bg-transparent border-0"></app-settings>
-                </div>
+                
 
             </div>
         </div>

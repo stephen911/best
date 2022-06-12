@@ -10,7 +10,7 @@
               content="IE=edge">
         <meta name="viewport"
               content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Payment History</title>
+        <title>Certification</title>
 
         <!-- Prevent the demo from appearing in search engines (REMOVE THIS) -->
         <meta name="robots"
@@ -93,7 +93,7 @@
                                         <div class="card-body">
                                             <div class="media align-items-center">
                                                 <div class="media-body">
-                                                    Your Certificate
+                                                    Download your Certificate
                                                     <!-- <strong class="text-danger">$25.00</strong> <a href="#">#8331</a> -->
                                                 </div>
                                                 <div class="media-right">
@@ -129,14 +129,7 @@
 
 
                 <!-- App Settings FAB -->
-                <div id="app-settings">
-                    <app-settings layout-active="default"
-                                  :layout-location="{
-      'fixed': 'fixed-student-billing.php',
-      'default': 'student-billing.php'
-    }"
-                                  sidebar-variant="bg-transparent border-0"></app-settings>
-                </div>
+                
 
             </div>
         </div>

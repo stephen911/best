@@ -72,15 +72,14 @@
                                                 <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">dvr</i> Quiz
                                             </a>
                                         </li>
-<<<<<<< HEAD
+
                                         <li class="sidebar-menu-item active">
                                             <a class="sidebar-menu-button"
                                                href="certification.php">
                                                 <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">class</i> Certification
                                             </a>
                                         </li>
-=======
->>>>>>> edb5c9562afc9ab6b8a75e5de7a7462c765ad579
+
                                                 
                                         
                                     </ul>
@@ -98,12 +97,12 @@
                                             <ul class="sidebar-submenu sm-indent collapse"
                                                 id="account_menu">
 
-                                                <li class="sidebar-menu-item">
+                                                <!-- <li class="sidebar-menu-item">
                                                     <a class="sidebar-menu-button"
                                                        href="student-account-edit.php">
                                                         <span class="sidebar-menu-text">Edit Account</span>
                                                     </a>
-                                                </li>
+                                                </li> -->
                                                 <li class="sidebar-menu-item">
                                                     <a class="sidebar-menu-button"
                                                        href="change_password.php">
@@ -128,12 +127,12 @@
                                                         <span class="sidebar-menu-text">Payment Information</span>
                                                     </a>
                                                 </li> -->
-                                                <li class="sidebar-menu-item">
+                                                <!-- <li class="sidebar-menu-item">
                                                     <a class="sidebar-menu-button"
                                                        href="documents.php">
                                                         <span class="sidebar-menu-text">My Documents</span>
                                                     </a>
-                                                </li>
+                                                </li> -->
                                                 <!-- <li class="sidebar-menu-item">
                                                     <a class="sidebar-menu-button"
                                                        href="student-account-edit-profile.php">

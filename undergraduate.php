@@ -11,7 +11,7 @@
               content="IE=edge">
         <meta name="viewport"
               content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Basic Information</title>
+        <title>NTC CPD Training</title>
 
          <meta name="robots"
               content="noindex">
@@ -85,7 +85,7 @@
                                 <div class="col-lg container-fluid page__container">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="dashboard.php">Home</a></li>
-                                        <li class="breadcrumb-item active">Dashboard</li>
+                                        <li class="breadcrumb-item active">NTC CPD Training</li>
                                     </ol>
 
                                     <div class="card border-left-3 border-left-primary card-2by1">
@@ -96,16 +96,16 @@
                                         </div>
                                         <div class="media-body"
                                              style="min-width: 180px">
-                                             <strong>Dashboard</strong>
+                                             <strong>Fill your NTC CPD Training forms</strong>
                                         </div>
                                         <div class="media-right mt-2 mt-xs-plus-0">
                                             <a class="btn btn-success"
-                                               href="renewal.php">Renew Scholarship</a>
+                                               href="dashboard.php">Go to Dashboard</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                                    <h1 class="h2">Basic Information</h1>
+                                    <h1 class="h2">NTC CPD Training</h1>
                                     <div class="card">
                                         <div class="list-group list-group-fit">
                                         <div class="list-group-item">
@@ -182,7 +182,7 @@
                                                                 <input id="email"
                                                                        type="email"
                                                                        placeholder="Your email address"
-                                                                       value="alexander.watson@gmail.com"
+                                                                       value=""
                                                                        class="form-control form-control-prepended">
                                                                 <div class="input-group-prepend">
                                                                     <div class="input-group-text">
@@ -405,15 +405,15 @@
                                             <ul class="nav page-nav__menu">
                                                 <li class="nav-item">
                                                     <a href="#"
-                                                       class="nav-link active">Basic Information</a>
+                                                       class="nav-link active">NTC CPD Training</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a href="student-account-edit.php"
-                                                       class="nav-link">Edit account</a>
+                                                    <a href="payment.php"
+                                                       class="nav-link">Payment</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a href="documents.php"
-                                                       class="nav-link">My Documents</a>
+                                                    <a href="certification.php"
+                                                       class="nav-link">Cerification</a>
                                                 </li>
                                                 <!-- <li class="nav-item">
                                                     <a href="student-account-edit-profile.html"
@@ -421,7 +421,7 @@
                                                 </li> -->
                                             </ul>
                                             <div class="page-nav__content">
-                                                <button class="btn btn-success">Save Changes</button>
+                                                <button class="btn btn-success">Submit</button>
                                             </div>
                                         </div>
                                     </div>
