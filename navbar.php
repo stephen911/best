@@ -1,3 +1,5 @@
+
+
 <!-- Header Layout -->
 <div class="mdk-header-layout js-mdk-header-layout">
 
@@ -84,7 +86,7 @@
                                 <i class="material-icons">person</i> Public Profile
                             </a> -->
                             <a class="dropdown-item"
-                               href="index.php">
+                               href="logout.php">
                                 <i class="material-icons">lock</i> Logout
                             </a>
                         </div>

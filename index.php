@@ -1,5 +1,8 @@
 <?php include 'functions.php';
-if (isset($_POST['btnlogin']));
+if (isset($_POST['btnlogin'])) {
+    extract($_POST);
+    login($email, $password);
+}
 ?>
 
 <!DOCTYPE html>
@@ -87,7 +90,7 @@ if (isset($_POST['btnlogin']));
                                            type="email"
                                            required=""
                                            class="form-control form-control-prepended"
-                                           placeholder="Email address">
+                                           placeholder="Email address" name="email">
                                     <div class="input-group-prepend">
                                         <div class="input-group-text">
                                             <span class="far fa-envelope"></span>
