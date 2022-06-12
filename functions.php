@@ -84,8 +84,11 @@ function register($name, $email, $password)
     if (mysqli_num_rows($sel) >= 1) {
         echo 'Sorry User account exist';
     } else {
-        $ins = mysqli_query($conn, "INSERT INTO users(name,email,password) VALUES('$name','$email','$password')");
+        $dd = date('jS F, Y');
+        $ins = mysqli_query($conn, "INSERT INTO users (name,email,password,dateadded) VALUES('$name','$email','$password','$dd')");
         if ($ins) {
+            session_start();
+            $_SESSION['id'] = $row['id'];
             echo 'registered';
         } else {
             echo 'Registeration failed';

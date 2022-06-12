@@ -173,6 +173,25 @@ $(function(){
         }
 
 
+
+        else if(response == 'registered'){
+
+          swal({
+              title: "Success",
+              text: "Registration Successful",
+              timer: 1000,
+              type: 'success',
+              padding: "2em",
+              onOpen: function () {
+                swal.showLoading();
+              },
+            }).then(function (result) {
+              window.location="ntcreg.php";
+            });
+
+      }
+
+
         else if(response == 'loginfailed'){
 
             swal({
