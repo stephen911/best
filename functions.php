@@ -17,9 +17,9 @@ function login($email, $password)
     // extract($_POST);
     $email = mysqli_real_escape_string($conn, $email);
     $password = mysqli_real_escape_string($conn, $password);
-
+    $password = md5($password);
     $sel = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email'");
-    $sel2 = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email' AND password = 'md5($password)'");
+    $sel2 = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email' AND password = '$password'");
 
     if (mysqli_num_rows($sel) >= 1) {
         if (mysqli_num_rows($sel2) >= 1) {
