@@ -67,7 +67,7 @@ function users()
     return $row;
 }
 
-function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $lincesed, $nameofaschool, $rregion, $district, $foodpref, $heard)
+function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $lincesed, $nameofschool, $region, $district, $foodpref, $heard)
 {
     include 'starter.php';
     $up = mysqli_query($conn, "UPDATE users SET title='$title', name= '$name', gender = '$gender', email='$email', contact= '$contact', telegram='$telegram', lincesed ='$lincesed', nameofschool='$nameofschool', region ='$region', district ='$district', foodpref='$foodpref', heard ='$heard' WHERE id='$id'  ");

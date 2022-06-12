@@ -6,7 +6,7 @@
 
 if (isset($_POST['btnupdate'])) {
     extract($_POST);
-    updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $lincesed, $nameofaschool, $rregion, $district, $foodpref, $heard);
+    updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $lincesed, $nameofschool, $region, $district, $foodpref, $heard);
 }
 ?>
 <!DOCTYPE html>
@@ -146,11 +146,12 @@ if (isset($_POST['btnupdate'])) {
                                                             <select id="custom-select"
                                                                 class="form-control custom-select" name="title">
                                                                 <option selected value="<?php echo  ($user['title'] == '') ? '' : $user['title']; ?>"><?php echo  ($user['title'] == '') ? 'Select your title' : $user['title']; ?></option>
-                                                                <option value="1">Fr.</option>
-                                                                <option value="2">Sis.</option>
-                                                                <option value="1">Mr.</option>
-                                                                <option value="2">Mrs.</option>
-                                                                <option value="1">Ms./Miss</option>
+                                                                <option value="Dr.">Dr.</option>
+                                                                <option value="Fr.">Fr.</option>
+                                                                <option value="Sis.">Sis.</option>
+                                                                <option value="Mr.">Mr.</option>
+                                                                <option value="Mrs.">Mrs.</option>
+                                                                <option value="Ms./Miss">Ms./Miss</option>
                                                                 
 
                                                             </select>
