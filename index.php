@@ -1,5 +1,6 @@
 <?php include 'functions.php';
-if (isset($_POST['btnlogin']));
+if (isset($_POST['btnlogin'])) {
+}
 ?>
 
 <!DOCTYPE html>
