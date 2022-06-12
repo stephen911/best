@@ -27,14 +27,12 @@ function login($email, $password)
             session_start();
             $_SESSION['id'] = $row['id'];
 
-            echo '<script>alert("Login successful");
-            window.location="dashboard.php";
-            </script>';
+            echo 'loginsuccess';
         } else {
-            echo '<script>alert("Login details not correct")</script>';
+            echo 'Login details not correct';
         }
     } else {
-        echo '<script>alert("User account does not exist")</script>';
+        echo 'loginfailed';
     }
 }
 

@@ -1,7 +1,7 @@
 
 $(function(){
 
-  alert('hi there');
+  // alert('hi there');
    $('#socl').click(function(){
     swal({
         title: "Done!",
@@ -151,7 +151,7 @@ $(function(){
                   swal.showLoading();
                 },
               }).then(function (result) {
-                window.location="/tms/home";
+                window.location="dashboard.php";
               });
 
         }
@@ -233,18 +233,18 @@ $('.welcome').submit(function(e){
 
 
 // add to cart
-$('.addtocart').click(function(e){
+$('.updateuser').submit(function(e){
 
   e.preventDefault();
   // before();
-  var id = $(this).attr('id');
+  // var id = $(this).attr('id');
   var staff = {
-      url: 'processor/processor.php?action=addtocart&id=1',
+      url: 'processor.php?action=update',
       type: 'post',
-      data: {"id": id},
-      // cache: false,
-      // contentType: false,
-      // processData: false,
+      data: new FormData(this),
+      cache: false,
+      contentType: false,
+      processData: false,
       beforeSend: before,
       success: resp
 

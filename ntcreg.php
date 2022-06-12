@@ -140,7 +140,7 @@ if (isset($_POST['btnupdate'])) {
                                 </div>
                             </div>
                                     <h1 class="h2">NTC CPD Training</h1>
-                                    <form action="" method="POST">
+                                    <form action="" method="POST" class="updateuser">
                                     <div class="card">
                                         <div class="list-group list-group-fit">
                                         <div class="list-group-item">
@@ -547,7 +547,7 @@ if (isset($_POST['btnupdate'])) {
 
         <!-- App JS -->
         <script src="assets/js/app.js"></script>
-        <script src="assets/js/sweetalert2.min.js"></script>
+        <script src="assets/js/sweetalert2.all.min.js"></script>
 
         <script src="assets/js/view.js"></script>
 
