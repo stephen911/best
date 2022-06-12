@@ -133,7 +133,7 @@ if (isset($_POST['btnupdate'])) {
                                 </div>
                             </div>
                                     <h1 class="h2">NTC CPD Training</h1>
-                                    <form action="" mehtod="POST">
+                                    <form action="" method="POST">
                                     <div class="card">
                                         <div class="list-group list-group-fit">
                                         <div class="list-group-item">
