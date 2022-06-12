@@ -1,4 +1,9 @@
-
+<?php
+ include 'functions.php';
+ checker();
+ $user = users();
+//  var_dump($_SESSION['id']);
+?>
 <!DOCTYPE html>
 <html lang="en"
       dir="ltr">
@@ -68,7 +73,7 @@
         </div>
 
         <!-- Header Layout -->
-        <?php include ("navbar.php") ?>
+        <?php include 'navbar.php'; ?>
 
             <!-- // END Header -->
 
@@ -123,6 +128,7 @@
                                 </div>
                             </div>
                                     <h1 class="h2">NTC CPD Training</h1>
+                                    <form action="" mehtod="POST">
                                     <div class="card">
                                         <div class="list-group list-group-fit">
                                         <div class="list-group-item">
@@ -133,7 +139,7 @@
                                                             </label>
                                                         <div class="col-md-9">
                                                             <select id="custom-select"
-                                                                class="form-control custom-select">
+                                                                class="form-control custom-select" name="title">
                                                                 <option selected>Dr.</option>
                                                                 <option value="1">Fr.</option>
                                                                 <option value="2">Sis.</option>
@@ -160,7 +166,7 @@
                                                                    type="text"
                                                                    placeholder="Name to be shown on Certificate"
                                                                    value=""
-                                                                   class="form-control">
+                                                                   class="form-control" name="name">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -173,7 +179,7 @@
                                                             </label>
                                                         <div class="col-md-9">
                                                             <select id="custom-select"
-                                                                class="form-control custom-select">
+                                                                class="form-control custom-select" name="gender">
                                                                 <option selected>Male</option>
                                                                 <option value="1">Female</option>
                                                                 <option value="2">Prefer not to say</option>
@@ -200,7 +206,7 @@
                                                                        type="email"
                                                                        placeholder="Your email address"
                                                                        value=""
-                                                                       class="form-control form-control-prepended">
+                                                                       class="form-control form-control-prepended" name="email">
                                                                 <div class="input-group-prepend">
                                                                     <div class="input-group-text">
                                                                         <i class="material-icons">email</i>
@@ -225,7 +231,7 @@
                                                                    type="text"
                                                                    placeholder="Your phone number"
                                                                    value=""
-                                                                   class="form-control">
+                                                                   class="form-control" name="contact">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -243,7 +249,7 @@
                                                                    type="text"
                                                                    placeholder="Your telegram number"
                                                                    value=""
-                                                                   class="form-control">
+                                                                   class="form-control" name="telegram">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -261,7 +267,7 @@
                                                                    type="text"
                                                                    placeholder="No. should be like PT/000660/2022"
                                                                    value=""
-                                                                   class="form-control">
+                                                                   class="form-control" name="lincesed">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -279,7 +285,7 @@
                                                                    type="text"
                                                                    placeholder="Name of School"
                                                                    value=""
-                                                                   class="form-control">
+                                                                   class="form-control" name="nameofschool">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -424,6 +430,8 @@
                                             
                                         </div>
                                     </div>
+
+                                    </form>
                                     <!-- <div class="card border-left-3 border-left-primary card-2by1">
                                 <div class="card-body">
                                     <div class="media flex-wrap align-items-center">
@@ -451,6 +459,7 @@
                                     </div>
                                     
                                 </div>
+
                                 <div id="page-nav"
                                      class="col-lg-auto page-nav">
                                     <div data-perfect-scrollbar>
@@ -484,7 +493,7 @@
 
                     </div>
 
-                    <?php include ("sidebar.php") ?>
+                    <?php include 'sidebar.php'; ?>
 
                 <!-- App Settings FAB -->
                 
