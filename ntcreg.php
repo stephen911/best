@@ -6,7 +6,7 @@
 
 if (isset($_POST['btnupdate'])) {
     extract($_POST);
-    updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $lincesed, $nameofaschool, $rregion, $district, $foodpref, $heard);
+    updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $lincesed, $nameofschool, $region, $district, $foodpref, $heard);
 }
 ?>
 <!DOCTYPE html>
@@ -126,8 +126,8 @@ if (isset($_POST['btnupdate'])) {
                                              <small>Please we humbly entreat you to make payment right away to book your seat. Please call +233 246 535 961 when you have successfully made payment. Thank you</small>
                                         </div>
                                         <div class="media-right mt-2 mt-xs-plus-0">
-                                            <a class="btn btn-success"
-                                               href="payment.php">Pay Now</a>
+                                            <button class="btn btn-success"
+                                               >Pay Now</a>
                                         </div>
                                     </div>
                                 </div>
@@ -146,11 +146,12 @@ if (isset($_POST['btnupdate'])) {
                                                             <select id="custom-select"
                                                                 class="form-control custom-select" name="title">
                                                                 <option selected value="<?php echo  ($user['title'] == '') ? '' : $user['title']; ?>"><?php echo  ($user['title'] == '') ? 'Select your title' : $user['title']; ?></option>
-                                                                <option value="1">Fr.</option>
-                                                                <option value="2">Sis.</option>
-                                                                <option value="1">Mr.</option>
-                                                                <option value="2">Mrs.</option>
-                                                                <option value="1">Ms./Miss</option>
+                                                                <option value="Dr.">Dr.</option>
+                                                                <option value="Fr.">Fr.</option>
+                                                                <option value="Sis.">Sis.</option>
+                                                                <option value="Mr.">Mr.</option>
+                                                                <option value="Mrs.">Mrs.</option>
+                                                                <option value="Ms./Miss">Ms./Miss</option>
                                                                 
 
                                                             </select>
@@ -192,8 +193,9 @@ if (isset($_POST['btnupdate'])) {
                                                             <select id="custom-select"
                                                                 class="form-control custom-select" name="gender">
                                                                 <option selected value="<?php echo  ($user['gender'] == '') ? '' : $user['gender']; ?>"><?php echo  ($user['gender'] == '') ? 'Select Gender' : $user['gender']; ?></option>
-                                                                <option value="1">Female</option>
-                                                                <option value="2">Prefer not to say</option>
+                                                                <option value="Male">Male</option>
+                                                                <option value="Female">Female</option>
+                                                                <option value="Prefer not to say">Prefer not to say</option>
                                                                 
                                                                 
 
@@ -502,9 +504,9 @@ if (isset($_POST['btnupdate'])) {
                                                        class="nav-link">Profile &amp; Privacy</a>
                                                 </li> -->
                                             </ul>
-                                            <div class="page-nav__content">
+                                            <!-- <div class="page-nav__content">
                                                 <button class="btn btn-success">Submit</button>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>
@@ -545,6 +547,113 @@ if (isset($_POST['btnupdate'])) {
 
         <!-- App Settings (safe to remove) -->
         <script src="assets/js/app-settings.js"></script>
+
+
+        <script>
+            var paymentForm = document.getElementById('paymentForm');
+
+            paymentForm.addEventListener('submit', payWithPaystack, false);
+
+            function payWithPaystack() {
+                
+                var handler = PaystackPop.setup({
+                
+                    key: 'pk_test_25b3d5f8bfb5621c4569175877020aafe6085a0a', // Replace with your public key
+                
+                    email: '<?php echo $email; ?>',
+                
+                    amount: <?php echo $amount * 100; ?>, // the amount value is multiplied by 100 to convert to the lowest currency unit
+                
+                    currency: 'GHS', // Use GHS for Ghana Cedis or USD for US Dollars
+                
+                    firstname: '<?php echo $fname; ?>',
+                
+                    lastname: '<?php echo $lname; ?>',
+                
+                    ref: '<?php echo $myref; ?>', // Replace with a reference you generated
+                    metadata: {
+                        custom_fields : 
+                            [
+                                    {
+                                        display_name: 'Mobile Number',
+                                        variable_name: 'mobile_number',
+                                        value:"+233556676471"
+                                    }
+                                    
+                            
+                            ]
+                    },
+                
+                    callback: function(response) {
+                
+                    //this happens after the payment is completed successfully
+                
+                    var reference = response.reference;
+                    var fname  = '<?php echo $fname; ?>';
+                    var lname = '<?php echo $lname; ?>';
+                    var email = '<?php echo $email; ?>';
+                    var amount = '<?php echo $amount; ?>';
+                
+                    //   alert('Payment complete! Reference: ' + reference);
+                    // window.location='success.php?ref='+ reference + '&fname=' + fname + '&lname=' + lname + '&email=' + email + '&amount=' + amount ;
+                    
+                    // Make an AJAX call to your server with the reference to verify the transaction
+                    
+                        if(response.status == "success"){
+                            var myrf = '<?php echo $myref; ?>';
+                            var mimi = 'dollar';
+                            var formdt = $('#paymentForm')[0]; // You need to use standard javascript object here
+                            var formData = new FormData(formdt);
+                        
+                            var opt = {
+                                url : "dollar.php?action=paysuccess",
+                                type: "post",
+                                data:formData ,
+                                contentType: false, // NEEDED, DON'T OMIT THIS (requires jQuery 1.6+)
+                                processData: false,
+                                cache:false, // NEEDED, DON'T OMIT THIS
+
+                                success: function(rep){
+                                setTimeout(function () { 
+                                    swal({
+                                    title: "Success!",
+                                    text: "<small>You purchase is successfull  </small>",
+                                    type: "success",
+                                    html: true,
+                                    confirmButtonText: "OK"
+                                    },
+                                    function(isConfirm){
+                                    if (isConfirm) {
+                                        window.location = "profile.php";
+                                    }
+                                    }); }, 1000);
+                                }
+                                
+                            }
+                            $.ajax(opt);
+                        
+                            
+
+                                
+                        
+                        }            
+                    },
+                
+                    onClose: function() {
+                
+                    alert('Transaction was not completed, window closed.');
+                
+                    },
+                
+                });
+                
+                handler.openIframe();
+                
+                }
+        </script>
+
+
+    <script src="https://js.paystack.co/v1/inline.js"></script>
 
     </body>
 

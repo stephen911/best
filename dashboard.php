@@ -265,7 +265,7 @@
                                                 </div>
                                                 <div class="media-right">
                                                     <a class="btn btn-sm btn-primary"
-                                                       href="quiz.php">Take Quiz</a>
+                                                       href="ntcreg.php">Complete Registration</a>
                                                 </div>
                                             </div>
                                         </div>
