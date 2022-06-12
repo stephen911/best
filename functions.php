@@ -37,3 +37,10 @@ function login($email, $password)
         echo '<script>alert("User account does not exist")</script>';
     }
 }
+
+function logout()
+{
+    session_start();
+    unset($_SESSION['id']);
+    echo 'window.location="index.php"';
+}
