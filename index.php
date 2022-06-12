@@ -60,12 +60,12 @@ if (isset($_POST['btnlogin']));
                     <div class="avatar avatar-lg">
                         <img src="assets/images/logo/gnpc2.svg"
                              class="avatar-img rounded-circle"
-                             alt="GNPC Scholarship Portal" />
+                             alt="TUCEE Online Registration" />
                     </div>
                 </div>
                 <div class="d-flex justify-content-center mb-5 navbar-light">
                     <a href="dashboard.php"
-                       class="navbar-brand m-0">GNPC Scholarship Portal</a>
+                       class="navbar-brand m-0">TUCEE Online Registration</a>
                 </div>
                 <div class="card navbar-shadow">
                     <div class="card-header text-center">

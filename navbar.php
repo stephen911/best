@@ -24,8 +24,8 @@
                    class="navbar-brand">
                     <img src="assets/images/logo/white.svg"
                          class="mr-2"
-                         alt="GNPC Scholarship Portal" />
-                    <span class="d-none d-xs-md-block">GNPC Scholarship Portal</span>
+                         alt="TUCEE Online Registration" />
+                    <span class="d-none d-xs-md-block">TUCEE Online Registration</span>
                 </a>
 
                 <!-- Search -->
