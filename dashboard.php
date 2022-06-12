@@ -1,6 +1,7 @@
 <?php
  include 'functions.php';
  checker();
+ $user = users();
 //  var_dump($_SESSION['id']);
 ?>
 <!DOCTYPE html>
@@ -100,7 +101,7 @@
                                         </div>
                                         <div class="media-body"
                                              style="min-width: 180px">
-                                            Your are welcomed! <strong>Dr. Hawa Adams</strong>
+                                            Your are welcome! <strong><?php echo $user['title'].' '.$user['name']; ?></strong>
                                         </div>
                                         <div class="media-right mt-2 mt-xs-plus-0">
                                             <a class="btn btn-success"
