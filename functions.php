@@ -44,3 +44,13 @@ function logout()
     unset($_SESSION['id']);
     echo 'window.location="index.php"';
 }
+
+function checker()
+{
+    session_start();
+    if (empty($_SESSION['id'])) {
+        echo '<script>
+        alert("You need to login first");
+        window.location="index.php"</script>';
+    }
+}

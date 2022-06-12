@@ -1,4 +1,7 @@
-
+<?php
+ include 'functions.php';
+ checker();
+?>
 <!DOCTYPE html>
 <html lang="en"
       dir="ltr">
@@ -68,7 +71,8 @@
         </div>
 
         <!-- Header Layout -->
-        <?php include ("navbar.php") ?>
+        <?php include 'navbar.php';
+         ?>
 
             <!-- // END Header -->
 
@@ -515,7 +519,7 @@
 
                     </div>
 
-                    <?php include ("sidebar.php") ?>
+                    <?php include 'sidebar.php'; ?>
 
                 <!-- App Settings FAB -->
                 
