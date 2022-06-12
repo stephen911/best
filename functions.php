@@ -7,12 +7,12 @@
 
 function db()
 {
-    return require 'starter.php';
+    return  'starter.php';
 }
 
-function login($email,$password)
+function login($email, $password)
 {
-    db();
+    include 'starter.php';
 
     // extract($_POST);
     $email = mysqli_real_escape_string($conn, $email);
