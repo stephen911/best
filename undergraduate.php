@@ -4,7 +4,7 @@
  $user = users();
 //  var_dump($_SESSION['id']);
 
-if (isset($_POST['btnupdt'])) {
+if (isset($_POST['btnupdate'])) {
     extract($_POST);
     updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $lincesed, $nameofaschool, $rregion, $district, $foodpref, $heard);
 }
