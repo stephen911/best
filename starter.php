@@ -1,4 +1,3 @@
 <?php
 
-$conn = mysqli_connect('localhost:8080', 'root', '', 'ntc') or die('failed');
-?>
+$conn = mysqli_connect('127.0. 0.1', 'root', '', 'ntc') or die('failed');

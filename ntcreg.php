@@ -127,7 +127,7 @@ if (isset($_POST['btnupdate'])) {
                                         </div>
                                         <div class="media-right mt-2 mt-xs-plus-0">
                                             <button class="btn btn-success"
-                                               >Pay Now</a>
+                                            onclick="payWithPaystack()">Pay Now</a>
                                         </div>
                                     </div>
                                 </div>
