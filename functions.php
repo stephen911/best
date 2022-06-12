@@ -74,7 +74,7 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
     if ($up) {
         echo '<script>
         alert("Record updated successfuly");
-        window.location.reload();
+        window.location="ntcreg.php";
         </script>';
     } else {
         '<script>
