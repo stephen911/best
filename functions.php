@@ -10,11 +10,11 @@ function db()
     return require 'starter.php';
 }
 
-function login()
+function login($email,$password)
 {
     db();
 
-    extract($_POST);
+    // extract($_POST);
     $email = mysqli_real_escape_string($conn, $email);
     $password = mysqli_real_escape_string($conn, $password);
 
