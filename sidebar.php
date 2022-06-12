@@ -5,7 +5,7 @@
                                  data-perfect-scrollbar>
                                 <div class="sidebar-p-y">
                                     <div class="sidebar-heading">APPLICATIONS</div>
-                                    <ul class="sidebar-menu sm-active-button-bg">
+                                    <ul class="sidebar-menu sm-button-bg">
                                         <li class="sidebar-menu-item active">
                                             <a class="sidebar-menu-button"
                                                href="dashboard.php">

@@ -12,9 +12,10 @@ image.onload = function () {
 function drawImage() {
 	// ctx.clearRect(0, 0, canvas.width, canvas.height)
 	ctx.drawImage(image, 0, 0, canvas.width, canvas.height)
-	ctx.font = '40px monotype corsiva'
-	ctx.fillStyle = '#29e'
-	ctx.fillText(nameInput.value, 40, 180)
+	ctx.font = '20px monotype arial'
+	ctx.fillStyle = '#00000'
+	ctx.textAlign = "center"
+	ctx.fillText(nameInput.value, 250, 180)
 }
 
 nameInput.addEventListener('input', function () {
@@ -22,6 +23,6 @@ nameInput.addEventListener('input', function () {
 })
 
 downloadBtn.addEventListener('click', function () {
-	downloadBtn.href = canvas.toDataURL('image/jpg')
+	downloadBtn.href = canvas.toDataURL('image/png')
 	downloadBtn.download = 'Certificate - ' + nameInput.value
 })

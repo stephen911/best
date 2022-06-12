@@ -102,6 +102,7 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        
                                     </div>
 
                                     
@@ -113,8 +114,12 @@
             Name:
             <input id="name" type='text'>
         </label> -->
-        <!-- <a href="#" id="download-btn">Download</a> -->
+        <!-- <a href="#" id="download-btn" download>Download</a> -->
         <canvas id="canvas" height="350px" width="500px"></canvas>
+        <label>
+            Name:
+            <input id="name" type='text'>
+        </label>
     <!-- </div> -->
                                     
 
