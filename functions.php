@@ -19,7 +19,7 @@ function login($email, $password)
     $password = mysqli_real_escape_string($conn, $password);
 
     $sel = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email'");
-    $sel2 = mysqli_query($conn, "SELECT * FROM users WHERE email = '$emal' AND password = '$password'");
+    $sel2 = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email' AND password = 'md5($password)'");
 
     if (mysqli_num_rows($sel) >= 1) {
         if (mysqli_num_rows($sel2) >= 1) {
@@ -31,9 +31,9 @@ function login($email, $password)
             window.location="dashboard.php";
             </script>';
         } else {
-            echo 'Login details not correct';
+            echo '<script>alert("Login details not correct")</script>';
         }
     } else {
-        echo 'User does not exist';
+        echo '<script>alert("User account does not exist")</script>';
     }
 }
