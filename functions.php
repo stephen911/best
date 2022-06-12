@@ -31,6 +31,7 @@ function login()
             window.location="dashboard.php";
             </script>';
         } else {
+            echo 'Login details not correct';
         }
     } else {
         echo 'User does not exist';
