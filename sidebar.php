@@ -33,7 +33,7 @@
 
                                                 <li class="sidebar-menu-item">
                                                     <a class="sidebar-menu-button"
-                                                       href="undergraduate.php">
+                                                       href="ntcreg.php">
                                                         <span class="sidebar-menu-text">NTC CPD Training</span>
                                                     </a>
                                                 </li>

@@ -1,3 +1,11 @@
+<?php
+ include 'functions.php';
+ checker();
+ $user = users();
+//  var_dump($_SESSION['id']);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en"
       dir="ltr">
@@ -68,7 +76,7 @@
         </div>
 
         <!-- Header Layout -->
-        <?php include("navbar.php") ?>
+        <?php include 'navbar.php'; ?>
             <!-- // END Header -->
 
             <!-- Header Layout Content -->
@@ -116,10 +124,10 @@
         </label> -->
         <!-- <a href="#" id="download-btn" download>Download</a> -->
         <canvas id="canvas" height="350px" width="500px"></canvas>
-        <label>
-            Name:
-            <input id="name" type='text'>
-        </label>
+        
+            
+            <input id="name" type='hidden' value="<?php echo $user['title'].' '.$user['name']; ?>">
+       
     <!-- </div> -->
                                     
 
@@ -130,7 +138,7 @@
 
                     </div>
 
-                    <?php include ("sidebar.php") ?>
+                    <?php include 'sidebar.php'; ?>
 
 
                 <!-- App Settings FAB -->
