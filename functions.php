@@ -72,14 +72,8 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
     include 'starter.php';
     $up = mysqli_query($conn, "UPDATE users SET title='$title', name= '$name', gender = '$gender', email='$email', contact= '$contact', telegram='$telegram', lincesed ='$lincesed', nameofschool='$nameofschool', region ='$region', district ='$district', foodpref='$foodpref', heard ='$heard' WHERE id='$id'  ");
     if ($up) {
-        echo '<script>
-        alert("Record updated successfuly");
-        window.location="ntcreg.php";
-        </script>';
+        echo 'Updated Successfully';
     } else {
-        '<script>
-        alert("Failed to update record . Try again");
-        
-        </script>';
+        echo 'Failed to update record . Try again';
     }
 }

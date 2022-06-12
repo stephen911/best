@@ -663,6 +663,7 @@ if (isset($_POST['btnupdate'])) {
 
 
     <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script src="processor.js"></script>
 
     </body>
 
