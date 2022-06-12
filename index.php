@@ -58,14 +58,14 @@ if (isset($_POST['btnlogin']));
                  style="min-width: 300px;">
                 <div class="text-center mt-5 mb-1">
                     <div class="avatar avatar-lg">
-                        <img src="assets/images/logo/gnpc2.svg"
+                        <img src="assets/images/logo/tucee.png"
                              class="avatar-img rounded-circle"
-                             alt="GNPC Scholarship Portal" />
+                             alt="TUCEE Online Registration" />
                     </div>
                 </div>
                 <div class="d-flex justify-content-center mb-5 navbar-light">
-                    <a href="dashboard.php"
-                       class="navbar-brand m-0">GNPC Scholarship Portal</a>
+                    <a href="#"
+                       class="navbar-brand m-0">TUCEE Online Registration</a>
                 </div>
                 <div class="card navbar-shadow">
                     <div class="card-header text-center">
@@ -81,13 +81,13 @@ if (isset($_POST['btnlogin']));
                               method="post">
                             <div class="form-group">
                                 <label class="form-label"
-                                       for="email">email address or gnpc ref</label>
+                                       for="email">Email address</label>
                                 <div class="input-group input-group-merge">
                                     <input id="email"
                                            type="email"
                                            required=""
                                            class="form-control form-control-prepended"
-                                           placeholder="email address or gnpc ref">
+                                           placeholder="Email address">
                                     <div class="input-group-prepend">
                                         <div class="input-group-text">
                                             <span class="far fa-envelope"></span>
@@ -123,7 +123,7 @@ if (isset($_POST['btnlogin']));
                         </form>
                     </div>
                     <div class="card-footer text-center text-black-50">
-                        Not yet a student? <a href="signup.php">Sign Up</a>
+                        Not registered yet? <a href="signup.php">Sign Up</a>
                     </div>
                 </div>
             </div>

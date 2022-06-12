@@ -1,16 +1,21 @@
+// $(document).ready(function(){
+// $(".all").hide();
+// });
+
+
 const el = document.getElementById('custom-select9');
 
-// const all = document.getElementById('all');
+// const all = document.getElementsByClassName('all');
 const east = document.getElementById('east');
 // const tertiary = document.getElementById('tertiary2');
 const specify = document.getElementById('specify');
 
 el.addEventListener('change', function handleChange(event) {
-//   if (event.target.value == 'none') {
-//     all.style.display = 'none';
-//   } else {
-//     all.style.display = 'block';
-//   }
+  // if (event.target.value == 'none') {
+  //   all.style.display = 'none';
+  // } else {
+  //   all.style.display = 'block';
+  // }
 //   if (event.target.value == 'adenta') {
 //     shs.style.display = 'block';
 //   } else {
@@ -27,3 +32,6 @@ el.addEventListener('change', function handleChange(event) {
     specify.style.display = 'none';
   }
 });
+
+
+

@@ -54,16 +54,16 @@
                  style="min-width: 300px;">
                 <div class="text-center mt-5 mb-1">
                     <div class="avatar avatar-lg">
-                        <img src="assets/images/logo/gnpc2.svg"
+                        <img src="assets/images/logo/tucee.png"
                              class="avatar-img rounded-circle"
-                             alt="GNPC Scholarship Portal" />
+                             alt="TUCEE Online Registration" />
                     </div>
                 </div>
                 <div class="d-flex justify-content-center mb-5 navbar-light">
                     <!-- Brand -->
-                    <a href="dashboard.php"
+                    <a href="#"
                        class="navbar-brand m-0">
-                        GNPC Scholarship Portal
+                        TUCEE Online Registration
                     </a>
                 </div>
                 <div class="card navbar-shadow">
@@ -76,10 +76,10 @@
                         <div class="alert alert-light border-1 border-left-3 border-left-primary d-flex"
                              role="alert">
                             <i class="material-icons text-success mr-3">check_circle</i>
-                            <div class="text-body">An email with password reset instructions has been sent to your email address, if it exists on our system.</div>
+                            <div class="text-body">An email with password reset instructions will be sent to your email address, if it exists on our system.</div>
                         </div>
 
-                        <form action="https://learnplus.demo.frontendmatter.com/student-dashboard.php"
+                        <form action="#"
                               novalidate
                               method="get">
                             <div class="form-group">

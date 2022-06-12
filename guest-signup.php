@@ -54,14 +54,14 @@
                  style="min-width: 300px;">
                 <div class="text-center mt-5 mb-1">
                     <div class="avatar avatar-lg">
-                        <img src="assets/images/logo/gnpc2.svg"
+                        <img src="assets/images/logo/tucee.png"
                              class="avatar-img rounded-circle"
-                             alt="GNPC Scholarship Portal" />
+                             alt="TUCEE Online Registration" />
                     </div>
                 </div>
                 <div class="d-flex justify-content-center mb-5 navbar-light">
-                    <a href="dashboard.php"
-                       class="navbar-brand m-0">GNPC Scholarship Portal</a>
+                    <a href="#"
+                       class="navbar-brand m-0">TUCEE Online Registration</a>
                 </div>
                 <div class="card navbar-shadow">
                     <div class="card-header text-center">

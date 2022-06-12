@@ -11,7 +11,7 @@
               content="IE=edge">
         <meta name="viewport"
               content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>NTC CPD Training</title>
+        <title>Counselling Training</title>
 
          <meta name="robots"
               content="noindex">
@@ -85,7 +85,7 @@
                                 <div class="col-lg container-fluid page__container">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="dashboard.php">Home</a></li>
-                                        <li class="breadcrumb-item active">NTC CPD Training</li>
+                                        <li class="breadcrumb-item active">Counselling Training</li>
                                     </ol>
 
                                     <div class="card border-left-3 border-left-primary card-2by1">
@@ -96,7 +96,7 @@
                                         </div>
                                         <div class="media-body"
                                              style="min-width: 180px">
-                                             <strong>Fill your NTC CPD Training forms</strong>
+                                             <strong>Fill your Counselling Training forms</strong>
                                         </div>
                                         <div class="media-right mt-2 mt-xs-plus-0">
                                             <a class="btn btn-success"
@@ -122,7 +122,7 @@
                                     </div>
                                 </div>
                             </div>
-                                    <h1 class="h2">NTC CPD Training</h1>
+                                    <h1 class="h2">Counselling Training</h1>
                                     <div class="card">
                                         <div class="list-group list-group-fit">
                                         <div class="list-group-item">
@@ -293,26 +293,6 @@
                                                            class="custom-control-label">Check this custom checkbox</label>
                                                 </div>
                                             </div> -->
-                                            <div class="list-group-item">
-                                            <div class="form-group m-0" role="group"
-                                                aria-labelledby="label-region">
-                                                <div class="form-row">
-                                                    <label id="label-region" for="region"
-                                                        class="col-md-3 col-form-label form-label">Region</label>
-                                                    <div class="col-md-9">
-                                                        <select id="custom-select8" class="form-control custom-select">
-                                                            <option selected value="none">Select you region
-                                                            </option>
-                                                            <option value="adenta">Greater Accra</option>
-                                                            <option value="east">Ashanti Region</option>
-                                                            <option value="madina">Eastern Region</option>
-                                                            <option value="other">Central Region</option>
-
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                             
                                             
                                             <div class="list-group-item">
@@ -320,10 +300,10 @@
                                                 aria-labelledby="label-highestEduLevel">
                                                 <div class="form-row">
                                                     <label id="label-highestEduLevel" for="highestEduLevel"
-                                                        class="col-md-3 col-form-label form-label">District or Municipality</label>
+                                                        class="col-md-3 col-form-label form-label">What district or Municipality are you coming from</label>
                                                     <div class="col-md-9">
                                                         <select id="custom-select9" class="form-control custom-select">
-                                                            <option selected value="none">Choose your District or Municipality
+                                                            <option selected value="none">Choose your district or Municipality
                                                             </option>
                                                             <option value="adenta">Adenta Municipality</option>
                                                             <option value="east">Ga - East Municipality</option>
@@ -335,8 +315,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="all">
-                                        <div id="specify" style="display: none;">
+                                        <div id="specify">
                                             <div class="list-group-item toggle-target target-report" data-lookup="1">
 
                                                 <div class="form-group m-0" role="group"
@@ -354,7 +333,7 @@
 
                                             </div>
 </div>
-<div id="east" class="list-group-item" style="display: none;">
+<div id="east" class="list-group-item">
                                             <div id="east" class="form-group m-0" role="group"
                                                 aria-labelledby="label-venuepref">
                                                 <div class="form-row">
@@ -373,7 +352,6 @@
                                                 </div>
                                             </div>
                                         </div>
-</div>
                                         <div class="list-group-item">
                                             <div class="form-group m-0" role="group"
                                                 aria-labelledby="label-foodpref">
@@ -403,7 +381,7 @@
                                                         class="col-md-3 col-form-label form-label">How did you hear/know of this training</label>
                                                     <div class="col-md-9">
                                                         <select id="custom-select2" class="form-control custom-select">
-                                                            <option selected value="none">select how you heard about this training
+                                                            <option selected value="none">Choose food Preference
                                                             </option>
                                                             <option value="website">TUCEE Website</option>
                                                             <option value="gnacc">GNACC Website</option>
@@ -458,7 +436,7 @@
                                             <ul class="nav page-nav__menu">
                                                 <li class="nav-item">
                                                     <a href="#"
-                                                       class="nav-link active">NTC CPD Training</a>
+                                                       class="nav-link active">Counselling Training</a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a href="payment.php"

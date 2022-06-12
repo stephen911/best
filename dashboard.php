@@ -11,7 +11,7 @@
               content="IE=edge">
         <meta name="viewport"
               content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Basic Information</title>
+        <title>Dashboard</title>
 
          <meta name="robots"
               content="noindex">
@@ -107,37 +107,8 @@
                             <div class="row">
                                 <div class="col-lg-7">
 
-                                    <div class="card">
-                                        <div class="card-header d-flex align-items-center">
-                                            <div class="h2 mb-0 mr-3 text-primary">116</div>
-                                            <div class="flex">
-                                                <h4 class="card-title">Angular</h4>
-                                                <p class="card-subtitle">Best score</p>
-                                            </div>
-                                            <div class="dropdown">
-                                                <a href="#"
-                                                   class="dropdown-toggle text-black-70"
-                                                   data-toggle="dropdown">Popular Topics</a>
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a href="#"
-                                                       class="dropdown-item">Popular Topics</a>
-                                                    <a href="#"
-                                                       class="dropdown-item">Web Design</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="chart"
-                                                 style="height: 319px;">
-                                                <canvas id="topicIqChart"
-                                                        class="chart-canvas js-update-chart-line"
-                                                        data-chart-hide-axes="false"
-                                                        data-chart-points="true"
-                                                        data-chart-suffix=" points"
-                                                        data-chart-line-border-color="primary"></canvas>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
+                                        
 
                                     <div class="card">
                                         <div class="card-header">
@@ -351,26 +322,7 @@
                                 </div>
                                 <div class="col-lg-5">
 
-                                    <div class="card">
-                                        <div class="card-header d-flex align-items-center">
-                                            <div class="h2 mb-0 mr-3 text-primary">432</div>
-                                            <div class="flex">
-                                                <h4 class="card-title">Experience IQ</h4>
-                                                <p class="card-subtitle">4 days streak this week</p>
-                                            </div>
-                                            <i class="material-icons text-muted ml-2">trending_up</i>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="chart"
-                                                 style="height: 154px;">
-                                                <canvas id="iqChart"
-                                                        class="chart-canvas js-update-chart-line"
-                                                        data-chart-points="true"
-                                                        data-chart-suffix="pt"
-                                                        data-chart-line-border-color="primary"></canvas>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
 
                                     <div class="card card-2by1">
                                         <div class="card-header">
