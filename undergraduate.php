@@ -172,6 +172,12 @@ if (isset($_POST['btnupdt'])) {
                                                                    placeholder="Name to be shown on Certificate"
                                                                    value="<?php echo  ($user['name'] == '') ? '' : $user['name']; ?>"
                                                                    class="form-control" name="name">
+
+                                                                   <input id="certname"
+                                                                   type="hidden"
+                                                                   placeholder="Name to be shown on Certificate"
+                                                                   value="<?php echo  $user['id']; ?>"
+                                                                   class="form-control" name="id">
                                                         </div>
                                                     </div>
                                                 </div>
