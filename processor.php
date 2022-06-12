@@ -1,19 +1,19 @@
 <?php
 
-require '../loader/autoloader.php';
-require '../fragement/deep.php';
+// require '../loader/autoloader.php';
+require 'functions.php';
  if (isset($_GET['action'])) {
      switch ($_GET['action']) {
         case 'update':
             extract($_POST);
             // extract($_POST);
-    updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $lincesed, $nameofschool, $region, $district, $foodpref, $heard);
+            updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $lincesed, $nameofschool, $region, $district, $foodpref, $heard);
 
             break;
 
-        case 'removecart':
+        case 'login':
             extract($_POST);
-            deletefromcart($id);
+            login($email, $password);
             break;
 
         default:

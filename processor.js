@@ -232,7 +232,7 @@ $('.welcome').submit(function(e){
 
 
 
-// add to cart
+// update user
 $('.updateuser').submit(function(e){
 
   e.preventDefault();
@@ -240,6 +240,28 @@ $('.updateuser').submit(function(e){
   // var id = $(this).attr('id');
   var staff = {
       url: 'processor.php?action=update',
+      type: 'post',
+      data: new FormData(this),
+      cache: false,
+      contentType: false,
+      processData: false,
+      beforeSend: before,
+      success: resp
+
+  };
+  $.ajax(staff);
+});
+
+
+// login
+
+$('.login').submit(function(e){
+
+  e.preventDefault();
+  // before();
+  // var id = $(this).attr('id');
+  var staff = {
+      url: 'processor.php?action=login',
       type: 'post',
       data: new FormData(this),
       cache: false,
