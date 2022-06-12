@@ -306,13 +306,13 @@
                                                     <label id="label-region" for="region"
                                                         class="col-md-3 col-form-label form-label">Region</label>
                                                     <div class="col-md-9">
-                                                        <select id="custom-select8" class="form-control custom-select">
+                                                        <select id="custom-select8" class="form-control custom-select" name="region">
                                                             <option selected value="none">Select you region
                                                             </option>
-                                                            <option value="adenta">Greater Accra</option>
-                                                            <option value="east">Ashanti Region</option>
-                                                            <option value="madina">Eastern Region</option>
-                                                            <option value="other">Central Region</option>
+                                                            <option value="Greater Accra">Greater Accra</option>
+                                                            <option value="Ashanti Region">Ashanti Region</option>
+                                                            <option value="Eastern Region">Eastern Region</option>
+                                                            <option value="Central Region">Central Region</option>
 
                                                         </select>
                                                     </div>
@@ -328,7 +328,7 @@
                                                     <label id="label-highestEduLevel" for="highestEduLevel"
                                                         class="col-md-3 col-form-label form-label">District or Municipality</label>
                                                     <div class="col-md-9">
-                                                        <select id="custom-select9" class="form-control custom-select">
+                                                        <select id="custom-select9" class="form-control custom-select" name="district">
                                                             <option selected value="none">Choose your District or Municipality
                                                             </option>
                                                             <option value="adenta">Adenta Municipality</option>
@@ -352,7 +352,7 @@
                                                             class="col-md-3 col-form-label form-label">specify</label>
                                                         <div class="col-md-9">
                                                             <input id="specify" type="text" placeholder="Specify your district or municipality"
-                                                                value="" class="form-control">
+                                                                value="" class="form-control" name="dother">
                                                         </div>
                                                     </div>
 
@@ -367,7 +367,7 @@
                                                     <label id="label-venuepref" for="venuepref"
                                                         class="col-md-3 col-form-label form-label">Venue Preference</label>
                                                     <div class="col-md-9">
-                                                        <select id="custom-select2" class="form-control custom-select">
+                                                        <select id="custom-select2" class="form-control custom-select" name="venue">
                                                             <option selected value="none">Choose a venue of your choice
                                                             </option>
                                                             <option value="ashongmang">Ashongmang Presby Church</option>
@@ -387,7 +387,7 @@
                                                     <label id="label-foodpref" for="foodpref"
                                                         class="col-md-3 col-form-label form-label">Food Preference</label>
                                                     <div class="col-md-9">
-                                                        <select id="custom-select2" class="form-control custom-select">
+                                                        <select id="custom-select2" class="form-control custom-select" name="foodpref">
                                                             <option selected value="none">Choose food Preference
                                                             </option>
                                                             <option value="waakye">Waakye with chicken</option>
@@ -408,7 +408,7 @@
                                                     <label id="label-heard" for="heard"
                                                         class="col-md-3 col-form-label form-label">How did you hear/know of this training</label>
                                                     <div class="col-md-9">
-                                                        <select id="custom-select2" class="form-control custom-select">
+                                                        <select id="custom-select2" class="form-control custom-select" name="heard">
                                                             <option selected value="none">select how you heard about this training
                                                             </option>
                                                             <option value="website">TUCEE Website</option>
