@@ -180,7 +180,7 @@
                                                         <div class="col-md-9">
                                                             <select id="custom-select"
                                                                 class="form-control custom-select" name="gender">
-                                                                <option selected>Male</option>
+                                                                <option selected value="<?php echo  ($user['gender'] == '') ? '' : $user['gender']; ?>"><?php echo  ($user['gender'] == '') ? 'Select Gender' : $user['gender']; ?></option>
                                                                 <option value="1">Female</option>
                                                                 <option value="2">Prefer not to say</option>
                                                                 
@@ -205,7 +205,7 @@
                                                                 <input id="email"
                                                                        type="email"
                                                                        placeholder="Your email address"
-                                                                       value=""
+                                                                       value="<?php echo  ($user['email'] == '') ? '' : $user['email']; ?>"
                                                                        class="form-control form-control-prepended" name="email">
                                                                 <div class="input-group-prepend">
                                                                     <div class="input-group-text">
@@ -230,7 +230,7 @@
                                                             <input id="phonenumber"
                                                                    type="text"
                                                                    placeholder="Your phone number"
-                                                                   value=""
+                                                                   value="<?php echo  ($user['contact'] == '') ? '' : $user['contact']; ?>"
                                                                    class="form-control" name="contact">
                                                         </div>
                                                     </div>
@@ -248,7 +248,7 @@
                                                             <input id="telegram"
                                                                    type="text"
                                                                    placeholder="Your telegram number"
-                                                                   value=""
+                                                                   value="<?php echo  ($user['telegram'] == '') ? '' : $user['telegram']; ?>"
                                                                    class="form-control" name="telegram">
                                                         </div>
                                                     </div>
