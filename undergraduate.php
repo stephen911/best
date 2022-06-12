@@ -140,7 +140,7 @@
                                                         <div class="col-md-9">
                                                             <select id="custom-select"
                                                                 class="form-control custom-select" name="title">
-                                                                <option selected>Dr.</option>
+                                                                <option selected value="<?php echo  ($user['title'] == '') ? '' : $user['title']; ?>"><?php echo  ($user['title'] == '') ? '' : $user['title']; ?></option>
                                                                 <option value="1">Fr.</option>
                                                                 <option value="2">Sis.</option>
                                                                 <option value="1">Mr.</option>
@@ -165,7 +165,7 @@
                                                             <input id="certname"
                                                                    type="text"
                                                                    placeholder="Name to be shown on Certificate"
-                                                                   value=""
+                                                                   value="<?php echo  ($user['name'] == '') ? '' : $user['name']; ?>"
                                                                    class="form-control" name="name">
                                                         </div>
                                                     </div>
