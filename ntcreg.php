@@ -45,6 +45,12 @@ if (isset($_POST['btnupdate'])) {
               href="assets/css/fontawesome.css"
               rel="stylesheet">
 
+
+              <!-- sweetalert -->
+              <link type="text/css"
+              href="assets/css/sweetalert2.min.css"
+              rel="stylesheet">
+
         <!-- Preloader -->
         <link type="text/css"
               href="assets/vendor/spinkit.css"
@@ -531,6 +537,7 @@ if (isset($_POST['btnupdate'])) {
         <script src="assets/vendor/popper.min.js"></script>
         <script src="assets/vendor/bootstrap.min.js"></script>
 
+
         <!-- Perfect Scrollbar -->
         <script src="assets/vendor/perfect-scrollbar.min.js"></script>
 
@@ -540,6 +547,7 @@ if (isset($_POST['btnupdate'])) {
 
         <!-- App JS -->
         <script src="assets/js/app.js"></script>
+        <script src="assets/js/sweetalert2.min.js"></script>
 
         <script src="assets/js/view.js"></script>
 
