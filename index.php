@@ -76,9 +76,9 @@ if (isset($_POST['btnlogin']));
 
                         
 
-                        <form action="dashboard.php"
+                        <form action=""
                               novalidate
-                              method="get">
+                              method="post">
                             <div class="form-group">
                                 <label class="form-label"
                                        for="email">email address or gnpc ref</label>
