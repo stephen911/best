@@ -122,7 +122,7 @@
                                         </div>
                                         <div class="media-right mt-2 mt-xs-plus-0">
                                             <a class="btn btn-success"
-                                               href="dashboard.php">Pay Now</a>
+                                               href="payment.php">Pay Now</a>
                                         </div>
                                     </div>
                                 </div>
