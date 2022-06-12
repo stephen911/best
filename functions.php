@@ -55,3 +55,14 @@ function checker()
         window.location="index.php"</script>';
     }
 }
+
+function users()
+{
+    include 'starter.php';
+    session_start();
+    $id = $_SESSION['id'];
+    $d = mysqli_query($conn, "SELECT * FROM users WHERE id ='$id'");
+    $row = mysqli_fetch_array($d);
+
+    return $row;
+}
