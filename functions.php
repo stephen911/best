@@ -16,4 +16,11 @@ function login()
 
     extract($_POST);
     $email = mysqli_real_escape_string($conn, $email);
+    $password = mysqli_real_escape_string($conn, $password);
+
+    $sel = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email'");
+    if (mysqli_num_rows($sel) >= 1) {
+    } else {
+        echo 'User does not exist';
+    }
 }
