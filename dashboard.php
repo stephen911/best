@@ -279,7 +279,7 @@
                                                            href="#"><strong>Email Address</strong></a><br>
                                                         <div class="d-flex align-items-center">
                                                             <!-- <small class="text-black-50 text-uppercase mr-2">Course</small> -->
-                                                            <a href="#">hawaadams@gmail.com</a>
+                                                            <a href="#"><?php echo $user['email']; ?></a>
                                                         </div>
                                                     </div>
                                                     <div class="media-right text-center d-flex align-items-center">
@@ -296,7 +296,7 @@
                                                            href="#"><strong>Phone Number</strong></a><br>
                                                         <div class="d-flex align-items-center">
                                                             <!-- <small class="text-black-50 text-uppercase mr-2">Course</small> -->
-                                                            <a href="#">0244567890</a>
+                                                            <a href="#"><?php echo $user['contact']; ?></a>
                                                         </div>
                                                     </div>
                                                     <div class="media-right text-center d-flex align-items-center">
@@ -312,7 +312,7 @@
                                                            href="#"><strong>Telegram Phone Number</strong></a><br>
                                                         <div class="d-flex align-items-center">
                                                             <!-- <small class="text-black-50 text-uppercase mr-2">Course</small> -->
-                                                            <a href="#">0246778956</a>
+                                                            <a href="#"><?php echo $user['telegram']; ?></a>
                                                         </div>
                                                     </div>
                                                     <div class="media-right text-center d-flex align-items-center">
@@ -328,7 +328,7 @@
                                                            href="#"><strong>Name of School</strong></a><br>
                                                         <div class="d-flex align-items-center">
                                                             <!-- <small class="text-black-50 text-uppercase mr-2">Course</small> -->
-                                                            <a href="#">kwabenya primany School</a>
+                                                            <a href="#"><?php echo $user['nameofschool']; ?></a>
                                                         </div>
                                                     </div>
                                                     <div class="media-right text-center d-flex align-items-center">
@@ -345,7 +345,7 @@
                                                            href="#"><strong>Nation teachers council license number</strong></a><br>
                                                         <div class="d-flex align-items-center">
                                                             <!-- <small class="text-black-50 text-uppercase mr-2">Course</small> -->
-                                                            <a href="#">PT/000660/2022</a>
+                                                            <a href="#"><?php echo $user['lincesed']; ?></a>
                                                         </div>
                                                     </div>
                                                     <div class="media-right text-center d-flex align-items-center">
@@ -361,7 +361,7 @@
                                                            href="#"><strong>Region</strong></a><br>
                                                         <div class="d-flex align-items-center">
                                                             <!-- <small class="text-black-50 text-uppercase mr-2">Course</small> -->
-                                                            <a href="#">Greater Accra</a>
+                                                            <a href="#"><?php echo $user['region']; ?></a>
                                                         </div>
                                                     </div>
                                                     <div class="media-right text-center d-flex align-items-center">
@@ -377,7 +377,7 @@
                                                            href="#"><strong>District</strong></a><br>
                                                         <div class="d-flex align-items-center">
                                                             <!-- <small class="text-black-50 text-uppercase mr-2">Course</small> -->
-                                                            <a href="#">Adenta</a>
+                                                            <a href="#"><?php echo $user['district']; ?></a>
                                                         </div>
                                                     </div>
                                                     <div class="media-right text-center d-flex align-items-center">
