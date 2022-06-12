@@ -48,7 +48,7 @@ function logout()
 function checker()
 {
     session_start();
-    if (empty($_SESSION['id'])) {
+    if (!isset($_SESSION['id'])) {
         echo '<script>
         alert("You need to login first");
         window.location="index.php"</script>';
