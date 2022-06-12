@@ -78,4 +78,17 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
 
 function register($name, $email, $password)
 {
+    $password = md5($password);
+    include 'starter.php';
+    $sel = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email'");
+    if (mysqli_num_rows($sel) >= 1) {
+        echo 'Sorry User account exist';
+    } else {
+        $ins = mysqli_query($conn, "INSERT INTO users(name,email,password) VALUES('$name','$email','$password')");
+        if ($ins) {
+            echo 'registered';
+        } else {
+            echo 'Registeration failed';
+        }
+    }
 }
