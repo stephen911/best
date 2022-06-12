@@ -261,12 +261,12 @@
                                                     <div class="form-row">
                                                         <label id="label-lastname"
                                                                for="lastname"
-                                                               class="col-md-3 col-form-label form-label">Nation teachers council license number</label>
+                                                               class="col-md-3 col-form-label form-label">National teachers council license number</label>
                                                         <div class="col-md-9">
                                                             <input id="lastname"
                                                                    type="text"
                                                                    placeholder="No. should be like PT/000660/2022"
-                                                                   value=""
+                                                                   value="<?php echo  ($user['lincesed'] == '') ? '' : $user['lincesed']; ?>"
                                                                    class="form-control" name="lincesed">
                                                         </div>
                                                     </div>
@@ -284,7 +284,7 @@
                                                             <input id="schname"
                                                                    type="text"
                                                                    placeholder="Name of School"
-                                                                   value=""
+                                                                   value="<?php echo  ($user['nameofschool'] == '') ? '' : $user['nameofschool']; ?>"
                                                                    class="form-control" name="nameofschool">
                                                         </div>
                                                     </div>
@@ -307,7 +307,7 @@
                                                         class="col-md-3 col-form-label form-label">Region</label>
                                                     <div class="col-md-9">
                                                         <select id="custom-select8" class="form-control custom-select" name="region">
-                                                            <option selected value="none">Select you region
+                                                            <option selected value="<?php echo  ($user['region'] == '') ? '' : $user['region']; ?>"><?php echo  ($user['region'] == '') ? 'Select you region' : $user['region']; ?>
                                                             </option>
                                                             <option value="Greater Accra">Greater Accra</option>
                                                             <option value="Ashanti Region">Ashanti Region</option>
@@ -329,7 +329,7 @@
                                                         class="col-md-3 col-form-label form-label">District or Municipality</label>
                                                     <div class="col-md-9">
                                                         <select id="custom-select9" class="form-control custom-select" name="district">
-                                                            <option selected value="none">Choose your District or Municipality
+                                                            <option selected value="<?php echo  ($user['district'] == '') ? '' : $user['district']; ?>"> <?php echo  ($user['district'] == '') ? 'Choose your District or Municipality' : $user['district']; ?>
                                                             </option>
                                                             <option value="adenta">Adenta Municipality</option>
                                                             <option value="east">Ga - East Municipality</option>
@@ -352,7 +352,7 @@
                                                             class="col-md-3 col-form-label form-label">specify</label>
                                                         <div class="col-md-9">
                                                             <input id="specify" type="text" placeholder="Specify your district or municipality"
-                                                                value="" class="form-control" name="dother">
+                                                                value="<?php echo  ($user['dother'] == '') ? '' : $user['dother']; ?>" class="form-control" name="dother">
                                                         </div>
                                                     </div>
 
@@ -368,7 +368,7 @@
                                                         class="col-md-3 col-form-label form-label">Venue Preference</label>
                                                     <div class="col-md-9">
                                                         <select id="custom-select2" class="form-control custom-select" name="venue">
-                                                            <option selected value="none">Choose a venue of your choice
+                                                            <option selected value="<?php echo  ($user['venue'] == '') ? '' : $user['venue']; ?>"><?php echo  ($user['venue'] == '') ? 'Choose a venue of your choice' : $user['venue']; ?>
                                                             </option>
                                                             <option value="ashongmang">Ashongmang Presby Church</option>
                                                             <option value="kwabenya">Kwabenya SHS</option>
@@ -388,7 +388,7 @@
                                                         class="col-md-3 col-form-label form-label">Food Preference</label>
                                                     <div class="col-md-9">
                                                         <select id="custom-select2" class="form-control custom-select" name="foodpref">
-                                                            <option selected value="none">Choose food Preference
+                                                            <option selected  value="<?php echo  ($user['foodpref'] == '') ? '' : $user['foodpref']; ?>">Choose food Preference <?php echo  ($user['foodpref'] == '') ? 'Choose food Preference ' : $user['foodpref']; ?>
                                                             </option>
                                                             <option value="waakye">Waakye with chicken</option>
                                                             <option value="jollof">Jollof with chicken</option>
@@ -409,7 +409,7 @@
                                                         class="col-md-3 col-form-label form-label">How did you hear/know of this training</label>
                                                     <div class="col-md-9">
                                                         <select id="custom-select2" class="form-control custom-select" name="heard">
-                                                            <option selected value="none">select how you heard about this training
+                                                            <option  selected value="<?php echo  ($user['heard'] == '') ? '' : $user['heard']; ?>">select how you heard about this training<?php echo  ($user['heard'] == 'select how you heard about this training') ? '' : $user['heard']; ?>
                                                             </option>
                                                             <option value="website">TUCEE Website</option>
                                                             <option value="gnacc">GNACC Website</option>
@@ -426,10 +426,19 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        
                                             
                                             
                                         </div>
+
+                                        
                                     </div>
+
+                                    
+                                    <div class="page-nav__content">
+                                                <button type="submit" name="btnupdate" class="btn btn-success">Save</button>
+                                            </div>  
 
                                     </form>
                                     <!-- <div class="card border-left-3 border-left-primary card-2by1">
