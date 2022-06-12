@@ -66,3 +66,8 @@ function users()
 
     return $row;
 }
+
+function updateuser($title, $name, $gender, $email, $contact, $telegram, $lincesed, $nameofaschool, $rregion, $district, $foodpref, $heard)
+{
+    $updateusers
+}
