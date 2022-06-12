@@ -45,13 +45,13 @@
                                                 </li> -->
                                                 <li class="sidebar-menu-item">
                                                     <a class="sidebar-menu-button"
-                                                       href="masters.php">
+                                                       href="training.php">
                                                         <span class="sidebar-menu-text">Counselling Training</span>
                                                     </a>
                                                 </li>
                                                 <li class="sidebar-menu-item">
                                                     <a class="sidebar-menu-button"
-                                                       href="phd.php">
+                                                       href="booking.php">
                                                         <span class="sidebar-menu-text">Couns. Session Booking</span>
                                                     </a>
                                                 </li>
