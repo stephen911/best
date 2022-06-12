@@ -75,3 +75,7 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
         echo 'Failed to update record . Try again';
     }
 }
+
+function register($name, $email, $password)
+{
+}
