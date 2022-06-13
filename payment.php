@@ -111,12 +111,14 @@ if (isset($_GET['ref'])) {
 
                                     <h1 class="h2">Payment History</h1>
 
-                                    <div class="card border-left-3 border-left-danger card-2by1">
+                                    <?php
+                                    if ($user['paystatus'] == '') {
+                                        echo '<div class="card border-left-3 border-left-danger card-2by1">
                                         <div class="card-body">
                                             <div class="media align-items-center">
                                                 <div class="media-body">
-                                                    Your payment history
-                                                    <!-- <strong class="text-danger">$25.00</strong> <a href="#">#8331</a> -->
+                                                    Your haven\'t paid
+                                                    
                                                 </div>
                                                 <div class="media-right">
                                                     <a href="#"
@@ -124,7 +126,12 @@ if (isset($_GET['ref'])) {
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>';
+                                    } else {
+                                        echo '';
+                                    }
+
+                                    ?>
 
                                     <div class="card table-responsive"
                                          data-toggle="lists"
