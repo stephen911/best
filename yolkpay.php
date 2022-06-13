@@ -81,7 +81,7 @@ function payWithPaystack() {
        
 
       //alert("Payment complete! Reference: " + reference);
-    window.location="payment.php?ref='.$ref.'&amount='.$amount.'" ;
+    window.location="payhandler.php?ref='.$ref.'&amount='.$amount.'" ;
       
       // Make an AJAX call to your server with the reference to verify the transaction
       

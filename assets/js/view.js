@@ -21,7 +21,7 @@ el.addEventListener('change', function handleChange(event) {
 //   } else {
 //     shs.style.display = 'none';
 //   }
-  if (event.target.value == 'east') {
+  if (event.target.value == 'Ga - East Municipality') {
     east.style.display = 'block';
   } else {
     east.style.display = 'none';

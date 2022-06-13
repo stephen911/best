@@ -1,6 +1,8 @@
 <?php
  include 'functions.php';
  include 'yolkpay.php';
+ $yolk =  new YolkPay();
+
  checker();
  $user = users();
 //  var_dump($_SESSION['id']);
@@ -121,9 +123,9 @@ if (isset($_GET['ref'])) {
                                                     
                                                 </div>
                                                 <div class="media-right">
-                                                '.Yolkpay::handler().'
-                                                '.Yolkpay::payscript($user['title'], $user['name'], $user['email'], $user['contact'], 100, $ref = '').'
-                                                '.Yolkpay::pay('Pay Now').'
+                                                    '.$yolk->handler().'
+                                                    '.$yolk->payscript($user['title'], $user['name'], $user['email'], $user['contact'], 100, $ref = '').'
+                                                    '.$yolk->pay("Pay Now").'
                                                 </div>
                                             </div>
                                         </div>

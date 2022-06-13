@@ -4,7 +4,7 @@ const nameInput = document.getElementById('name')
 const downloadBtn = document.getElementById('download-btn')
 
 const image = new Image()
-image.src = 'assets/images/certificate.jpg'
+image.src = 'assets/images/certificate.png'
 image.onload = function () {
 	drawImage()
 }
@@ -15,7 +15,7 @@ function drawImage() {
 	ctx.font = '20px monotype arial'
 	ctx.fillStyle = '#00000'
 	ctx.textAlign = "center"
-	ctx.fillText(nameInput.value, 250, 180)
+	ctx.fillText(nameInput.value, 250, 173)
 }
 
 nameInput.addEventListener('input', function () {

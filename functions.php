@@ -143,15 +143,10 @@ function transactions()
             <div class="d-flex align-items-center">
                 <small class="text-uppercase text-muted mr-2">Transaction Amount</small>
                 <a href="student-invoice.php"
-                   class="text-body small"><span class="js-lists-values-document">7000</span></a>
+                   class="text-body small"><span class="js-lists-values-document">'.$row['amount'].'</span></a>
             </div>
         </td>
-        <td class="text-center">
-            <div class="d-flex align-items-center">
-                <small class="text-uppercase text-muted mr-2">Outstanding Balance</small>
-                <small class="text-uppercase">$<span class="js-lists-values-amount">2000</span>GHC</small>
-            </div>
-        </td>
+        
         <td class="text-center">
             <div class="d-flex align-items-center">
                 <small class="text-uppercase text-muted mr-2">Status</small>
@@ -162,7 +157,7 @@ function transactions()
         <td class="text-right">
             <div class="d-flex align-items-center text-right">
                 <small class="text-uppercase text-muted mr-2">Date</small>
-                <small class="text-uppercase js-lists-values-date">12 Feb 2018</small>
+                <small class="text-uppercase js-lists-values-date">'.$row['dateadded'].'</small>
             </div>
         </td>
     </tr>';
