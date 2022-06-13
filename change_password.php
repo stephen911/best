@@ -85,6 +85,28 @@
 
                                 <div class="card">
                                     <div class="list-group list-group-fit">
+                                    <div class="list-group-item">
+                                            <div class="form-group m-0" role="group" aria-labelledby="label-oldpassword">
+                                                <div class="form-row">
+                                                    <label id="label-oldpassword" for="oldpassword"
+                                                        class="col-sm-3 col-form-label form-label">Old
+                                                        password:</label>
+                                                    <div class="col-sm-9">
+                                                        <div role="group"
+                                                            class="input-group input-group-merge form-control-prepended">
+                                                            <input id="oldpassword" type="password" required="required"
+                                                                placeholder="Old password" aria-required="true"
+                                                                class="form-control form-control-prepended">
+                                                            <div class="input-group-prepend">
+                                                                <div class="input-group-text">
+                                                                    <span class="far fa-key"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="list-group-item">
                                             <div class="form-group m-0" role="group" aria-labelledby="label-password">
                                                 <div class="form-row">
