@@ -45,6 +45,12 @@ if (isset($_POST['btnupdate'])) {
               href="assets/css/fontawesome.css"
               rel="stylesheet">
 
+
+              <!-- sweetalert -->
+              <link type="text/css"
+              href="assets/css/sweetalert2.min.css"
+              rel="stylesheet">
+
         <!-- Preloader -->
         <link type="text/css"
               href="assets/vendor/spinkit.css"
@@ -127,13 +133,14 @@ if (isset($_POST['btnupdate'])) {
                                         </div>
                                         <div class="media-right mt-2 mt-xs-plus-0">
                                             <button class="btn btn-success"
-                                               >Pay Now</a>
+                                            onclick="payWithPaystack()">Pay Now</a>
                                         </div>
+                                        
                                     </div>
                                 </div>
                             </div>
                                     <h1 class="h2">NTC CPD Training</h1>
-                                    <form action="" method="POST">
+                                    <form action="" method="POST" class="updateuser">
                                     <div class="card">
                                         <div class="list-group list-group-fit">
                                         <div class="list-group-item">
@@ -530,6 +537,7 @@ if (isset($_POST['btnupdate'])) {
         <script src="assets/vendor/popper.min.js"></script>
         <script src="assets/vendor/bootstrap.min.js"></script>
 
+
         <!-- Perfect Scrollbar -->
         <script src="assets/vendor/perfect-scrollbar.min.js"></script>
 
@@ -539,6 +547,7 @@ if (isset($_POST['btnupdate'])) {
 
         <!-- App JS -->
         <script src="assets/js/app.js"></script>
+        <script src="assets/js/sweetalert2.all.min.js"></script>
 
         <script src="assets/js/view.js"></script>
 
@@ -654,6 +663,7 @@ if (isset($_POST['btnupdate'])) {
 
 
     <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script src="processor.js"></script>
 
     </body>
 

@@ -27,14 +27,12 @@ function login($email, $password)
             session_start();
             $_SESSION['id'] = $row['id'];
 
-            echo '<script>alert("Login successful");
-            window.location="dashboard.php";
-            </script>';
+            echo 'loginsuccess';
         } else {
-            echo '<script>alert("Login details not correct")</script>';
+            echo 'Login details not correct';
         }
     } else {
-        echo '<script>alert("User account does not exist")</script>';
+        echo 'loginfailed';
     }
 }
 
@@ -72,14 +70,28 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
     include 'starter.php';
     $up = mysqli_query($conn, "UPDATE users SET title='$title', name= '$name', gender = '$gender', email='$email', contact= '$contact', telegram='$telegram', lincesed ='$lincesed', nameofschool='$nameofschool', region ='$region', district ='$district', foodpref='$foodpref', heard ='$heard' WHERE id='$id'  ");
     if ($up) {
-        echo '<script>
-        alert("Record updated successfuly");
-        window.location="ntcreg.php";
-        </script>';
+        echo 'Updated Successfully';
     } else {
-        '<script>
-        alert("Failed to update record . Try again");
-        
-        </script>';
+        echo 'Failed to update record . Try again';
+    }
+}
+
+function register($name, $email, $password)
+{
+    $password = md5($password);
+    include 'starter.php';
+    $sel = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email'");
+    if (mysqli_num_rows($sel) >= 1) {
+        echo 'Sorry User account exist';
+    } else {
+        $dd = date('jS F, Y');
+        $ins = mysqli_query($conn, "INSERT INTO users (name,email,password,dateadded) VALUES('$name','$email','$password','$dd')");
+        if ($ins) {
+            session_start();
+            $_SESSION['id'] = $row['id'];
+            echo 'registered';
+        } else {
+            echo 'Registeration failed';
+        }
     }
 }
