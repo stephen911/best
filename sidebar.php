@@ -43,7 +43,7 @@
                                                         <span class="sidebar-menu-text">Basic Information</span>
                                                     </a>
                                                 </li> -->
-                                                <li class="sidebar-menu-item">
+                                                <!-- <li class="sidebar-menu-item">
                                                     <a class="sidebar-menu-button"
                                                        href="training.php">
                                                         <span class="sidebar-menu-text">Counselling Training</span>
@@ -54,7 +54,7 @@
                                                        href="booking.php">
                                                         <span class="sidebar-menu-text">Couns. Session Booking</span>
                                                     </a>
-                                                </li>
+                                                </li> -->
 
                                                
                                                 

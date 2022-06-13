@@ -344,9 +344,9 @@ if (isset($_POST['btnupdate'])) {
                                                         <select id="custom-select9" class="form-control custom-select" name="district">
                                                             <option selected value="<?php echo  ($user['district'] == '') ? '' : $user['district']; ?>"> <?php echo  ($user['district'] == '') ? 'Choose your District or Municipality' : $user['district']; ?>
                                                             </option>
-                                                            <option value="adenta">Adenta Municipality</option>
-                                                            <option value="east">Ga - East Municipality</option>
-                                                            <option value="madina">La Nkwantanang Madina Municipality</option>
+                                                            <option value="Adenta Municipality">Adenta Municipality</option>
+                                                            <option value="Ga - East Municipality">Ga - East Municipality</option>
+                                                            <option value="La Nkwantanang Madina Municipality">La Nkwantanang Madina Municipality</option>
                                                             <option value="other">other</option>
 
                                                         </select>
@@ -383,8 +383,8 @@ if (isset($_POST['btnupdate'])) {
                                                         <select id="custom-select2" class="form-control custom-select" name="venue">
                                                             <option selected value="<?php echo  ($user['venue'] == '') ? '' : $user['venue']; ?>"><?php echo  ($user['venue'] == '') ? 'Choose a venue of your choice' : $user['venue']; ?>
                                                             </option>
-                                                            <option value="ashongmang">Ashongmang Presby Church</option>
-                                                            <option value="kwabenya">Kwabenya SHS</option>
+                                                            <option value="Ashongmang Presby Church">Ashongmang Presby Church</option>
+                                                            <option value="Kwabenya SHS">Kwabenya SHS</option>
                                                             
 
                                                         </select>
@@ -403,10 +403,10 @@ if (isset($_POST['btnupdate'])) {
                                                         <select id="custom-select2" class="form-control custom-select" name="foodpref">
                                                             <option selected  value="<?php echo  ($user['foodpref'] == '') ? '' : $user['foodpref']; ?>">Choose food Preference <?php echo  ($user['foodpref'] == '') ? 'Choose food Preference ' : $user['foodpref']; ?>
                                                             </option>
-                                                            <option value="waakye">Waakye with chicken</option>
-                                                            <option value="jollof">Jollof with chicken</option>
-                                                            <option value="rice">plain rice with chicken</option>
-                                                            <option value="kenkey">Ga-kenkey with Sardine</option>
+                                                            <option value="Waakye with chicken">Waakye with chicken</option>
+                                                            <option value="Jollof with chicken">Jollof with chicken</option>
+                                                            <option value="plain rice with chicken">plain rice with chicken</option>
+                                                            <option value="Ga-kenkey with Sardine">Ga-kenkey with Sardine</option>
                                                             
 
                                                         </select>

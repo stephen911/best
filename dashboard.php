@@ -265,7 +265,7 @@
                                                 </div>
                                                 <div class="media-right">
                                                     <a class="btn btn-sm btn-primary"
-                                                       href="ntcreg.php">Complete Registration</a>
+                                                       href="ntcreg.php">Continue Registration</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -275,8 +275,7 @@
                                             <li class="list-group-item">
                                                 <div class="media align-items-center">
                                                     <div class="media-body">
-                                                        <a class="text-body"
-                                                           href="#"><strong>Email Address</strong></a><br>
+                                                        <strong>Email Address</strong><br>
                                                         <div class="d-flex align-items-center">
                                                             <!-- <small class="text-black-50 text-uppercase mr-2">Course</small> -->
                                                             <a href="#"><?php echo $user['email']; ?></a>
@@ -292,8 +291,7 @@
                                             <li class="list-group-item">
                                                 <div class="media align-items-center">
                                                     <div class="media-body">
-                                                        <a class="text-body"
-                                                           href="#"><strong>Phone Number</strong></a><br>
+                                                        <strong>Phone Number</strong><br>
                                                         <div class="d-flex align-items-center">
                                                             <!-- <small class="text-black-50 text-uppercase mr-2">Course</small> -->
                                                             <a href="#"><?php echo $user['contact']; ?></a>
@@ -308,8 +306,7 @@
                                             <li class="list-group-item">
                                                 <div class="media align-items-center">
                                                     <div class="media-body">
-                                                        <a class="text-body"
-                                                           href="#"><strong>Telegram Phone Number</strong></a><br>
+                                                        <strong>Telegram Phone Number</strong><br>
                                                         <div class="d-flex align-items-center">
                                                             <!-- <small class="text-black-50 text-uppercase mr-2">Course</small> -->
                                                             <a href="#"><?php echo $user['telegram']; ?></a>
@@ -324,8 +321,7 @@
                                             <li class="list-group-item">
                                                 <div class="media align-items-center">
                                                     <div class="media-body">
-                                                        <a class="text-body"
-                                                           href="#"><strong>Name of School</strong></a><br>
+                                                        <strong>Name of School</strong><br>
                                                         <div class="d-flex align-items-center">
                                                             <!-- <small class="text-black-50 text-uppercase mr-2">Course</small> -->
                                                             <a href="#"><?php echo $user['nameofschool']; ?></a>
@@ -341,8 +337,7 @@
                                             <li class="list-group-item">
                                                 <div class="media align-items-center">
                                                     <div class="media-body">
-                                                        <a class="text-body"
-                                                           href="#"><strong>Nation teachers council license number</strong></a><br>
+                                                        <strong>National Teachers Council License Number</strong><br>
                                                         <div class="d-flex align-items-center">
                                                             <!-- <small class="text-black-50 text-uppercase mr-2">Course</small> -->
                                                             <a href="#"><?php echo $user['lincesed']; ?></a>
@@ -357,8 +352,7 @@
                                             <li class="list-group-item">
                                                 <div class="media align-items-center">
                                                     <div class="media-body">
-                                                        <a class="text-body"
-                                                           href="#"><strong>Region</strong></a><br>
+                                                        <strong>Region</strong><br>
                                                         <div class="d-flex align-items-center">
                                                             <!-- <small class="text-black-50 text-uppercase mr-2">Course</small> -->
                                                             <a href="#"><?php echo $user['region']; ?></a>
@@ -373,8 +367,7 @@
                                             <li class="list-group-item">
                                                 <div class="media align-items-center">
                                                     <div class="media-body">
-                                                        <a class="text-body"
-                                                           href="#"><strong>District</strong></a><br>
+                                                        <strong>District</strong><br>
                                                         <div class="d-flex align-items-center">
                                                             <!-- <small class="text-black-50 text-uppercase mr-2">Course</small> -->
                                                             <a href="#"><?php echo $user['district']; ?></a>
