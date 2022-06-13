@@ -20,25 +20,40 @@
 
     <meta name="robots" content="noindex">
 
-    <!-- Custom Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Oswald:400,500,700%7CRoboto:400,500%7CRoboto:400,500&amp;display=swap"
-        rel="stylesheet">
+     <!-- Custom Fonts -->
+     <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,700%7CRoboto:400,500%7CRoboto:400,500&amp;display=swap"
+              rel="stylesheet">
 
-    <!-- Perfect Scrollbar -->
-    <link type="text/css" href="assets/vendor/perfect-scrollbar.css" rel="stylesheet">
+        <!-- Perfect Scrollbar -->
+        <link type="text/css"
+              href="assets/vendor/perfect-scrollbar.css"
+              rel="stylesheet">
 
-    <!-- Material Design Icons -->
-    <link type="text/css" href="assets/css/material-icons.css" rel="stylesheet">
+        <!-- Material Design Icons -->
+        <link type="text/css"
+              href="assets/css/material-icons.css"
+              rel="stylesheet">
 
-    <!-- Font Awesome Icons -->
-    <link type="text/css" href="assets/css/fontawesome.css" rel="stylesheet">
+        <!-- Font Awesome Icons -->
+        <link type="text/css"
+              href="assets/css/fontawesome.css"
+              rel="stylesheet">
 
-    <!-- Preloader -->
-    <link type="text/css" href="assets/vendor/spinkit.css" rel="stylesheet">
 
-    <!-- App CSS -->
-    <link type="text/css" href="assets/css/app.css" rel="stylesheet">
+              <!-- sweetalert -->
+              <link type="text/css"
+              href="assets/css/sweetalert2.min.css"
+              rel="stylesheet">
+
+        <!-- Preloader -->
+        <link type="text/css"
+              href="assets/vendor/spinkit.css"
+              rel="stylesheet">
+
+        <!-- App CSS -->
+        <link type="text/css"
+              href="assets/css/app.css"
+              rel="stylesheet">
 
 </head>
 
@@ -188,28 +203,38 @@
         </div>
     </div>
 
-    <!-- jQuery -->
-    <script src="assets/vendor/jquery.min.js"></script>
+   <!-- jQuery -->
+   <script src="assets/vendor/jquery.min.js"></script>
+        
 
-    <!-- Bootstrap -->
-    <script src="assets/vendor/popper.min.js"></script>
-    <script src="assets/vendor/bootstrap.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="assets/vendor/popper.min.js"></script>
+        <script src="assets/vendor/bootstrap.min.js"></script>
 
-    <!-- Perfect Scrollbar -->
-    <script src="assets/vendor/perfect-scrollbar.min.js"></script>
 
-    <!-- MDK -->
-    <script src="assets/vendor/dom-factory.js"></script>
-    <script src="assets/vendor/material-design-kit.js"></script>
+        <!-- Perfect Scrollbar -->
+        <script src="assets/vendor/perfect-scrollbar.min.js"></script>
 
-    <!-- App JS -->
-    <script src="assets/js/app.js"></script>
+        <!-- MDK -->
+        <script src="assets/vendor/dom-factory.js"></script>
+        <script src="assets/vendor/material-design-kit.js"></script>
 
-    <!-- Highlight.js -->
-    <script src="assets/js/hljs.js"></script>
+        <!-- App JS -->
+        <script src="assets/js/app.js"></script>
+        <script src="assets/js/sweetalert2.all.min.js"></script>
 
-    <!-- App Settings (safe to remove) -->
-    <script src="assets/js/app-settings.js"></script>
+        <script src="assets/js/view.js"></script>
+
+        <!-- Highlight.js -->
+        <script src="assets/js/hljs.js"></script>
+
+        <!-- App Settings (safe to remove) -->
+        <script src="assets/js/app-settings.js"></script>
+
+      
+
+        
+    <script src="processor.js"></script>
 
 </body>
 

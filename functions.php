@@ -115,10 +115,11 @@ function payment($uid, $ref, $amount)
 function changepass($id, $password, $newpass)
 {
     $password = md5($password);
+    $newpass = md5($newpass);
     include 'starter.php';
     $check = mysqli_query($conn, "SELECT * FROM users WHERE password = '$password'");
     if (mysqli_num_rows($check) >= 1) {
-        $up = mysqli_query($conn, "UPDATE users SET password = '$password' WHERE id ='$id'");
+        $up = mysqli_query($conn, "UPDATE users SET password = '$newpass' WHERE id ='$id'");
         if ($up) {
             echo 'changepasssuccess';
         } else {
