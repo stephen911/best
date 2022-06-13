@@ -1,3 +1,11 @@
+<?php
+ include 'functions.php';
+ include 'yolkpay.php';
+ checker();
+ $user = users();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -11,25 +19,40 @@
 
     <meta name="robots" content="noindex">
 
-    <!-- Custom Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Oswald:400,500,700%7CRoboto:400,500%7CRoboto:400,500&amp;display=swap"
-        rel="stylesheet">
+     <!-- Custom Fonts -->
+     <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,700%7CRoboto:400,500%7CRoboto:400,500&amp;display=swap"
+              rel="stylesheet">
 
-    <!-- Perfect Scrollbar -->
-    <link type="text/css" href="assets/vendor/perfect-scrollbar.css" rel="stylesheet">
+        <!-- Perfect Scrollbar -->
+        <link type="text/css"
+              href="assets/vendor/perfect-scrollbar.css"
+              rel="stylesheet">
 
-    <!-- Material Design Icons -->
-    <link type="text/css" href="assets/css/material-icons.css" rel="stylesheet">
+        <!-- Material Design Icons -->
+        <link type="text/css"
+              href="assets/css/material-icons.css"
+              rel="stylesheet">
 
-    <!-- Font Awesome Icons -->
-    <link type="text/css" href="assets/css/fontawesome.css" rel="stylesheet">
+        <!-- Font Awesome Icons -->
+        <link type="text/css"
+              href="assets/css/fontawesome.css"
+              rel="stylesheet">
 
-    <!-- Preloader -->
-    <link type="text/css" href="assets/vendor/spinkit.css" rel="stylesheet">
 
-    <!-- App CSS -->
-    <link type="text/css" href="assets/css/app.css" rel="stylesheet">
+              <!-- sweetalert -->
+              <link type="text/css"
+              href="assets/css/sweetalert2.min.css"
+              rel="stylesheet">
+
+        <!-- Preloader -->
+        <link type="text/css"
+              href="assets/vendor/spinkit.css"
+              rel="stylesheet">
+
+        <!-- App CSS -->
+        <link type="text/css"
+              href="assets/css/app.css"
+              rel="stylesheet">
 
 </head>
 
@@ -54,7 +77,7 @@
     </div>
 
     <!-- Header Layout -->
-    <?php include ("navbar.php") ?>
+    <?php include 'navbar.php'; ?>
 
     <!-- // END Header -->
 
@@ -65,7 +88,7 @@
             <div class="mdk-drawer-layout__content page ">
 
                 <div class="container-fluid page__container p-0">
-                    <form action="">
+                    <form action="" class="changepass">
                         <div class="row m-0">
                             <div class="col-lg container-fluid page__container">
                                 <ol class="breadcrumb">
@@ -75,12 +98,12 @@
 
                                 <h4>Change Password</h4>
 
-                                <div class="alert alert-light border-1 border-left-3 border-left-primary d-flex">
+                                <!-- <div class="alert alert-light border-1 border-left-3 border-left-primary d-flex">
                                     <i class="material-icons text-success mr-3">check_circle</i>
                                     <div class="text-body">An email with password reset instructions has been sent to
                                         your
                                         email address, if it exists on our system.</div>
-                                </div>
+                                </div> -->
 
                                 <div class="card">
                                     <div class="list-group list-group-fit">
@@ -95,7 +118,7 @@
                                                             class="input-group input-group-merge form-control-prepended">
                                                             <input id="oldpassword" type="password" required="required"
                                                                 placeholder="Old password" aria-required="true"
-                                                                class="form-control form-control-prepended">
+                                                                class="form-control form-control-prepended" name="password">
                                                             <div class="input-group-prepend">
                                                                 <div class="input-group-text">
                                                                     <span class="far fa-key"></span>
@@ -116,7 +139,7 @@
                                                             class="input-group input-group-merge form-control-prepended">
                                                             <input id="password" type="password" required="required"
                                                                 placeholder="New password" aria-required="true"
-                                                                class="form-control form-control-prepended">
+                                                                class="form-control form-control-prepended" name="newpass">
                                                             <div class="input-group-prepend">
                                                                 <div class="input-group-text">
                                                                     <span class="far fa-key"></span>
@@ -138,7 +161,11 @@
                                                             class="input-group input-group-merge form-control-prepended">
                                                             <input id="password2" type="password" required="required"
                                                                 placeholder="Confirm password" aria-required="true"
-                                                                class="form-control form-control-prepended">
+                                                                class="form-control form-control-prepended" name="repass">
+
+                                                                <input id="" type="hidden" 
+                                                                placeholder="Confirm password" aria-required="true"
+                                                                class="form-control form-control-prepended" name="id" value="<?php echo $_SESSION['id']; ?>">
                                                             <div class="input-group-prepend">
                                                                 <div class="input-group-text">
                                                                     <span class="far fa-key"></span>
@@ -167,7 +194,7 @@
 
             </div>
 
-            <?php include ("sidebar.php") ?>
+            <?php include 'sidebar.php'; ?>
 
             <!-- App Settings FAB -->
 
@@ -175,28 +202,38 @@
         </div>
     </div>
 
-    <!-- jQuery -->
-    <script src="assets/vendor/jquery.min.js"></script>
+   <!-- jQuery -->
+   <script src="assets/vendor/jquery.min.js"></script>
+        
 
-    <!-- Bootstrap -->
-    <script src="assets/vendor/popper.min.js"></script>
-    <script src="assets/vendor/bootstrap.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="assets/vendor/popper.min.js"></script>
+        <script src="assets/vendor/bootstrap.min.js"></script>
 
-    <!-- Perfect Scrollbar -->
-    <script src="assets/vendor/perfect-scrollbar.min.js"></script>
 
-    <!-- MDK -->
-    <script src="assets/vendor/dom-factory.js"></script>
-    <script src="assets/vendor/material-design-kit.js"></script>
+        <!-- Perfect Scrollbar -->
+        <script src="assets/vendor/perfect-scrollbar.min.js"></script>
 
-    <!-- App JS -->
-    <script src="assets/js/app.js"></script>
+        <!-- MDK -->
+        <script src="assets/vendor/dom-factory.js"></script>
+        <script src="assets/vendor/material-design-kit.js"></script>
 
-    <!-- Highlight.js -->
-    <script src="assets/js/hljs.js"></script>
+        <!-- App JS -->
+        <script src="assets/js/app.js"></script>
+        <script src="assets/js/sweetalert2.all.min.js"></script>
 
-    <!-- App Settings (safe to remove) -->
-    <script src="assets/js/app-settings.js"></script>
+        <script src="assets/js/view.js"></script>
+
+        <!-- Highlight.js -->
+        <script src="assets/js/hljs.js"></script>
+
+        <!-- App Settings (safe to remove) -->
+        <script src="assets/js/app-settings.js"></script>
+
+      
+
+        
+    <script src="processor.js"></script>
 
 </body>
 

@@ -1,13 +1,14 @@
 <?php
  include 'functions.php';
+ include 'yolkpay.php';
  checker();
  $user = users();
 //  var_dump($_SESSION['id']);
 
-if (isset($_POST['btnupdate'])) {
-    extract($_POST);
-    updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $lincesed, $nameofschool, $region, $district, $foodpref, $heard);
-}
+// if (isset($_POST['btnupdate'])) {
+//     extract($_POST);
+//     updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $lincesed, $nameofschool, $region, $district, $foodpref, $heard);
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en"
@@ -121,24 +122,33 @@ if (isset($_POST['btnupdate'])) {
                                     </div>
                                 </div>
                             </div>
-                            <div class="card border-left-3 border-left-primary card-2by1">
-                                <div class="card-body">
-                                    <div class="media flex-wrap align-items-center">
-                                        <div class="media-left">
-                                            <i class="material-icons text-muted-light">credit_card</i>
+                            <?php
+                                    if ($user['paystatus'] == 'paid') {
+                                        echo '';
+                                    } else {
+                                        echo '<div class="card border-left-3 border-left-primary card-2by1">
+                                        <div class="card-body">
+                                            <div class="media flex-wrap align-items-center">
+                                                <div class="media-left">
+                                                    <i class="material-icons text-muted-light">credit_card</i>
+                                                </div>
+                                                <div class="media-body"
+                                                     style="min-width: 180px">
+                                                     <small><b>Please we humbly entreat you to make payment right away to book your seat. Please call +233 246 535 961 when you have successfully made payment. Thank you</b></small>
+                                                </div>
+                                                <div class="media-right mt-2 mt-xs-plus-0">
+                                                    
+                                            
+                                                 '.Yolkpay::handler().'
+                                                '.Yolkpay::payscript($user['title'], $user['name'], $user['email'], $user['contact'], 100, $ref = '').'
+                                                '.Yolkpay::pay('Pay Now').'
+                                                </div>
+                                                
+                                            </div>
                                         </div>
-                                        <div class="media-body"
-                                             style="min-width: 180px">
-                                             <small>Please we humbly entreat you to make payment right away to book your seat. Please call +233 246 535 961 when you have successfully made payment. Thank you</small>
-                                        </div>
-                                        <div class="media-right mt-2 mt-xs-plus-0">
-                                            <button class="btn btn-success"
-                                            onclick="payWithPaystack()">Pay Now</a>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
+                                    </div>';
+                                    }
+                            ?>
                                     <h1 class="h2">NTC CPD Training</h1>
                                     <form action="" method="POST" class="updateuser">
                                     <div class="card">
@@ -310,6 +320,28 @@ if (isset($_POST['btnupdate'])) {
                                                     </div>
                                                 </div>
                                             </div>
+
+
+
+
+                                            <!-- <div class="list-group-item">
+                                                <div class="form-group m-0"
+                                                     role="group"
+                                                     aria-labelledby="label-schname">
+                                                    <div class="form-row">
+                                                        <label id="label-schname"
+                                                               for="venue"
+                                                               class="col-md-3 col-form-label form-label">Venue</label>
+                                                        <div class="col-md-9">
+                                                            <input id="venue"
+                                                                   type="text"
+                                                                   placeholder="Venue"
+                                                                   value="<?php echo  ($user['venue'] == '') ? '' : $user['venue']; ?>"
+                                                                   class="form-control" name="venue">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> -->
                                             <!-- <div class="form-group">
                                                 <div class="custom-control custom-checkbox">
                                                     <input id="customCheck01"
@@ -408,7 +440,7 @@ if (isset($_POST['btnupdate'])) {
                                                         class="col-md-3 col-form-label form-label">Food Preference</label>
                                                     <div class="col-md-9">
                                                         <select id="custom-select2" class="form-control custom-select" name="foodpref">
-                                                            <option selected  value="<?php echo  ($user['foodpref'] == '') ? '' : $user['foodpref']; ?>">Choose food Preference <?php echo  ($user['foodpref'] == '') ? 'Choose food Preference ' : $user['foodpref']; ?>
+                                                            <option selected  value="<?php echo  ($user['foodpref'] == '') ? '' : $user['foodpref']; ?>"> <?php echo  ($user['foodpref'] == '') ? 'Choose food Preference ' : $user['foodpref']; ?>
                                                             </option>
                                                             <option value="Waakye with chicken">Waakye with chicken</option>
                                                             <option value="Jollof with chicken">Jollof with chicken</option>
@@ -429,7 +461,7 @@ if (isset($_POST['btnupdate'])) {
                                                         class="col-md-3 col-form-label form-label">How did you hear/know of this training</label>
                                                     <div class="col-md-9">
                                                         <select id="custom-select2" class="form-control custom-select" name="heard">
-                                                            <option  selected value="<?php echo  ($user['heard'] == '') ? '' : $user['heard']; ?>">select how you heard about this training<?php echo  ($user['heard'] == 'select how you heard about this training') ? '' : $user['heard']; ?>
+                                                            <option  selected value="<?php echo  ($user['heard'] == '') ? '' : $user['heard']; ?>"><?php echo  ($user['heard'] == 'select how you heard about this training') ? '' : $user['heard']; ?>
                                                             </option>
                                                             <option value="website">TUCEE Website</option>
                                                             <option value="gnacc">GNACC Website</option>
@@ -532,6 +564,7 @@ if (isset($_POST['btnupdate'])) {
 
         <!-- jQuery -->
         <script src="assets/vendor/jquery.min.js"></script>
+        
 
         <!-- Bootstrap -->
         <script src="assets/vendor/popper.min.js"></script>
@@ -557,112 +590,9 @@ if (isset($_POST['btnupdate'])) {
         <!-- App Settings (safe to remove) -->
         <script src="assets/js/app-settings.js"></script>
 
+      
 
-        <script>
-            var paymentForm = document.getElementById('paymentForm');
-
-            paymentForm.addEventListener('submit', payWithPaystack, false);
-
-            function payWithPaystack() {
-                
-                var handler = PaystackPop.setup({
-                
-                    key: 'pk_test_25b3d5f8bfb5621c4569175877020aafe6085a0a', // Replace with your public key
-                
-                    email: '<?php echo $email; ?>',
-                
-                    amount: <?php echo $amount * 100; ?>, // the amount value is multiplied by 100 to convert to the lowest currency unit
-                
-                    currency: 'GHS', // Use GHS for Ghana Cedis or USD for US Dollars
-                
-                    firstname: '<?php echo $fname; ?>',
-                
-                    lastname: '<?php echo $lname; ?>',
-                
-                    ref: '<?php echo $myref; ?>', // Replace with a reference you generated
-                    metadata: {
-                        custom_fields : 
-                            [
-                                    {
-                                        display_name: 'Mobile Number',
-                                        variable_name: 'mobile_number',
-                                        value:"+233556676471"
-                                    }
-                                    
-                            
-                            ]
-                    },
-                
-                    callback: function(response) {
-                
-                    //this happens after the payment is completed successfully
-                
-                    var reference = response.reference;
-                    var fname  = '<?php echo $fname; ?>';
-                    var lname = '<?php echo $lname; ?>';
-                    var email = '<?php echo $email; ?>';
-                    var amount = '<?php echo $amount; ?>';
-                
-                    //   alert('Payment complete! Reference: ' + reference);
-                    // window.location='success.php?ref='+ reference + '&fname=' + fname + '&lname=' + lname + '&email=' + email + '&amount=' + amount ;
-                    
-                    // Make an AJAX call to your server with the reference to verify the transaction
-                    
-                        if(response.status == "success"){
-                            var myrf = '<?php echo $myref; ?>';
-                            var mimi = 'dollar';
-                            var formdt = $('#paymentForm')[0]; // You need to use standard javascript object here
-                            var formData = new FormData(formdt);
-                        
-                            var opt = {
-                                url : "dollar.php?action=paysuccess",
-                                type: "post",
-                                data:formData ,
-                                contentType: false, // NEEDED, DON'T OMIT THIS (requires jQuery 1.6+)
-                                processData: false,
-                                cache:false, // NEEDED, DON'T OMIT THIS
-
-                                success: function(rep){
-                                setTimeout(function () { 
-                                    swal({
-                                    title: "Success!",
-                                    text: "<small>You purchase is successfull  </small>",
-                                    type: "success",
-                                    html: true,
-                                    confirmButtonText: "OK"
-                                    },
-                                    function(isConfirm){
-                                    if (isConfirm) {
-                                        window.location = "profile.php";
-                                    }
-                                    }); }, 1000);
-                                }
-                                
-                            }
-                            $.ajax(opt);
-                        
-                            
-
-                                
-                        
-                        }            
-                    },
-                
-                    onClose: function() {
-                
-                    alert('Transaction was not completed, window closed.');
-                
-                    },
-                
-                });
-                
-                handler.openIframe();
-                
-                }
-        </script>
-
-
-    <script src="https://js.paystack.co/v1/inline.js"></script>
+        
     <script src="processor.js"></script>
 
     </body>

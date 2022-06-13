@@ -28,6 +28,16 @@ require 'functions.php';
             }
             break;
 
+        case 'changepass':
+
+            extract($_POST);
+            if ($newpass != $repass) {
+                echo 'Password do not match';
+            } else {
+                changepass($id, $password, $newpass);
+            }
+                break;
+
         default:
 
         break;

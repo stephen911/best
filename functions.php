@@ -86,12 +86,46 @@ function register($name, $email, $password)
     } else {
         $dd = date('jS F, Y');
         $ins = mysqli_query($conn, "INSERT INTO users (name,email,password,dateadded) VALUES('$name','$email','$password','$dd')");
+
         if ($ins) {
+            $sel = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email' AND password='$password'");
+            $row = mysqli_fetch_array($sel);
             session_start();
             $_SESSION['id'] = $row['id'];
             echo 'registered';
         } else {
             echo 'Registeration failed';
         }
+    }
+}
+
+function payment($uid, $ref, $amount)
+{
+    include 'starter.php';
+    $dateadded = date('jS F,Y');
+
+    $ins = mysqli_query($conn, "INSERT INTO transactions (uid,transid,amount,dateadded) VALUES('$uid','$ref','$amount','$dateadded')");
+    $up = mysqli_query($conn, "UPDATE users SET paystatus ='paid' WHERE id ='$uid'");
+
+    if ($ins || $up) {
+        // echo''
+    }
+}
+
+function changepass($id, $password, $newpass)
+{
+    $password = md5($password);
+    $newpass = md5($newpass);
+    include 'starter.php';
+    $check = mysqli_query($conn, "SELECT * FROM users WHERE password = '$password'");
+    if (mysqli_num_rows($check) >= 1) {
+        $up = mysqli_query($conn, "UPDATE users SET password = '$newpass' WHERE id ='$id'");
+        if ($up) {
+            echo 'changepasssuccess';
+        } else {
+            echo 'Failed to change password';
+        }
+    } else {
+        echo 'Incorrect Password';
     }
 }

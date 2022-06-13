@@ -1,3 +1,19 @@
+<?php
+ include 'functions.php';
+ include 'yolkpay.php';
+ checker();
+ $user = users();
+//  var_dump($_SESSION['id']);
+
+if (isset($_GET['ref'])) {
+    extract($_GET);
+
+    $uid = $_SESSION['id'];
+
+    payment($uid, $ref, $amount);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en"
       dir="ltr">
@@ -16,8 +32,8 @@
         <meta name="robots"
               content="noindex">
 
-        <!-- Custom Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,700%7CRoboto:400,500%7CRoboto:400,500&amp;display=swap"
+       <!-- Custom Fonts -->
+       <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,700%7CRoboto:400,500%7CRoboto:400,500&amp;display=swap"
               rel="stylesheet">
 
         <!-- Perfect Scrollbar -->
@@ -33,6 +49,12 @@
         <!-- Font Awesome Icons -->
         <link type="text/css"
               href="assets/css/fontawesome.css"
+              rel="stylesheet">
+
+
+              <!-- sweetalert -->
+              <link type="text/css"
+              href="assets/css/sweetalert2.min.css"
               rel="stylesheet">
 
         <!-- Preloader -->
@@ -68,7 +90,7 @@
         </div>
 
         <!-- Header Layout -->
-        <?php include("navbar.php") ?>
+        <?php include 'navbar.php'; ?>
             <!-- // END Header -->
 
             <!-- Header Layout Content -->
@@ -282,7 +304,7 @@
 
                     </div>
 
-                    <?php include ("sidebar.php") ?>
+                    <?php include 'sidebar.php'; ?>
 
 
                 <!-- App Settings FAB -->
