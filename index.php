@@ -124,15 +124,15 @@ if (isset($_POST['btnlogin'])) {
                                 <button type="submit"
                                         class="btn btn-primary btn-block" name="btnlogin">Login</button>
                             </div>
-                            <div class="text-center">
+                            <!-- <div class="text-center">
                                 <a href="forgot-password.php"
                                    class="text-black-70"
                                    style="text-decoration: underline;">Forgot Password?</a>
-                            </div>
+                            </div> -->
                         </form>
                     </div>
                     <div class="card-footer text-center text-black-50">
-                        Not registered yet? <a href="signup.php">Sign Up</a>
+                        Not registered yet? <a href="signup.php">Register</a>
                     </div>
                 </div>
             </div>
