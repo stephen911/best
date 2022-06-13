@@ -122,27 +122,33 @@ if (isset($_POST['btnupdate'])) {
                                     </div>
                                 </div>
                             </div>
-                            <div class="card border-left-3 border-left-primary card-2by1">
-                                <div class="card-body">
-                                    <div class="media flex-wrap align-items-center">
-                                        <div class="media-left">
-                                            <i class="material-icons text-muted-light">credit_card</i>
-                                        </div>
-                                        <div class="media-body"
-                                             style="min-width: 180px">
-                                             <small>Please we humbly entreat you to make payment right away to book your seat. Please call +233 246 535 961 when you have successfully made payment. Thank you</small>
-                                        </div>
-                                        <div class="media-right mt-2 mt-xs-plus-0">
+                            <?php
+                                    if ($user['paystatus'] == 'paid') {
+                                        echo '<div class="card border-left-3 border-left-primary card-2by1">
+                                        <div class="card-body">
+                                            <div class="media flex-wrap align-items-center">
+                                                <div class="media-left">
+                                                    <i class="material-icons text-muted-light">credit_card</i>
+                                                </div>
+                                                <div class="media-body"
+                                                     style="min-width: 180px">
+                                                     <small>Please we humbly entreat you to make payment right away to book your seat. Please call +233 246 535 961 when you have successfully made payment. Thank you</small>
+                                                </div>
+                                                <div class="media-right mt-2 mt-xs-plus-0">
+                                                    
                                             
-                                        <?php
-                                        echo Yolkpay::handler();
-                                        echo Yolkpay::payscript($user['title'], $user['name'], $user['email'], $user['contact'], 100, $ref = '');
-                                        echo Yolkpay::pay(); ?>
+                                                 '.Yolkpay::handler().'
+                                                '.Yolkpay::payscript($user['title'], $user['name'], $user['email'], $user['contact'], 100, $ref = '').'
+                                                '.Yolkpay::pay('Pay Now').'
+                                                </div>
+                                                
+                                            </div>
                                         </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
+                                    </div>';
+                                    } else {
+                                        echo '';
+                                    }
+                            ?>
                                     <h1 class="h2">NTC CPD Training</h1>
                                     <form action="" method="POST" class="updateuser">
                                     <div class="card">
