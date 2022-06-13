@@ -129,3 +129,8 @@ function changepass($id, $password, $newpass)
         echo 'Incorrect Password';
     }
 }
+function transaction($id)
+{
+    include 'starter.php';
+    
+}
