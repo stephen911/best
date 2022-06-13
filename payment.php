@@ -147,12 +147,12 @@ if (isset($_GET['ref'])) {
                                          data-lists-sort-by="js-lists-values-document"
                                          data-lists-sort-desc="true">
                                         <table class="table mb-0">
-                                            <thead class="thead-light">
+                                            <!-- <thead class="thead-light">
                                                 <tr>
                                                     <th colspan="4">
-                                                        <!-- <a href="javascript:void(0)"
+                                                        <a href="javascript:void(0)"
                                                            class="sort"
-                                                           data-sort="js-lists-values-document">Document</a> -->
+                                                           data-sort="js-lists-values-document">Document</a>
                                                         <a href="javascript:void(0)"
                                                            class="sort"
                                                            data-sort="js-lists-values-amount">Amount</a>
@@ -164,7 +164,7 @@ if (isset($_GET['ref'])) {
                                                            data-sort="js-lists-values-date">Date</a>
                                                     </th>
                                                 </tr>
-                                            </thead>
+                                            </thead> -->
                                             <tbody class="list">
 
                                                 <?php transactions($_SESSION['id']);?>
@@ -232,7 +232,7 @@ if (isset($_GET['ref'])) {
                                     </div>
 
                                     <!-- Pagination -->
-                                    <ul class="pagination justify-content-center pagination-sm">
+                                    <!-- <ul class="pagination justify-content-center pagination-sm">
                                         <li class="page-item disabled">
                                             <a class="page-link"
                                                href="#"
@@ -259,7 +259,7 @@ if (isset($_GET['ref'])) {
                                                       class="material-icons">chevron_right</span>
                                             </a>
                                         </li>
-                                    </ul>
+                                    </ul> -->
 
                                 </div>
                                 <div id="page-nav"
