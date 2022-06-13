@@ -16,9 +16,9 @@ class Yolkpay
     public $amount;
     public $orderid;
 
-    public static function pay()
+    public static function pay($text = 'Pay')
     {
-        echo '<button class="btn btn-success" type="submit" onclick="payWithPaystack()"> Pay </button>';
+        echo '<button class="btn btn-success" type="submit" onclick="payWithPaystack()"> '.$text.' </button>';
     }
 
     public static function handler()
