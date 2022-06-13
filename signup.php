@@ -171,7 +171,7 @@
                             </div>
                             <button type="submit"
                                     class="btn btn-primary btn-block mb-3">Sign Up</button>
-                            <div class="form-group text-center mb-0">
+                            <!-- <div class="form-group text-center mb-0">
                                 <div class="custom-control custom-checkbox">
                                     <input id="terms"
                                            type="checkbox"
@@ -183,7 +183,7 @@
                                            class="text-black-70"
                                            style="text-decoration: underline;">Terms of Use</a></label>
                                 </div>
-                            </div>
+                            </div> -->
                         </form>
                     </div>
                     <div class="card-footer text-center text-black-50">Already signed up? <a href="index.php">Login</a></div>
