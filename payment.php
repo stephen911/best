@@ -32,8 +32,8 @@ if (isset($_GET['ref'])) {
         <meta name="robots"
               content="noindex">
 
-        <!-- Custom Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,700%7CRoboto:400,500%7CRoboto:400,500&amp;display=swap"
+       <!-- Custom Fonts -->
+       <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,700%7CRoboto:400,500%7CRoboto:400,500&amp;display=swap"
               rel="stylesheet">
 
         <!-- Perfect Scrollbar -->
@@ -49,6 +49,12 @@ if (isset($_GET['ref'])) {
         <!-- Font Awesome Icons -->
         <link type="text/css"
               href="assets/css/fontawesome.css"
+              rel="stylesheet">
+
+
+              <!-- sweetalert -->
+              <link type="text/css"
+              href="assets/css/sweetalert2.min.css"
               rel="stylesheet">
 
         <!-- Preloader -->
