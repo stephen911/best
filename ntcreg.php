@@ -133,8 +133,11 @@ if (isset($_POST['btnupdate'])) {
                                              <small>Please we humbly entreat you to make payment right away to book your seat. Please call +233 246 535 961 when you have successfully made payment. Thank you</small>
                                         </div>
                                         <div class="media-right mt-2 mt-xs-plus-0">
-                                            <button class="btn btn-success"
-                                            onclick="payWithPaystack()">Pay Now</a>
+                                            
+                                        <?php
+                                        echo Yolkpay::handler();
+                                        echo Yolkpay::payscript($user['title'], $user['name'], $user['email'], $user['contact'], 100, $ref = '');
+                                        echo Yolkpay::pay(); ?>
                                         </div>
                                         
                                     </div>
@@ -533,6 +536,7 @@ if (isset($_POST['btnupdate'])) {
 
         <!-- jQuery -->
         <script src="assets/vendor/jquery.min.js"></script>
+        
 
         <!-- Bootstrap -->
         <script src="assets/vendor/popper.min.js"></script>
@@ -558,7 +562,8 @@ if (isset($_POST['btnupdate'])) {
         <!-- App Settings (safe to remove) -->
         <script src="assets/js/app-settings.js"></script>
 
-    <
+      
+
         
     <script src="processor.js"></script>
 
