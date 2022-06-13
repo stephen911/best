@@ -86,7 +86,10 @@ function register($name, $email, $password)
     } else {
         $dd = date('jS F, Y');
         $ins = mysqli_query($conn, "INSERT INTO users (name,email,password,dateadded) VALUES('$name','$email','$password','$dd')");
+
         if ($ins) {
+            $sel = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email' AND password='$password'");
+            $row = mysqli_fetch_array($sel);
             session_start();
             $_SESSION['id'] = $row['id'];
             echo 'registered';
