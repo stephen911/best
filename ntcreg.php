@@ -5,10 +5,10 @@
  $user = users();
 //  var_dump($_SESSION['id']);
 
-if (isset($_POST['btnupdate'])) {
-    extract($_POST);
-    updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $lincesed, $nameofschool, $region, $district, $foodpref, $heard);
-}
+// if (isset($_POST['btnupdate'])) {
+//     extract($_POST);
+//     updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $lincesed, $nameofschool, $region, $district, $foodpref, $heard);
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en"
@@ -320,6 +320,28 @@ if (isset($_POST['btnupdate'])) {
                                                     </div>
                                                 </div>
                                             </div>
+
+
+
+
+                                            <!-- <div class="list-group-item">
+                                                <div class="form-group m-0"
+                                                     role="group"
+                                                     aria-labelledby="label-schname">
+                                                    <div class="form-row">
+                                                        <label id="label-schname"
+                                                               for="venue"
+                                                               class="col-md-3 col-form-label form-label">Venue</label>
+                                                        <div class="col-md-9">
+                                                            <input id="venue"
+                                                                   type="text"
+                                                                   placeholder="Venue"
+                                                                   value="<?php echo  ($user['venue'] == '') ? '' : $user['venue']; ?>"
+                                                                   class="form-control" name="venue">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> -->
                                             <!-- <div class="form-group">
                                                 <div class="custom-control custom-checkbox">
                                                     <input id="customCheck01"

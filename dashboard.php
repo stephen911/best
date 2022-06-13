@@ -104,8 +104,15 @@
                                             Your are welcome! <strong><?php echo $user['title'].' '.$user['name']; ?></strong>
                                         </div>
                                         <div class="media-right mt-2 mt-xs-plus-0">
-                                            <a class="btn btn-success"
-                                               href="certification.php">Go to Certification</a>
+                                        <?php
+                                                        if ($user['title'] == '' || $user['gender'] == '' || $user['contact'] == '' || $user['lincesed'] == '' || $user['nameofschool'] == '' || $user['district'] == '' || $user['region'] == '' || $user['foodpref'] == '' || $user['paystatus'] == '' || $user['heard'] == '') {
+                                                            echo '<a class="btn btn-sm btn-danger"
+                                                            href="ntcreg.php">Continue Registration</a>';
+                                                        } else {
+                                                            echo '<a class="btn btn-sm btn-success"
+                                                            href="certification.php"> View Certificate</a>';
+                                                        }
+                                                    ?>
                                         </div>
                                     </div>
                                 </div>
@@ -265,8 +272,8 @@
                                                 </div>
                                                 <div class="media-right">
                                                     <?php
-                                                        if ($user['title'] == '' || $user['gender'] == '' || $user['contact'] == '' || $user['lincesed'] == '' || $user['nameofschool'] == '' || $user['district'] == '' || $user['region'] == '' || $user['venue'] == '' || $user['foodpref'] == '' || $user['paystatus'] == '' || $user['heard'] == '') {
-                                                            echo '<a class="btn btn-sm btn-primary"
+                                                        if ($user['title'] == '' || $user['gender'] == '' || $user['contact'] == '' || $user['lincesed'] == '' || $user['nameofschool'] == '' || $user['district'] == '' || $user['region'] == '' || $user['foodpref'] == '' || $user['paystatus'] == '' || $user['heard'] == '') {
+                                                            echo '<a class="btn btn-sm btn-danger"
                                                             href="ntcreg.php">Continue Registration</a>';
                                                         } else {
                                                             echo '';
