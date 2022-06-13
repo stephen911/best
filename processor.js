@@ -155,6 +155,23 @@ $(function(){
               });
 
         }
+
+        else if(response == 'changepasssuccess'){
+
+          swal({
+              title: "Success",
+              text: "Password updated successfuly",
+              timer: 2000,
+              type: 'success',
+              padding: "2em",
+              onOpen: function () {
+                swal.showLoading();
+              },
+            }).then(function (result) {
+              window.location="dashboard.php";
+            });
+
+      }
         else if(response == 'Updated Successfully'){
 
             swal({
@@ -321,7 +338,26 @@ $('.register').submit(function(e){
 
 
 
+// change password
 
+$('.changepass').submit(function(e){
+
+  e.preventDefault();
+  // before();
+  // var id = $(this).attr('id');
+  var staff = {
+      url: 'processor.php?action=changepass',
+      type: 'post',
+      data: new FormData(this),
+      cache: false,
+      contentType: false,
+      processData: false,
+      beforeSend: before,
+      success: resp
+
+  };
+  $.ajax(staff);
+});
 
 
 

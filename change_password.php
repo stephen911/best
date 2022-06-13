@@ -74,7 +74,7 @@
             <div class="mdk-drawer-layout__content page ">
 
                 <div class="container-fluid page__container p-0">
-                    <form action="">
+                    <form action="" class="changepass">
                         <div class="row m-0">
                             <div class="col-lg container-fluid page__container">
                                 <ol class="breadcrumb">
@@ -84,12 +84,12 @@
 
                                 <h4>Change Password</h4>
 
-                                <div class="alert alert-light border-1 border-left-3 border-left-primary d-flex">
+                                <!-- <div class="alert alert-light border-1 border-left-3 border-left-primary d-flex">
                                     <i class="material-icons text-success mr-3">check_circle</i>
                                     <div class="text-body">An email with password reset instructions has been sent to
                                         your
                                         email address, if it exists on our system.</div>
-                                </div>
+                                </div> -->
 
                                 <div class="card">
                                     <div class="list-group list-group-fit">
@@ -104,7 +104,7 @@
                                                             class="input-group input-group-merge form-control-prepended">
                                                             <input id="oldpassword" type="password" required="required"
                                                                 placeholder="Old password" aria-required="true"
-                                                                class="form-control form-control-prepended">
+                                                                class="form-control form-control-prepended" name="password">
                                                             <div class="input-group-prepend">
                                                                 <div class="input-group-text">
                                                                     <span class="far fa-key"></span>
@@ -125,7 +125,7 @@
                                                             class="input-group input-group-merge form-control-prepended">
                                                             <input id="password" type="password" required="required"
                                                                 placeholder="New password" aria-required="true"
-                                                                class="form-control form-control-prepended">
+                                                                class="form-control form-control-prepended" name="newpass">
                                                             <div class="input-group-prepend">
                                                                 <div class="input-group-text">
                                                                     <span class="far fa-key"></span>
@@ -147,7 +147,11 @@
                                                             class="input-group input-group-merge form-control-prepended">
                                                             <input id="password2" type="password" required="required"
                                                                 placeholder="Confirm password" aria-required="true"
-                                                                class="form-control form-control-prepended">
+                                                                class="form-control form-control-prepended" name="repass">
+
+                                                                <input id="" type="hidden" 
+                                                                placeholder="Confirm password" aria-required="true"
+                                                                class="form-control form-control-prepended" name="id" value="<?php echo $_SESSION['id']; ?>">
                                                             <div class="input-group-prepend">
                                                                 <div class="input-group-text">
                                                                     <span class="far fa-key"></span>
