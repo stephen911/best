@@ -1,3 +1,19 @@
+<?php
+ include 'functions.php';
+ include 'yolkpay.php';
+ checker();
+ $user = users();
+//  var_dump($_SESSION['id']);
+
+if (isset($_GET['ref'])) {
+    extract($_GET);
+
+    $uid = $_SESSION['id'];
+
+    payment($uid, $ref, $amount);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en"
       dir="ltr">
@@ -68,7 +84,7 @@
         </div>
 
         <!-- Header Layout -->
-        <?php include("navbar.php") ?>
+        <?php include 'navbar.php'; ?>
             <!-- // END Header -->
 
             <!-- Header Layout Content -->
@@ -282,7 +298,7 @@
 
                     </div>
 
-                    <?php include ("sidebar.php") ?>
+                    <?php include 'sidebar.php'; ?>
 
 
                 <!-- App Settings FAB -->

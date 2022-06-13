@@ -98,3 +98,16 @@ function register($name, $email, $password)
         }
     }
 }
+
+function payment($uid, $ref, $amount)
+{
+    include 'starter.php';
+    $dateadded = date('jS F,Y');
+
+    $ins = mysqli_query($conn, "INSERT INTO transactions (uid,transid,amount,dateadded) VALUES('$uid','$ref','$amount','$dateadded')");
+    $up = mysqli_query($conn, "UPDATE users SET paystatus ='paid' WHERE id ='$uid'");
+
+    if ($ins || $up) {
+        // echo''
+    }
+}
