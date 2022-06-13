@@ -11,7 +11,6 @@
       dir="ltr">
 
     
-<!-- Mirrored from learnplus.demo.frontendmatter.com/student-billing.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 May 2022 13:24:35 GMT -->
 <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible"
@@ -103,6 +102,10 @@
                                                 <div class="media-body">
                                                     Download your Certificate
                                                     <!-- <strong class="text-danger">$25.00</strong> <a href="#">#8331</a> -->
+                                                </div>
+                                                <div class="media-right">
+                                                    <a href="ntcreg.php" 
+                                                       class="btn btn-success float-right">Update Details</a>
                                                 </div>
                                                 <div class="media-right">
                                                     <a href="#" id="download-btn"
