@@ -440,7 +440,7 @@
                                                         class="col-md-3 col-form-label form-label">Food Preference</label>
                                                     <div class="col-md-9">
                                                         <select id="custom-select2" class="form-control custom-select" name="foodpref">
-                                                            <option selected  value="<?php echo  ($user['foodpref'] == '') ? '' : $user['foodpref']; ?>">Choose food Preference <?php echo  ($user['foodpref'] == '') ? 'Choose food Preference ' : $user['foodpref']; ?>
+                                                            <option selected  value="<?php echo  ($user['foodpref'] == '') ? '' : $user['foodpref']; ?>"> <?php echo  ($user['foodpref'] == '') ? 'Choose food Preference ' : $user['foodpref']; ?>
                                                             </option>
                                                             <option value="Waakye with chicken">Waakye with chicken</option>
                                                             <option value="Jollof with chicken">Jollof with chicken</option>
@@ -461,7 +461,7 @@
                                                         class="col-md-3 col-form-label form-label">How did you hear/know of this training</label>
                                                     <div class="col-md-9">
                                                         <select id="custom-select2" class="form-control custom-select" name="heard">
-                                                            <option  selected value="<?php echo  ($user['heard'] == '') ? '' : $user['heard']; ?>">select how you heard about this training<?php echo  ($user['heard'] == 'select how you heard about this training') ? '' : $user['heard']; ?>
+                                                            <option  selected value="<?php echo  ($user['heard'] == '') ? '' : $user['heard']; ?>"><?php echo  ($user['heard'] == 'select how you heard about this training') ? '' : $user['heard']; ?>
                                                             </option>
                                                             <option value="website">TUCEE Website</option>
                                                             <option value="gnacc">GNACC Website</option>
