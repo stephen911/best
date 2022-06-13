@@ -18,12 +18,12 @@ class Yolkpay
 
     public static function pay($text = 'Pay')
     {
-        echo '<button class="btn btn-success" type="submit" onclick="payWithPaystack()"> '.$text.' </button>';
+        return '<button class="btn btn-success" type="submit" onclick="payWithPaystack()"> '.$text.' </button>';
     }
 
     public static function handler()
     {
-        echo ' <script src="https://js.paystack.co/v1/inline.js"></script>';
+        return ' <script src="https://js.paystack.co/v1/inline.js"></script>';
     }
 
     public function payscript($fname, $lname, $email, $phone, $amount, $ref = '')
@@ -34,7 +34,7 @@ class Yolkpay
             $r3 = time();
             $ref = $r1.''.$r2.''.$r3;
         }
-        echo '<script>
+        return '<script>
        // var paymentForm = document.getElementById("paymentForm");
 
        // paymentForm.addEventListener("submit", payWithPaystack, false);

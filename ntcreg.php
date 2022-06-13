@@ -124,6 +124,8 @@ if (isset($_POST['btnupdate'])) {
                             </div>
                             <?php
                                     if ($user['paystatus'] == 'paid') {
+                                        echo '';
+                                    } else {
                                         echo '<div class="card border-left-3 border-left-primary card-2by1">
                                         <div class="card-body">
                                             <div class="media flex-wrap align-items-center">
@@ -132,7 +134,7 @@ if (isset($_POST['btnupdate'])) {
                                                 </div>
                                                 <div class="media-body"
                                                      style="min-width: 180px">
-                                                     <small>Please we humbly entreat you to make payment right away to book your seat. Please call +233 246 535 961 when you have successfully made payment. Thank you</small>
+                                                     <small><b>Please we humbly entreat you to make payment right away to book your seat. Please call +233 246 535 961 when you have successfully made payment. Thank you</b></small>
                                                 </div>
                                                 <div class="media-right mt-2 mt-xs-plus-0">
                                                     
@@ -145,8 +147,6 @@ if (isset($_POST['btnupdate'])) {
                                             </div>
                                         </div>
                                     </div>';
-                                    } else {
-                                        echo '';
                                     }
                             ?>
                                     <h1 class="h2">NTC CPD Training</h1>

@@ -264,8 +264,14 @@
                                                     <p class="card-subtitle">Your Personal Information</p>
                                                 </div>
                                                 <div class="media-right">
-                                                    <a class="btn btn-sm btn-primary"
-                                                       href="ntcreg.php">Continue Registration</a>
+                                                    <?php
+                                                        if ($user['title'] == '' || $user['gender'] == '' || $user['contact'] == '' || $user['lincesed'] == '' || $user['nameofschool'] == '' || $user['district'] == '' || $user['region'] == '' || $user['venue'] == '' || $user['foodpref'] == '' || $user['paystatus'] == '' || $user['heard'] == '') {
+                                                            echo '<a class="btn btn-sm btn-primary"
+                                                            href="ntcreg.php">Continue Registration</a>';
+                                                        } else {
+                                                            echo '';
+                                                        }
+                                                    ?>
                                                 </div>
                                             </div>
                                         </div>
