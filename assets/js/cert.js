@@ -4,7 +4,7 @@ const nameInput = document.getElementById('name')
 const downloadBtn = document.getElementById('download-btn')
 
 const image = new Image()
-image.src = 'assets/images/certificate.jpg'
+image.src = 'assets/images/certificate.png'
 image.onload = function () {
 	drawImage()
 }
@@ -12,10 +12,10 @@ image.onload = function () {
 function drawImage() {
 	// ctx.clearRect(0, 0, canvas.width, canvas.height)
 	ctx.drawImage(image, 0, 0, canvas.width, canvas.height)
-	ctx.font = '20px monotype arial'
+	ctx.font = '16px monotype arial'
 	ctx.fillStyle = '#00000'
 	ctx.textAlign = "center"
-	ctx.fillText(nameInput.value, 250, 180)
+	ctx.fillText(nameInput.value.toUpperCase(), 250, 173)
 }
 
 nameInput.addEventListener('input', function () {
@@ -24,5 +24,5 @@ nameInput.addEventListener('input', function () {
 
 downloadBtn.addEventListener('click', function () {
 	downloadBtn.href = canvas.toDataURL('image/png')
-	downloadBtn.download = 'Certificate - ' + nameInput.value
+	downloadBtn.download = 'Certificate' 
 })

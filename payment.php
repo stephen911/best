@@ -1,6 +1,8 @@
 <?php
  include 'functions.php';
  include 'yolkpay.php';
+ $yolk =  new YolkPay();
+
  checker();
  $user = users();
 //  var_dump($_SESSION['id']);
@@ -121,8 +123,9 @@ if (isset($_GET['ref'])) {
                                                     
                                                 </div>
                                                 <div class="media-right">
-                                                    <a href="#"
-                                                       class="btn btn-success float-right">Pay Now</a>
+                                                    '.$yolk->handler().'
+                                                    '.$yolk->payscript($user['title'], $user['name'], $user['email'], $user['contact'], 100, $ref = '').'
+                                                    '.$yolk->pay("Pay Now").'
                                                 </div>
                                             </div>
                                         </div>
@@ -144,12 +147,12 @@ if (isset($_GET['ref'])) {
                                          data-lists-sort-by="js-lists-values-document"
                                          data-lists-sort-desc="true">
                                         <table class="table mb-0">
-                                            <thead class="thead-light">
+                                            <!-- <thead class="thead-light">
                                                 <tr>
                                                     <th colspan="4">
-                                                        <!-- <a href="javascript:void(0)"
+                                                        <a href="javascript:void(0)"
                                                            class="sort"
-                                                           data-sort="js-lists-values-document">Document</a> -->
+                                                           data-sort="js-lists-values-document">Document</a>
                                                         <a href="javascript:void(0)"
                                                            class="sort"
                                                            data-sort="js-lists-values-amount">Amount</a>
@@ -161,39 +164,12 @@ if (isset($_GET['ref'])) {
                                                            data-sort="js-lists-values-date">Date</a>
                                                     </th>
                                                 </tr>
-                                            </thead>
+                                            </thead> -->
                                             <tbody class="list">
 
-                                                <tr>
-                                                    <td>
-                                                        <div class="d-flex align-items-center">
-                                                            <small class="text-uppercase text-muted mr-2">Transaction Amount</small>
-                                                            <a href="student-invoice.php"
-                                                               class="text-body small"><span class="js-lists-values-document">7000</span></a>
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <div class="d-flex align-items-center">
-                                                            <small class="text-uppercase text-muted mr-2">Outstanding Balance</small>
-                                                            <small class="text-uppercase">$<span class="js-lists-values-amount">2000</span>GHC</small>
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <div class="d-flex align-items-center">
-                                                            <small class="text-uppercase text-muted mr-2">Status</small>
-                                                            <i class="material-icons text-success md-18 mr-2">lens</i>
-                                                            <small class="text-uppercase js-lists-values-status">paid</small>
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-right">
-                                                        <div class="d-flex align-items-center text-right">
-                                                            <small class="text-uppercase text-muted mr-2">Date</small>
-                                                            <small class="text-uppercase js-lists-values-date">12 Feb 2018</small>
-                                                        </div>
-                                                    </td>
-                                                </tr>
+                                                <?php transactions($_SESSION['id']);?>
 
-                                                <tr>
+                                                <!-- <tr>
                                                     <td>
                                                         <div class="d-flex align-items-center">
                                                             <small class="text-uppercase text-muted mr-2">Transaction Amount</small>
@@ -220,9 +196,9 @@ if (isset($_GET['ref'])) {
                                                             <small class="text-uppercase js-lists-values-date">12 Feb 2019</small>
                                                         </div>
                                                     </td>
-                                                </tr>
+                                                </tr> -->
 
-                                                <tr>
+                                                <!-- <tr>
                                                     <td>
                                                         <div class="d-flex align-items-center">
                                                             <small class="text-uppercase text-muted mr-2">Transaction Amount</small>
@@ -249,14 +225,14 @@ if (isset($_GET['ref'])) {
                                                             <small class="text-uppercase js-lists-values-date">12 Feb 2020</small>
                                                         </div>
                                                     </td>
-                                                </tr>
+                                                </tr> -->
 
                                             </tbody>
                                         </table>
                                     </div>
 
                                     <!-- Pagination -->
-                                    <ul class="pagination justify-content-center pagination-sm">
+                                    <!-- <ul class="pagination justify-content-center pagination-sm">
                                         <li class="page-item disabled">
                                             <a class="page-link"
                                                href="#"
@@ -283,7 +259,7 @@ if (isset($_GET['ref'])) {
                                                       class="material-icons">chevron_right</span>
                                             </a>
                                         </li>
-                                    </ul>
+                                    </ul> -->
 
                                 </div>
                                 <div id="page-nav"

@@ -60,12 +60,23 @@ if (isset($_POST['btnlogin'])) {
     </head>
 
     <body class="login">
+        
 
         <div class="d-flex align-items-center"
              style="min-height: 100vh">
             <div class="col-sm-8 col-md-6 col-lg-4 mx-auto"
                  style="min-width: 300px;">
                 <div class="text-center mt-5 mb-1">
+                <div class="card navbar-shadow">
+                    <div class="card-header text-center">
+                        <h4 class="card-title">TUCEE Institute of counselling and Technology</h4>
+                        <!-- <p class="card-subtitle">Access your account</p> -->
+                    </div>
+                   
+</div>
+                
+                    
+                
                     <div class="avatar avatar-lg">
                         <img src="assets/images/logo/tucee.png"
                              class="avatar-img rounded-circle"
@@ -124,15 +135,15 @@ if (isset($_POST['btnlogin'])) {
                                 <button type="submit"
                                         class="btn btn-primary btn-block" name="btnlogin">Login</button>
                             </div>
-                            <div class="text-center">
+                            <!-- <div class="text-center">
                                 <a href="forgot-password.php"
                                    class="text-black-70"
                                    style="text-decoration: underline;">Forgot Password?</a>
-                            </div>
+                            </div> -->
                         </form>
                     </div>
                     <div class="card-footer text-center text-black-50">
-                        Not registered yet? <a href="signup.php">Sign Up</a>
+                        Not registered yet? <a href="signup.php">Register</a>
                     </div>
                 </div>
             </div>

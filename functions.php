@@ -129,8 +129,39 @@ function changepass($id, $password, $newpass)
         echo 'Incorrect Password';
     }
 }
-function transaction($id)
+function transactions()
 {
+    // session_start();
+    $id = $_SESSION['id'];
     include 'starter.php';
+
+    $sel = mysqli_query($conn,"SELECT * FROM  transactions WHERE uid = '$id'");
+    while ($row = mysqli_fetch_array($sel)) {
+
+        echo '<tr>
+        <td>
+            <div class="d-flex align-items-center">
+                <small class="text-uppercase text-muted mr-2">Transaction Amount</small>
+                <a href="student-invoice.php"
+                   class="text-body small"><span class="js-lists-values-document">'.$row['amount'].'</span></a>
+            </div>
+        </td>
+        
+        <td class="text-center">
+            <div class="d-flex align-items-center">
+                <small class="text-uppercase text-muted mr-2">Status</small>
+                <i class="material-icons text-success md-18 mr-2">lens</i>
+                <small class="text-uppercase js-lists-values-status">paid</small>
+            </div>
+        </td>
+        <td class="text-right">
+            <div class="d-flex align-items-center text-right">
+                <small class="text-uppercase text-muted mr-2">Date</small>
+                <small class="text-uppercase js-lists-values-date">'.$row['dateadded'].'</small>
+            </div>
+        </td>
+    </tr>';
+        # code...
+    }
     
 }
