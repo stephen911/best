@@ -24,10 +24,10 @@
                 <!-- Brand -->
                 <a href="dashboard.php"
                    class="navbar-brand">
-                    <img src="assets/images/logo/white.svg"
+                    <img src="../assets/images/logo/white.svg"
                          class="mr-2"
                          alt="TUCEE Online Registration" />
-                    <span class="d-none d-xs-md-block">GNPC Online Portal</span>
+                    <span class="d-none d-xs-md-block">GNPC Online Admin Portal</span>
                 </a>
 
                 <!-- Search -->
@@ -72,7 +72,7 @@
                         <a class="nav-link dropdown-toggle"
                            data-toggle="dropdown"
                            href="#"
-                           role="button"><img src="assets/images/people/50/tucee_avatar.png"
+                           role="button"><img src="../assets/images/people/50/tucee_avatar.png"
                                  alt="Avatar"
                                  class="rounded-circle"
                                  width="40"></a>

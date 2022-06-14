@@ -26,16 +26,7 @@ const WESTERN = document.getElementById('Western Region');
 
 
 el.addEventListener('change', function handleChange(event) {
-  // if (event.target.value == 'none') {
-  //   all.style.display = 'none';
-  // } else {
-  //   all.style.display = 'block';
-  // }
-//   if (event.target.value == 'adenta') {
-//     shs.style.display = 'block';
-//   } else {
-//     shs.style.display = 'none';
-//   }
+
   if (event.target.value == 'Greater Accra') {
     GreaterAccra.style.display = 'block';
   } else {

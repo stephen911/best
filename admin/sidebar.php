@@ -9,6 +9,11 @@
                             <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">account_box</i> Dashboard
                         </a>
                     </li>
+                    <li class="sidebar-menu-item active">
+                        <a class="sidebar-menu-button" href="ntcreg.php">
+                            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">account_box</i> Set Date
+                        </a>
+                    </li>
                     <!-- <li class="sidebar-menu-item active">
                                             <a class="sidebar-menu-button"
                                                href="renewal.php">
@@ -16,7 +21,7 @@
                                             </a>
                                         </li> -->
 
-                    <ul class="sidebar-menu">
+                    <!-- <ul class="sidebar-menu">
                         <li class="sidebar-menu-item active">
                             <a class="sidebar-menu-button sidebar-js-collapse" data-toggle="collapse" href="#apply_menu">
                                 <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">school</i> Registration
@@ -29,7 +34,7 @@
                                     <a class="sidebar-menu-button" href="ntcreg.php">
                                         <span class="sidebar-menu-text">NTC CPD Training</span>
                                     </a>
-                                </li>
+                                </li> -->
                                 <!-- <li class="sidebar-menu-item">
                                                     <a class="sidebar-menu-button"
                                                        href="dashboard.php">
@@ -52,8 +57,8 @@
 
 
 
-                            </ul>
-                        <li class="sidebar-menu-item active">
+                            <!-- </ul> -->
+                        <!-- <li class="sidebar-menu-item active">
                             <a class="sidebar-menu-button" href="payment.php">
                                 <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">credit_card</i> Payment
                             </a>
@@ -68,11 +73,11 @@
                             <a class="sidebar-menu-button" href="certification.php">
                                 <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">class</i> Certification
                             </a>
-                        </li>
+                        </li> -->
 
 
 
-                    </ul>
+                    <!-- </ul> -->
                     <!-- Account menu -->
                     <div class="sidebar-heading">Account</div>
                     <ul class="sidebar-menu">
