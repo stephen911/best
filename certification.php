@@ -130,6 +130,9 @@
         
             
             <input id="name" type='hidden' value="<?php echo $user['title'].' '.$user['name']; ?>">
+            <input id="district" type='hidden' value="<?php echo $user['region']; ?>">
+            <input id="dateadded" type='hidden' value="<?php echo $user['dateadded']; ?>">
+
        
     <!-- </div> -->
                                     
