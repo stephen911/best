@@ -60,12 +60,23 @@ if (isset($_POST['btnlogin'])) {
     </head>
 
     <body class="login">
+        
 
         <div class="d-flex align-items-center"
              style="min-height: 100vh">
             <div class="col-sm-8 col-md-6 col-lg-4 mx-auto"
                  style="min-width: 300px;">
                 <div class="text-center mt-5 mb-1">
+                <div class="card navbar-shadow">
+                    <div class="card-header text-center">
+                        <h4 class="card-title">TUCEE Institute of counselling and Technology</h4>
+                        <!-- <p class="card-subtitle">Access your account</p> -->
+                    </div>
+                   
+</div>
+                
+                    
+                
                     <div class="avatar avatar-lg">
                         <img src="assets/images/logo/tucee.png"
                              class="avatar-img rounded-circle"
