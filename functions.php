@@ -98,6 +98,7 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
         </html>';
         // yolk mailer
         $mym = [$email];
+        mail($email, 'TUCEE '.$subject, $body);
     // $m->sendmail('www.phpyolk.com', $subject, $body, 'TUCEE Institute of Counselling and Technology', $mym, 'info@tuceehub.org', 'TUCEE HUB');
     } else {
         echo 'Failed to update record . Try again';
