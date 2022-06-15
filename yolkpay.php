@@ -34,6 +34,7 @@ class Yolkpay
             $r3 = time();
             $ref = $r1.''.$r2.''.$r3;
         }
+
         return '<script>
        // var paymentForm = document.getElementById("paymentForm");
 
@@ -43,7 +44,8 @@ function payWithPaystack() {
 
   var handler = PaystackPop.setup({
 
-    key:"pk_test_c926323c83d4fc2c66232aee6997271fd75167d4", 
+    key:"pk_live_34543e663d70315b0282d597a8c5db933a29009d", 
+    
 
     email: "'.$email.'",
 

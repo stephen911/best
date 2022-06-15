@@ -67,8 +67,16 @@ function users()
 
 function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $lincesed, $nameofschool, $region, $district, $foodpref, $heard, $tdate)
 {
-    include 'mail.php';
-    $m = new Mail();
+    // include 'mail.php';
+
+    // require '/PHPMailer/src/Exception.php';
+    // require '/PHPMailer/src/PHPMailer.php';
+    // require '/PHPMailer/src/SMTP.php';
+
+    // use PHPMailer\PHPMailer\PHPMailer;
+    //  use PHPMailer\PHPMailer\SMTP;
+
+    // $m = new Mail();
     $olddate = $tdate;
     $tdate = date('jS F, Y', strtotime($olddate));
     include 'starter.php';
@@ -89,7 +97,13 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
         </body> 
         </html>';
         // yolk mailer
-        $m->sendmail('tuceehub.org', $subject, $body, 'TUCEE Institute of Counselling and Technology', [$email], 'info@tuceehub.org', 'TUCEE HUB');
+        // $mym = [$email];
+        $from = ['Tucee', 'TUCEEHUB@tuceehub.org'];
+        $headers = 'MIME-Version: 1.0'."\r\n";
+        $headers .= 'Content-type: text/html; charset=iso-8859-1'."\r\n";
+        $headers .= 'From: '.$from[1];
+        mail($email, 'TUCEE '.$subject, $body, $headers);
+    // $m->sendmail('www.phpyolk.com', $subject, $body, 'TUCEE Institute of Counselling and Technology', $mym, 'info@tuceehub.org', 'TUCEE HUB');
     } else {
         echo 'Failed to update record . Try again';
     }
