@@ -1,7 +1,7 @@
 <?php
  include 'functions.php';
  include 'yolkpay.php';
- $yolk =  new YolkPay();
+ $yolk = new YolkPay();
 
  checker();
  $user = users();
@@ -21,7 +21,6 @@ if (isset($_GET['ref'])) {
       dir="ltr">
 
     
-<!-- Mirrored from learnplus.demo.frontendmatter.com/student-billing.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 May 2022 13:24:35 GMT -->
 <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible"
@@ -181,7 +180,7 @@ if (isset($_GET['ref'])) {
                                             </thead> -->
                                             <tbody class="list">
 
-                                                <?php transactions($_SESSION['id']);?>
+                                                <?php transactions($_SESSION['id']); ?>
 
                                                 <!-- <tr>
                                                     <td>
