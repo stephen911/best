@@ -10,7 +10,11 @@ $user = users();
 //     extract($_POST);
 //     updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $lincesed, $nameofschool, $region, $district, $foodpref, $heard);
 // }
+
+// Yolk mailer
+$mail = new Mail();
 ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
