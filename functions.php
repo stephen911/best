@@ -72,6 +72,10 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
     require '/PHPMailer/src/Exception.php';
     require '/PHPMailer/src/PHPMailer.php';
     require '/PHPMailer/src/SMTP.php';
+
+    // use PHPMailer\PHPMailer\PHPMailer;
+    //  use PHPMailer\PHPMailer\SMTP;
+
     $m = new Mail();
     $olddate = $tdate;
     $tdate = date('jS F, Y', strtotime($olddate));
@@ -93,7 +97,8 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
         </body> 
         </html>';
         // yolk mailer
-        $m->sendmail('tuceehub.org', $subject, $body, 'TUCEE Institute of Counselling and Technology', [$email], 'info@tuceehub.org', 'TUCEE HUB');
+        $mym = [$email];
+        $m->sendmail('tuceehub.org', $subject, $body, 'TUCEE Institute of Counselling and Technology', $mym, 'info@tuceehub.org', 'TUCEE HUB');
     } else {
         echo 'Failed to update record . Try again';
     }
