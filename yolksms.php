@@ -15,7 +15,7 @@ class Yolksms
 
     public function sms($senderid, $recipient, $message)
     {
-        $url = $this->client.'?key='.Config::get('APIKEY').'&to='.$recipient.'&msg='.$message.'&sender_id='.$senderid;
+        $url = $this->client.'?key=7j4dvJq18adHHitlkBgLiHP9j&to='.$recipient.'&msg='.$message.'&sender_id='.$senderid;
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
