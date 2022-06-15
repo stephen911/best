@@ -102,7 +102,7 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
         $headers = 'MIME-Version: 1.0'."\r\n";
         $headers .= 'Content-type: text/html; charset=iso-8859-1'."\r\n";
         $headers .= 'From: '.$from."\r\n".'Reply-To: '.$from."\r\n".'X-Mailer: PHP/'.phpversion();
-        mail($email, 'TUCEE '.$subject, $body);
+        mail($email, 'TUCEE '.$subject, $body, $headers);
     // $m->sendmail('www.phpyolk.com', $subject, $body, 'TUCEE Institute of Counselling and Technology', $mym, 'info@tuceehub.org', 'TUCEE HUB');
     } else {
         echo 'Failed to update record . Try again';
