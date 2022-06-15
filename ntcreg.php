@@ -853,7 +853,29 @@ $user = users();
                                         </div>
                                                             </div>
 
-                                                            <div class="list-group-item">
+
+
+                                        <?php;
+
+                                        if ($user['tdate'] == '') {
+                                            echo '';
+                                        } else {
+                                            echo '<div class="list-group-item">
+                                            <div class="form-group m-0" role="group" aria-labelledby="label-tdate">
+                                                <div class="form-row">
+                                                    <label id="label-tdate" for="tdate" class="col-md-3 col-form-label form-label">Date for training</label>
+                                                    <div class="col-md-9">
+                                                        '.$user['tdate'].'
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>  ';
+                                        }
+
+                                        ?>
+                                        
+
+                                        <div class="list-group-item">
                                             <div class="form-group m-0" role="group" aria-labelledby="label-tdate">
                                                 <div class="form-row">
                                                     <label id="label-tdate" for="tdate" class="col-md-3 col-form-label form-label">Date for training</label>
