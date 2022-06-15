@@ -77,6 +77,8 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
     //  use PHPMailer\PHPMailer\SMTP;
 
     // $m = new Mail();
+    include 'yolksms.php';
+    $send = new Yolksms();
     $olddate = $tdate;
     $tdate = date('jS F, Y', strtotime($olddate));
     include 'starter.php';
@@ -104,6 +106,8 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
         $headers .= 'Content-type: text/html; charset=iso-8859-1'."\r\n";
         $headers .= 'From: '.$from[1];
         mail($email, 'TUCEE '.$subject, $body, $headers);
+
+        var_dump($send->sms('TUCEE HUB', $contact, 'Congratulations, you are duly registered for the counselling training.'));
     // $m->sendmail('www.phpyolk.com', $subject, $body, 'TUCEE Institute of Counselling and Technology', $mym, 'info@tuceehub.org', 'TUCEE HUB');
     } else {
         echo 'Failed to update record . Try again';

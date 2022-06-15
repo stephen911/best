@@ -132,7 +132,7 @@ $user = users();
                                         </div>
                                         <div class="media-right">
                                             '.$yolk->handler().'
-                                            '.$yolk->payscript($user['title'], $user['name'], $user['email'], $user['contact'], 0.5, $ref = '').'
+                                            '.$yolk->payscript($user['title'], $user['name'], $user['email'], $user['contact'], 70, $ref = '').'
                                             '.$yolk->pay('Pay Now').'
                                         </div>
                                     </div>
