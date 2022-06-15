@@ -115,10 +115,14 @@ if (isset($_GET['ref'])) {
                                         <div class="card-body">
                                             <div class="media align-items-center">
                                                 <div class="media-body">
-                                                    No Payment has been made yet. Pay to get your Certificate. Payment will be made available soon. Thank You!
+                                                    No Payment has been made yet
                                                     
                                                 </div>
-                                                
+                                                <div class="media-right">
+                                                    ' . $yolk->handler() . '
+                                                    ' . $yolk->payscript($user['title'], $user['name'], $user['email'], $user['contact'], 70, $ref = '') . '
+                                                    ' . $yolk->pay("Pay Now") . '
+                                                </div>
                                             </div>
                                         </div>
                                     </div>';
