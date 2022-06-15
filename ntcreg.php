@@ -851,16 +851,12 @@ $user = users();
                                         </div>
                                                             </div>
 
-<<<<<<< HEAD
-                                                            <div class="list-group-item">
-=======
 
 
                                         
                                         
 
                                         <div class="list-group-item">
->>>>>>> 3d0d71b6dd75ec1caf18fad94b79092a9a4b9606
                                             <div class="form-group m-0" role="group" aria-labelledby="label-tdate">
                                                 <div class="form-row">
                                                     <label id="label-tdate" for="tdate" class="col-md-3 col-form-label form-label">Date for training</label>
