@@ -69,7 +69,7 @@ if (isset($_POST['btnlogin'])) {
                 <div class="text-center mt-5 mb-1">
                 <div class="card navbar-shadow">
                     <div class="card-header text-center">
-                        <h4 class="card-title">TUCEE Institute of counselling and Technology</h4>
+                        <h4 class="card-title">TUCEE Institute of Counselling and Technology</h4>
                         <!-- <p class="card-subtitle">Access your account</p> -->
                     </div>
                    
