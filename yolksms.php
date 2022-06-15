@@ -15,7 +15,7 @@ class Yolksms
 
     public function sms($senderid, $recipient, $message)
     {
-        $url = 'https://apps.mnotify.net/smsapi?key=gThvFfUcm3mf271OGq1uLkWNz&to=0556676471&msg=dollarstir&sender_id=TUCEE HUB';
+        $url = 'http://apps.mnotify.net/smsapi?key=gThvFfUcm3mf271OGq1uLkWNz&to=0556676471&msg=dollarstir&sender_id=TUCEE HUB';
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
