@@ -114,19 +114,24 @@ if (isset($_GET['ref'])) {
 
                                     <?php
                                     if ($user['paystatus'] == '') {
+                                        echo '';
+                                    } else {
                                         echo '<div class="card border-left-3 border-left-danger card-2by1">
                                         <div class="card-body">
                                             <div class="media align-items-center">
                                                 <div class="media-body">
-                                                    No Payment has been made yet. Payment will be made available soon. Thank You!
+                                                    No Payment has been made yet
                                                     
                                                 </div>
-                                                
+                                                <div class="media-right">
+                                                    '.$yolk->handler().'
+                                                    '.$yolk->payscript($user['title'], $user['name'], $user['email'], $user['contact'], 70, $ref = '').'
+                                                    '.$yolk->pay("Pay Now").'
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>';
-                                    } else {
-                                        echo '';
+                                    </div>
+';
                                     }
 
                                     ?>
@@ -286,6 +291,7 @@ if (isset($_GET['ref'])) {
                                                     <a href="#"
                                                        class="nav-link active">Payment History</a>
                                                 </li>
+                                                <!-- activate certification -->
                                                 <li class="nav-item">
                                                     <a href="certification.php"
                                                        class="nav-link">Certification</a>

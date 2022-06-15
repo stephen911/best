@@ -957,9 +957,10 @@ $user = users();
                                         <li class="nav-item">
                                             <a href="payment.php" class="nav-link">Payment</a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a href="certification.php" class="nav-link">Cerification</a>
-                                        </li>
+                                        <!-- activate certification -->
+                                        <!-- <li class="nav-item">
+                                            <a href="certification.php" class="nav-link">Certification</a>
+                                        </li> -->
                                         <!-- <li class="nav-item">
                                                     <a href="student-account-edit-profile.html"
                                                        class="nav-link">Profile &amp; Privacy</a>
