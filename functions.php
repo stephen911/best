@@ -72,8 +72,18 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
     include 'starter.php';
     $up = mysqli_query($conn, "UPDATE users SET title='$title', name= '$name', gender = '$gender', email='$email', contact= '$contact', telegram='$telegram', lincesed ='$lincesed', nameofschool='$nameofschool', region ='$region', district ='$district', foodpref='$foodpref',  heard ='$heard', tdate='$tdate' WHERE id='$id'  ");
     if ($up) {
-        echo 'Updated Successfully';
-        mail($email, 'TUCEE Institute of Counselling and Technology', 'Your Registration has been successful This message is to confirm your registration has been succesful. Please make payment to enable you download your Certification of Participation');
+        echo 'Registration Successful. Make Payment to Confirm Participation. An email has been sent to '. $email;
+        mail($email, 'TUCEE Institute of Counselling and Technology',  '<html> 
+        <head> 
+            <title>TUCEE Institute of Counselling and Technology</title> 
+        </head> 
+        <body> 
+            <h4>Registration Successful</h4> 
+            <p>Your Registration has been successful.</p>
+            <p>This message is to confirm your that registration has been <span style="color: green;">Successful. </span></p>
+            <p>Please make <span style="color: green;">Payment</span> to enable you <span style="color: green;">Download</span> your <span style="color: green;">Certification of Participation</span> </p>
+        </body> 
+        </html>');
     } else {
         echo 'Failed to update record . Try again';
     }

@@ -858,7 +858,8 @@ $user = users();
                                                 <div class="form-row">
                                                     <label id="label-tdate" for="tdate" class="col-md-3 col-form-label form-label">Date for training</label>
                                                     <div class="col-md-9">
-                                                        <input id="tdate" type="date" placeholder="Date for training" value="<?php echo ($user['tdate'] == '') ? '' : $user['tdate']; ?>" class="form-control" name="tdate">
+                                                        <?php $date = date("Y-m-d", strtotime($user['tdate']))?>
+                                                        <input id="tdate" type="date" placeholder="Date for training" value="<?php echo ($user['tdate'] == '') ? '' : $date; ?>" class="form-control" name="tdate">
                                                     </div>
                                                 </div>
                                             </div>
