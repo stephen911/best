@@ -115,7 +115,7 @@ $user = users();
                                         </div>
                                         <div class="media-body"
                                              style="min-width: 180px">
-                                             <small><b>Please we humbly entreat you to make payment right away to book your seat. Please call +233 246 535 961 when you have successfully made payment. Thank you</b></small>
+                                             <small><b>Congratulations, you are duly registered for the Counselling training. Proceed to make payment to confirm your particiation. Call +233541369429 for any assistance. Thanks</b></small>
                                         </div>
                                         
                                         
