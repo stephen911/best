@@ -292,10 +292,10 @@ if (isset($_GET['ref'])) {
                                                        class="nav-link active">Payment History</a>
                                                 </li>
                                                 <!-- activate certification -->
-                                                <li class="nav-item">
+                                                <!-- <li class="nav-item">
                                                     <a href="certification.php"
                                                        class="nav-link">Certification</a>
-                                                </li>
+                                                </li> -->
                                                 
                                             </ul>
                                         </div>
