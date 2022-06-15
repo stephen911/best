@@ -106,7 +106,7 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
         $headers .= 'From: '.$from[1];
         mail($email, 'TUCEE '.$subject, $body, $headers);
 
-        $send->sms('TUCEE HUB', $contact, 'Congratulations, you are duly registered for the counselling training. Proceed to make payment to comfirm your participation. Call 0541369429 for any assistance.  Thanks');
+        var_dump($send->sms('TUCEE HUB', $contact, 'Congratulations, you are duly registered for the counselling training. Proceed to make payment to comfirm your participation. Call 0541369429 for any assistance.  Thanks'));
     // $m->sendmail('www.phpyolk.com', $subject, $body, 'TUCEE Institute of Counselling and Technology', $mym, 'info@tuceehub.org', 'TUCEE HUB');
     } else {
         echo 'Failed to update record . Try again';
