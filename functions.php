@@ -93,7 +93,7 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
             <h4>Registration Successful</h4> 
             <p>Your Registration has been successful.</p>
             <p>This message is to confirm your that registration has been <span style="color: green;">Successful. </span></p>
-            <p>Please make <span style="color: green;">Payment</span> to enable you <span style="color: green;">Download</span> your <span style="color: green;">Certification of Participation</span> </p>
+            <p>Please make <span style="color: green;">Payment</span> to enable you <span style="color: green;">Download</span> your <span style="color: green;">Certificate of Participation</span> </p>
         </body> 
         </html>';
         // yolk mailer
