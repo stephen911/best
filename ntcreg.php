@@ -1,7 +1,7 @@
 <?php
 include 'functions.php';
 include 'yolkpay.php';
-$yolk =  new YolkPay();
+$yolk = new YolkPay();
 checker();
 $user = users();
 //  var_dump($_SESSION['id']);
@@ -118,9 +118,9 @@ $user = users();
                                                 <div class="media-right mt-2 mt-xs-plus-0">
                                                     
                                             
-                                                 ' . $yolk->handler() . '
-                                                ' . $yolk->payscript($user['title'], $user['name'], $user['email'], $user['contact'], 100, $ref = '') . '
-                                                ' . $yolk->pay('Pay Now') . '
+                                                 '.$yolk->handler().'
+                                                '.$yolk->payscript($user['title'], $user['name'], $user['email'], $user['contact'], 70, $ref = '').'
+                                                '.$yolk->pay('Pay Now').'
                                                 </div>
                                                 
                                             </div>
@@ -643,10 +643,10 @@ $user = users();
                                         </div>
 
                                         <div id="Oti Region" <?php if ($user['district'] == null) {
-                                                                    echo 'style="display: block;"';
-                                                                } else {
-                                                                    echo ' style="display: none;"';
-                                                                }  ?>>
+                                echo 'style="display: block;"';
+                            } else {
+                                echo ' style="display: none;"';
+                            }  ?>>
                                             <div class="list-group-item">
                                                 <div class="form-group m-0" role="group" aria-labelledby="label-highestEduLevel">
                                                     <div class="form-row">
