@@ -67,13 +67,15 @@ function users()
 
 function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $lincesed, $nameofschool, $region, $district, $foodpref, $heard, $tdate)
 {
+    include 'mail.php';
+    $mail = new Mail();
     $olddate = $tdate;
     $tdate = date('jS F, Y', strtotime($olddate));
     include 'starter.php';
     $up = mysqli_query($conn, "UPDATE users SET title='$title', name= '$name', gender = '$gender', email='$email', contact= '$contact', telegram='$telegram', lincesed ='$lincesed', nameofschool='$nameofschool', region ='$region', district ='$district', foodpref='$foodpref',  heard ='$heard', tdate='$tdate' WHERE id='$id'  ");
     if ($up) {
-        echo 'Registration Successful. Make Payment to Confirm Participation. An email has been sent to '. $email;
-        mail($email, 'TUCEE Institute of Counselling and Technology',  '<html> 
+        echo 'Registration Successful. Make Payment to Confirm Participation. An email has been sent to '.$email;
+        mail($email, 'TUCEE Institute of Counselling and Technology', '<html> 
         <head> 
             <title>TUCEE Institute of Counselling and Technology</title> 
         </head> 
