@@ -27,7 +27,7 @@
                     <img src="assets/images/logo/white.svg"
                          class="mr-2"
                          alt="TUCEE Online Registration" />
-                    <span class="d-none d-xs-md-block">GNPC Online Portal</span>
+                    <span class="d-none d-xs-md-block">TUCEE Online Portal</span>
                 </a>
 
                 <!-- Search -->
