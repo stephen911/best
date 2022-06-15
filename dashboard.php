@@ -105,7 +105,7 @@
                                         </div>
                                         <div class="media-right mt-2 mt-xs-plus-0">
                                         <?php
-                                                        if ($user['title'] == '' || $user['gender'] == '' || $user['contact'] == '' || $user['lincesed'] == '' || $user['nameofschool'] == '' || $user['district'] == '' || $user['region'] == '' || $user['foodpref'] == '' || $user['paystatus'] == '' || $user['heard'] == '') {
+                                                        if ($user['title'] == '' || $user['gender'] == '' || $user['contact'] == '' || $user['lincesed'] == '' || $user['nameofschool'] == '' || $user['district'] == '' || $user['region'] == '' || $user['foodpref'] == '' || $user['paystatus'] == '' || $user['heard'] == '' || $user['tdate'] == '') {
                                                             echo '<a class="btn btn-sm btn-danger"
                                                             href="ntcreg.php">Continue Registration</a>';
                                                         } else {
