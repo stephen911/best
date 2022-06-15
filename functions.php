@@ -69,9 +69,9 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
 {
     include 'mail.php';
 
-    require 'PHPMailer/src/Exception.php';
-    require 'PHPMailer/src/PHPMailer.php';
-    require 'PHPMailer/src/SMTP.php';
+    require '/PHPMailer/src/Exception.php';
+    require '/PHPMailer/src/PHPMailer.php';
+    require '/PHPMailer/src/SMTP.php';
     $m = new Mail();
     $olddate = $tdate;
     $tdate = date('jS F, Y', strtotime($olddate));

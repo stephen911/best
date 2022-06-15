@@ -12,8 +12,9 @@ class Mail extends PHPMailer
 
     public function sendmail($domain, $subject, $message, $from_name = 'Yolk Mailer', $to, $reply_to = 'info@phpyork.com', $reply_to_name = 'Yolk Mailer')
     {
-        // PHPMailer\PHPMailer\PHPMailer;
-        // PHPMailer\PHPMailer\SMTP;
+        require '/PHPMailer/src/Exception.php';
+        require '/PHPMailer/src/PHPMailer.php';
+        require '/PHPMailer/src/SMTP.php';
         try {
             $mail = new PHPMailer(true);
             if (is_array($to)) {
