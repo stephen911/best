@@ -273,7 +273,7 @@ $user = users();
                                                            class="custom-control-label">Check this custom checkbox</label>
                                                 </div>
                                             </div> -->
-                                        <div class="list-group-item">
+                                            <div class="list-group-item">
                                             <div class="form-group m-0" role="group" aria-labelledby="label-region">
                                                 <div class="form-row">
                                                     <label id="label-region" for="region" class="col-md-3 col-form-label form-label">Region</label>
@@ -306,6 +306,7 @@ $user = users();
                                         </div>
 
 
+                                        <div id="region_districts">
 
                                         <div id="Greater Accra" style="display: none;">
 
@@ -850,67 +851,7 @@ $user = users();
                                                 </div>
                                             </div>
                                         </div>
-
-
-
-
-                                        <!-- <div class="list-group-item">
-                                            <div class="form-group m-0" role="group"
-                                                aria-labelledby="label-highestEduLevel">
-                                                <div class="form-row">
-                                                    <label id="label-highestEduLevel" for="highestEduLevel"
-                                                        class="col-md-3 col-form-label form-label">District or Municipality</label>
-                                                    <div class="col-md-9">
-                                                        <select id="custom-select9" class="form-control custom-select" name="district">
-                                                            <option selected value="<//?//php //echo  ($user['district'] == '') ? '' : $user['district']; ?>"> <//?//php //echo  ($user['district'] == '') ? 'Choose your District or Municipality' : $user['district']; ?>
-                                                            </option>
-                                                            <option value="Adenta Municipality">Adenta Municipality</option>
-                                                            <option value="Ga - East Municipality">Ga - East Municipality</option>
-                                                            <option value="La Nkwantanang Madina Municipality">La Nkwantanang Madina Municipality</option>
-                                                            <option value="other">other</option>
-
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div> -->
-
-
-
-                                        <!-- <div class="all">
-                                            <div id="specify" style="display: none;">
-                                                <div class="list-group-item toggle-target target-report" data-lookup="1">
-
-                                                    <div class="form-group m-0" role="group" aria-labelledby="label-specify">
-                                                        <div class="form-row">
-                                                            <label id="label-specify" for="specify" class="col-md-3 col-form-label form-label">specify</label>
-                                                            <div class="col-md-9">
-                                                                <input id="specify" type="text" placeholder="Specify your district or municipality" value="<//?php echo ($user['dother'] == '') ? '' : $user['dother']; ?>" class="form-control" name="dother">
                                                             </div>
-                                                        </div>
-
-                                                    </div>
-
-                                                </div>
-                                            </div> -->
-                                            <!-- <div id="east" class="list-group-item" style="display: none;">
-                                                <div id="east" class="form-group m-0" role="group" aria-labelledby="label-venuepref">
-                                                    <div class="form-row">
-                                                        <label id="label-venuepref" for="venuepref" class="col-md-3 col-form-label form-label">Venue Preference</label>
-                                                        <div class="col-md-9">
-                                                            <select id="custom-select2" class="form-control custom-select" name="venue">
-                                                                <option selected value="<//?php echo ($user['venue'] == '') ? '' : $user['venue']; ?>"><//?php echo ($user['venue'] == '') ? 'Choose a venue of your choice' : $user['venue']; ?>
-                                                                </option>
-                                                                <option value="Ashongmang Presby Church">Ashongmang Presby Church</option>
-                                                                <option value="Kwabenya SHS">Kwabenya SHS</option>
-
-
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div> -->
-                                        <!-- </div> -->
                                         <div class="list-group-item">
                                             <div class="form-group m-0" role="group" aria-labelledby="label-foodpref">
                                                 <div class="form-row">
