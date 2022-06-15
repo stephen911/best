@@ -1,9 +1,20 @@
+
 <?php
  include 'functions.php';
+ include 'yolkpay.php';
+ $yolk =  new YolkPay();
+
  checker();
  $user = users();
 //  var_dump($_SESSION['id']);
 
+if (isset($_GET['ref'])) {
+    extract($_GET);
+
+    $uid = $_SESSION['id'];
+
+    payment($uid, $ref, $amount);
+}
 ?>
 
 <!DOCTYPE html>
@@ -98,7 +109,25 @@
 
                                     <h1 class="h2">Certification</h1>
 
-                                    <div class="card border-left-3 border-left-danger card-2by1">
+                                    <?php
+                                    if ($user['paystatus'] == '') {
+                                        echo '<div class="card border-left-3 border-left-danger card-2by1">
+                                        <div class="card-body">
+                                            <div class="media align-items-center">
+                                                <div class="media-body">
+                                                    No Payment has been made yet. Pay to get your Certificate
+                                                    
+                                                </div>
+                                                <div class="media-right">
+                                                    '.$yolk->handler().'
+                                                    '.$yolk->payscript($user['title'], $user['name'], $user['email'], $user['contact'], 70, $ref = '').'
+                                                    '.$yolk->pay("Pay Now").'
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>';
+                                    } else {
+                                        echo '<div class="card border-left-3 border-left-danger card-2by1">
                                         <div class="card-body">
                                             <div class="media align-items-center">
                                                 <div class="media-body">
@@ -117,6 +146,15 @@
                                         </div>
                                         
                                     </div>
+                                    <canvas id="canvas" style="border:1px solid #d3d3d3;"></canvas>
+
+                                    ';
+
+                                    }
+
+                                    ?>
+
+                                   
 
                                     
 
@@ -128,7 +166,6 @@
             <input id="name" type='text'>
         </label> -->
         <!-- <a href="#" id="download-btn" download>Download</a> -->
-        <canvas id="canvas" style="border:1px solid #d3d3d3;"></canvas>
         
             
             <input id="name" type='hidden' value="<?php echo $user['title'].' '.$user['name']; ?>">

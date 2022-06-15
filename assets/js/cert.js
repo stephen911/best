@@ -10,7 +10,7 @@ const downloadBtn = document.getElementById('download-btn')
 
               //window.devicePixelRatio=1; //Blury Text 
 
-        window.devicePixelRatio=2;      //Clear Text 
+        window.devicePixelRatio=5;      //Clear Text 
 
         //(CSS pixels). 
 
@@ -66,9 +66,9 @@ image.onload = function () {
 	// context.imageSmoothingEnabled = false;
 	// drawImage2()
 	drawImage()
-	drawText(nameInput.value.toUpperCase(), 500, 348, 30,'monotype arial');
-drawText(districtInput.value.toUpperCase(), 500, 491, 20,'monotype arial');
-drawText(dateInput.value.toUpperCase(), 500, 522, 20,'monotype arial');
+	drawText(nameInput.value.toUpperCase(), 1250, 875, 70,'monotype arial');
+drawText(districtInput.value.toUpperCase(), 1250, 1230, 40,'monotype arial');
+drawText(dateInput.value.toUpperCase(), 1250, 1310, 40,'monotype arial');
 
 
 }
