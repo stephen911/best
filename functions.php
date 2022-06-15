@@ -98,7 +98,7 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
         </html>';
         // yolk mailer
         // $mym = [$email];
-        $from = 'kpin463@gmail.com';
+        $from = 'tuceehub.org';
         $headers = 'MIME-Version: 1.0'."\r\n";
         $headers .= 'Content-type: text/html; charset=iso-8859-1'."\r\n";
         $headers .= 'From: '.$from;
