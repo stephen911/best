@@ -1,9 +1,60 @@
 const canvas = document.getElementById('canvas')
 const ctx = canvas.getContext('2d')
+window.devicePixelRatio=2;
 const nameInput = document.getElementById('name')
 const districtInput = document.getElementById('district')
 const dateInput = document.getElementById('dateadded')
 const downloadBtn = document.getElementById('download-btn')
+
+
+
+              //window.devicePixelRatio=1; //Blury Text 
+
+        window.devicePixelRatio=2;      //Clear Text 
+
+        //(CSS pixels). 
+
+              //Display Size 
+
+        // var size = 150; 
+
+        canvas.style.width = 500 + "px"; 
+
+        canvas.style.height = 350 + "px"; 
+
+  
+
+        var scale = window.devicePixelRatio;  
+
+            
+
+        canvas.width = Math.floor(500 * scale); 
+
+        canvas.height = Math.floor(350 * scale); 
+
+  
+
+        //CSS pixels for coordinate systems 
+
+        // ctx.scale(scale, scale); 
+
+        // ctx.font = '10px Arial'; 
+
+        // ctx.textAlign = 'center'; 
+
+        // ctx.textBaseline = 'middle'; 
+
+  
+
+        // var x = size / 2; 
+
+        // var y = size / 2; 
+
+  
+
+        // var textString = "GEEKS FOR GEEKS"; 
+
+        // ctx.fillText(textString, x, y); 
 
 
 const image = new Image()
@@ -15,9 +66,9 @@ image.onload = function () {
 	// context.imageSmoothingEnabled = false;
 	// drawImage2()
 	drawImage()
-	drawText(nameInput.value.toUpperCase(), 250, 173, 16,'monotype arial');
-drawText(districtInput.value.toUpperCase(), 250, 244, 10,'monotype arial');
-drawText(dateInput.value.toUpperCase(), 250, 260, 10,'monotype arial');
+	drawText(nameInput.value.toUpperCase(), 500, 348, 30,'monotype arial');
+drawText(districtInput.value.toUpperCase(), 500, 491, 20,'monotype arial');
+drawText(dateInput.value.toUpperCase(), 500, 522, 20,'monotype arial');
 
 
 }
