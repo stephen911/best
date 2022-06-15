@@ -72,7 +72,8 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
     include 'starter.php';
     $up = mysqli_query($conn, "UPDATE users SET title='$title', name= '$name', gender = '$gender', email='$email', contact= '$contact', telegram='$telegram', lincesed ='$lincesed', nameofschool='$nameofschool', region ='$region', district ='$district', foodpref='$foodpref', tdate='$tdate', heard ='$heard' WHERE id='$id'  ");
     if ($up) {
-        echo 'Updated Successfully. Make Payment to Download your Certifcate ';
+        echo 'Registration Successful. Make Payment to Confirm Resgistration ';
+        mail($email, "TUCEE Institute of Counselling and Technology", "Your Registration has been successful This message is to confirm your registration has been succesful. Please make payment to enable you download your Certification of Participation");
     } else {
         echo 'Failed to update record . Try again';
     }
