@@ -115,13 +115,7 @@ $user = users();
                                                      style="min-width: 180px">
                                                      <small><b>Please we humbly entreat you to make payment right away to book your seat. Please call +233 246 535 961 when you have successfully made payment. Thank you</b></small>
                                                 </div>
-                                                <div class="media-right mt-2 mt-xs-plus-0">
-                                                    
-                                            
-                                                 '.$yolk->handler().'
-                                                '.$yolk->payscript($user['title'], $user['name'], $user['email'], $user['contact'], 70, $ref = '').'
-                                                '.$yolk->pay('Pay Now').'
-                                                </div>
+                                                
                                                 
                                             </div>
                                         </div>
@@ -853,29 +847,7 @@ $user = users();
                                         </div>
                                                             </div>
 
-
-
-                                        <?php;
-
-                                        if ($user['tdate'] == '') {
-                                            echo '';
-                                        } else {
-                                            echo '<div class="list-group-item">
-                                            <div class="form-group m-0" role="group" aria-labelledby="label-tdate">
-                                                <div class="form-row">
-                                                    <label id="label-tdate" for="tdate" class="col-md-3 col-form-label form-label">Date for training</label>
-                                                    <div class="col-md-9">
-                                                        '.$user['tdate'].'
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>  ';
-                                        }
-
-                                        ?>
-                                        
-
-                                        <div class="list-group-item">
+                                                            <div class="list-group-item">
                                             <div class="form-group m-0" role="group" aria-labelledby="label-tdate">
                                                 <div class="form-row">
                                                     <label id="label-tdate" for="tdate" class="col-md-3 col-form-label form-label">Date for training</label>
