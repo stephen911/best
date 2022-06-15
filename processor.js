@@ -177,7 +177,7 @@ $(function(){
             swal({
                 title: "Success",
                 html: "Registration Successful. <br>Make Payment to Confirm Resgistration",
-                timer: 1000,
+                timer: 3000,
                 type: 'success',
                 padding: "2em",
                 onOpen: function () {
