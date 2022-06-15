@@ -135,6 +135,7 @@
             <input id="district" type='hidden' value="<?php echo $user['district']; ?>">
             <input id="dateadded" type='hidden' value="<?php echo $user['dateadded']; ?>">
 
+            <!-- <a href="javascript:genPDF()">Download PDF</a> -->
 
             <!-- <button onclick="modifyPdf()">Modify PDF</button> -->
 
@@ -159,6 +160,32 @@
             </div>
         </div>
 
+        <script>
+
+function genPDF() {
+	
+	var doc = new jsPDF();
+	
+	doc.text(20,20,'TEST Message!!');
+	doc.addPage();
+	doc.text(20,20,'TEST Page 2!');
+	doc.save('Test.pdf');
+	
+}
+
+
+
+        </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/
+jspdf/1.3.2/jspdf.debug.js"></script>
+
+
+<script>
+ const pdf=new jsPDF("assets/images/CERT.pdf");
+ pdf.text('This is my first line in jsPDF',10,10);
+ pdf.save('a4.pdf');
+</script>
         <script>
     const { degrees, PDFDocument, rgb, StandardFonts } = PDFLib
 
