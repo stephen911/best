@@ -272,7 +272,7 @@
                                                 </div>
                                                 <!-- <div class="media-right">
                                                     <?php
-                                                        if ($user['title'] == '' || $user['gender'] == '' || $user['contact'] == '' || $user['lincesed'] == '' || $user['nameofschool'] == '' || $user['district'] == '' || $user['region'] == '' || $user['foodpref'] == '' || $user['paystatus'] == '' || $user['heard'] == '') {
+                                                        if ($user['title'] == '' || $user['gender'] == '' || $user['contact'] == ''|| $user['tdate'] == '' || $user['lincesed'] == '' || $user['nameofschool'] == '' || $user['district'] == '' || $user['region'] == '' || $user['foodpref'] == '' || $user['paystatus'] == '' || $user['heard'] == '') {
                                                             echo '<a class="btn btn-sm btn-danger"
                                                             href="ntcreg.php">Continue Registration</a>';
                                                         } else {
@@ -297,6 +297,21 @@
                                                     <div class="media-right text-center d-flex align-items-center">
                                                         <!-- <span class="text-black-50 mr-3">Good</span>
                                                         <h4 class="mb-0">5.8</h4> -->
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="media align-items-center">
+                                                    <div class="media-body">
+                                                        <strong>Training Date</strong><br>
+                                                        <div class="d-flex align-items-center">
+                                                            <!-- <small class="text-black-50 text-uppercase mr-2">Course</small> -->
+                                                            <a href="#"><?php echo $user['tdate']; ?></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="media-right text-center d-flex align-items-center">
+                                                        <!-- <span class="text-black-50 mr-3">Failed</span>
+                                                        <h4 class="mb-0 text-danger">2.8</h4> -->
                                                     </div>
                                                 </div>
                                             </li>

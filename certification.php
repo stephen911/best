@@ -1,9 +1,20 @@
+
 <?php
  include 'functions.php';
+ include 'yolkpay.php';
+ $yolk =  new YolkPay();
+
  checker();
  $user = users();
 //  var_dump($_SESSION['id']);
 
+if (isset($_GET['ref'])) {
+    extract($_GET);
+
+    $uid = $_SESSION['id'];
+
+    payment($uid, $ref, $amount);
+}
 ?>
 
 <!DOCTYPE html>
@@ -98,7 +109,21 @@
 
                                     <h1 class="h2">Certification</h1>
 
-                                    <div class="card border-left-3 border-left-danger card-2by1">
+                                    <?php
+                                    if ($user['paystatus'] == '') {
+                                        echo '<div class="card border-left-3 border-left-danger card-2by1">
+                                        <div class="card-body">
+                                            <div class="media align-items-center">
+                                                <div class="media-body">
+                                                    No Payment has been made yet. Pay to get your Certificate. Payment will be made available soon. Thank You!
+                                                    
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>';
+                                    } else {
+                                        echo '<div class="card border-left-3 border-left-danger card-2by1">
                                         <div class="card-body">
                                             <div class="media align-items-center">
                                                 <div class="media-body">
@@ -117,6 +142,15 @@
                                         </div>
                                         
                                     </div>
+                                    <canvas id="canvas" style="border:1px solid #d3d3d3;"></canvas>
+
+                                    ';
+
+                                    }
+
+                                    ?>
+
+                                   
 
                                     
 
@@ -128,12 +162,11 @@
             <input id="name" type='text'>
         </label> -->
         <!-- <a href="#" id="download-btn" download>Download</a> -->
-        <canvas id="canvas" height="350px" width="500px"></canvas>
         
             
             <input id="name" type='hidden' value="<?php echo $user['title'].' '.$user['name']; ?>">
             <input id="district" type='hidden' value="<?php echo $user['district']; ?>">
-            <input id="dateadded" type='hidden' value="<?php echo $user['dateadded']; ?>">
+            <input id="dateadded" type='hidden' value="<?php echo $user['tdate']; ?>">
 
             <!-- <a href="javascript:genPDF()">Download PDF</a> -->
 

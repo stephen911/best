@@ -852,6 +852,17 @@ $user = users();
                                             </div>
                                         </div>
                                                             </div>
+
+                                                            <div class="list-group-item">
+                                            <div class="form-group m-0" role="group" aria-labelledby="label-tdate">
+                                                <div class="form-row">
+                                                    <label id="label-tdate" for="tdate" class="col-md-3 col-form-label form-label">Date for training</label>
+                                                    <div class="col-md-9">
+                                                        <input id="tdate" type="date" placeholder="Date for training" value="<?php echo ($user['tdate'] == '') ? '' : $user['tdate']; ?>" class="form-control" name="tdate">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>                    
                                         <div class="list-group-item">
                                             <div class="form-group m-0" role="group" aria-labelledby="label-foodpref">
                                                 <div class="form-row">
@@ -881,6 +892,7 @@ $user = users();
                                                             </option>
                                                             <option value="TUCEE Website">TUCEE Website</option>
                                                             <option value="GNACC Website">GNACC Website</option>
+                                                            <option value="GES">GES</option>
                                                             <option value="Facebook">Facebook</option>
                                                             <option value="whatsapp">WhatsApp</option>
                                                             <option value="Instagram">Instagram</option>
