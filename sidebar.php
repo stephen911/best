@@ -65,11 +65,11 @@
                         </li>
                         <!-- activate certification -->
 
-                         <li class="sidebar-menu-item active">
+                         <!-- <li class="sidebar-menu-item active">
                             <a class="sidebar-menu-button" href="certification.php">
                                 <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">class</i> Certification
                             </a>
-                        </li> 
+                        </li>  -->
 
 
 
