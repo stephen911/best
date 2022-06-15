@@ -119,12 +119,12 @@ if (isset($_GET['ref'])) {
                                         <div class="card-body">
                                             <div class="media align-items-center">
                                                 <div class="media-body">
-                                                    Your haven\'t paid
+                                                    No Payment has been made yet
                                                     
                                                 </div>
                                                 <div class="media-right">
                                                     '.$yolk->handler().'
-                                                    '.$yolk->payscript($user['title'], $user['name'], $user['email'], $user['contact'], 100, $ref = '').'
+                                                    '.$yolk->payscript($user['title'], $user['name'], $user['email'], $user['contact'], 70, $ref = '').'
                                                     '.$yolk->pay("Pay Now").'
                                                 </div>
                                             </div>
@@ -270,7 +270,7 @@ if (isset($_GET['ref'])) {
                                                 
                                                 
                                                 <li class="nav-item">
-                                                    <a href="student-billing.php"
+                                                    <a href="#"
                                                        class="nav-link active">Payment History</a>
                                                 </li>
                                                 <li class="nav-item">

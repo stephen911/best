@@ -142,8 +142,8 @@ function transactions()
         <td>
             <div class="d-flex align-items-center">
                 <small class="text-uppercase text-muted mr-2">Transaction Amount</small>
-                <a href="#"
-                   class="text-body small"><span class="js-lists-values-document">₵'.$row['amount'].'.00</span></a>
+                <a href="student-invoice.php"
+                   class="text-body small"><span class="js-lists-values-document">'.$row['amount'].'</span></a>
             </div>
         </td>
         

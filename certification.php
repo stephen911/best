@@ -22,6 +22,8 @@
         <!-- Prevent the demo from appearing in search engines (REMOVE THIS) -->
         <meta name="robots"
               content="noindex">
+        <script src="https://unpkg.com/pdf-lib@1.4.0"></script>
+        <script src="https://unpkg.com/downloadjs@1.4.7"></script>
 
         <!-- Custom Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,700%7CRoboto:400,500%7CRoboto:400,500&amp;display=swap"
@@ -130,8 +132,13 @@
         
             
             <input id="name" type='hidden' value="<?php echo $user['title'].' '.$user['name']; ?>">
-            <input id="district" type='hidden' value="<?php echo $user['region']; ?>">
+            <input id="district" type='hidden' value="<?php echo $user['district']; ?>">
             <input id="dateadded" type='hidden' value="<?php echo $user['dateadded']; ?>">
+
+            <!-- <a href="javascript:genPDF()">Download PDF</a> -->
+
+            <!-- <button onclick="modifyPdf()">Modify PDF</button> -->
+
 
        
     <!-- </div> -->
@@ -152,6 +159,71 @@
 
             </div>
         </div>
+
+        <script>
+
+function genPDF() {
+	
+	var doc = new jsPDF();
+	
+	doc.text(20,20,'TEST Message!!');
+	doc.addPage();
+	doc.text(20,20,'TEST Page 2!');
+	doc.save('Test.pdf');
+	
+}
+
+
+
+        </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/
+jspdf/1.3.2/jspdf.debug.js"></script>
+
+
+<script>
+ const pdf=new jsPDF("assets/images/CERT.pdf");
+ pdf.text('This is my first line in jsPDF',10,10);
+ pdf.save('a4.pdf');
+</script>
+        <script>
+    const { degrees, PDFDocument, rgb, StandardFonts } = PDFLib
+
+    async function modifyPdf() {
+      // Fetch an existing PDF document
+      const url = 'assets/images/CERT.pdf'
+  		const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer())
+
+      // Load a PDFDocument from the existing PDF bytes
+      const pdfDoc = await PDFDocument.load(existingPdfBytes)
+
+      // Embed the Helvetica font
+      const helveticaFont = await pdfDoc.embedFont(StandardFonts.Helvetica)
+
+      // Get the first page of the document
+      const pages = pdfDoc.getPages()
+      const firstPage = pages[0]
+
+      // Get the width and height of the first page
+      const { width, height } = firstPage.getSize()
+
+      // Draw a string of text diagonally across the first page
+        drawText('This text was added with JavaScript!', {
+        x: 250,
+        y: 250,
+        size: 50,
+        font: helveticaFont,
+        color: rgb(0, 1, 1),
+        rotate: degrees(-45),
+      })
+
+      // Serialize the PDFDocument to bytes (a Uint8Array)
+      const pdfBytes = await pdfDoc.save()
+
+			// Trigger the browser to download the PDF document
+      download(pdfBytes, "pdf-lib_modification_example.pdf", "application/pdf");
+    }
+  </script>
 
         <!-- jQuery -->
         <script src="assets/vendor/jquery.min.js"></script>
