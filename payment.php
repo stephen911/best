@@ -119,6 +119,25 @@ if (isset($_GET['ref'])) {
                                         <div class="card-body">
                                             <div class="media align-items-center">
                                                 <div class="media-body">
+                                                    No Payment has been made yet. Payment will be made available soon. Thank You!
+                                                    
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>';
+                                    } else {
+                                        echo '';
+                                    }
+
+                                    ?>
+
+                                    
+<!-- activate payment -->
+<!-- <div class="card border-left-3 border-left-danger card-2by1">
+                                        <div class="card-body">
+                                            <div class="media align-items-center">
+                                                <div class="media-body">
                                                     No Payment has been made yet
                                                     
                                                 </div>
@@ -129,12 +148,7 @@ if (isset($_GET['ref'])) {
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>';
-                                    } else {
-                                        echo '';
-                                    }
-
-                                    ?>
+                                    </div> -->
 
                                     <div class="card table-responsive"
                                          data-toggle="lists"
@@ -286,6 +300,9 @@ if (isset($_GET['ref'])) {
                         </div>
 
                     </div>
+                    
+
+                    
 
                     <?php include 'sidebar.php'; ?>
 
