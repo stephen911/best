@@ -11,8 +11,12 @@ $user = users();
 //     updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $lincesed, $nameofschool, $region, $district, $foodpref, $heard);
 // }
 
+<<<<<<< HEAD
 // Yolk mailer
-// $mail = new Mail();
+=======
+// // Yolk mailer
+>>>>>>> 2d4b522961b942f334f2351fb111b7b3d9228a20
+$mail = new Mail();
 ?>
 
 <!DOCTYPE html>
@@ -369,6 +373,7 @@ $user = users();
 
                                                                 </select>
                                                             </div>
+<<<<<<< HEAD
                                                         </div>
                                                     </div>
                                                 </div>
@@ -393,6 +398,16 @@ $user = users();
                                                                 </select>
                                                             </div>
                                                         </div>
+=======
+
+                                                            <div class="list-group-item">
+                                            <div class="form-group m-0" role="group" aria-labelledby="label-tdate">
+                                                <div class="form-row">
+                                                    <label id="label-tdate" for="tdate" class="col-md-3 col-form-label form-label">Date for training</label>
+                                                    <div class="col-md-9">
+                                                        <?php $date = date('Y-m-d', strtotime($user['tdate'])); ?>
+                                                        <input id="tdate" type="date" placeholder="Date for training" value="<?php echo ($user['tdate'] == '') ? '' : $date; ?>" class="form-control" name="tdate">
+>>>>>>> 2d4b522961b942f334f2351fb111b7b3d9228a20
                                                     </div>
                                                 </div>
                                             </div>
