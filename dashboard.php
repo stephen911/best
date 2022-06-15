@@ -109,8 +109,8 @@
                                                             echo '<a class="btn btn-sm btn-danger"
                                                             href="ntcreg.php">Continue Registration</a>';
                                                         } else {
-                                                            echo '<a class="btn btn-sm btn-success"
-                                                            href="certification.php"> View Certificate</a>';
+                                                            echo '<!--<a class="btn btn-sm btn-success"
+                                                            href="certification.php"> View Certificate</a>-->';
                                                         }
                                                     ?>
                                         </div>
@@ -272,7 +272,7 @@
                                                 </div>
                                                 <!-- <div class="media-right">
                                                     <?php
-                                                        if ($user['title'] == '' || $user['gender'] == '' || $user['contact'] == ''|| $user['tdate'] == '' || $user['lincesed'] == '' || $user['nameofschool'] == '' || $user['district'] == '' || $user['region'] == '' || $user['foodpref'] == '' || $user['paystatus'] == '' || $user['heard'] == '') {
+                                                        if ($user['title'] == '' || $user['gender'] == '' || $user['contact'] == '' || $user['tdate'] == '' || $user['lincesed'] == '' || $user['nameofschool'] == '' || $user['district'] == '' || $user['region'] == '' || $user['foodpref'] == '' || $user['paystatus'] == '' || $user['heard'] == '') {
                                                             echo '<a class="btn btn-sm btn-danger"
                                                             href="ntcreg.php">Continue Registration</a>';
                                                         } else {
