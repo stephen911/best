@@ -291,6 +291,7 @@ if (isset($_GET['ref'])) {
                                                     <a href="#"
                                                        class="nav-link active">Payment History</a>
                                                 </li>
+                                                <!-- activate certification -->
                                                 <li class="nav-item">
                                                     <a href="certification.php"
                                                        class="nav-link">Certification</a>
