@@ -11,8 +11,8 @@ $user = users();
 //     updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $lincesed, $nameofschool, $region, $district, $foodpref, $heard);
 // }
 
-// Yolk mailer
-$mail = new Mail();
+// // Yolk mailer
+// $mail = new Mail();
 ?>
 
 <!DOCTYPE html>

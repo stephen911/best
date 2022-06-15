@@ -88,7 +88,7 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
             <p>Please make <span style="color: green;">Payment</span> to enable you <span style="color: green;">Download</span> your <span style="color: green;">Certification of Participation</span> </p>
         </body> 
         </html>';
-
+        // yolk mailer
         $mail->sendmail('tuceehub.org', $subject, $body, 'TUCEE Institute of Counselling and Technology', [$email], $reply_to = 'info@tuceehub.org', $reply_to_name = 'TUCEE HUB');
     } else {
         echo 'Failed to update record . Try again';
