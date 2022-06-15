@@ -69,9 +69,9 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
 {
     // include 'mail.php';
 
-    require '/PHPMailer/src/Exception.php';
-    require '/PHPMailer/src/PHPMailer.php';
-    require '/PHPMailer/src/SMTP.php';
+    // require '/PHPMailer/src/Exception.php';
+    // require '/PHPMailer/src/PHPMailer.php';
+    // require '/PHPMailer/src/SMTP.php';
 
     // use PHPMailer\PHPMailer\PHPMailer;
     //  use PHPMailer\PHPMailer\SMTP;
@@ -97,7 +97,7 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
         </body> 
         </html>';
         // yolk mailer
-        $mym = [$email];
+        // $mym = [$email];
         mail($email, 'TUCEE '.$subject, $body);
     // $m->sendmail('www.phpyolk.com', $subject, $body, 'TUCEE Institute of Counselling and Technology', $mym, 'info@tuceehub.org', 'TUCEE HUB');
     } else {
