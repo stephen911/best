@@ -67,7 +67,7 @@ function users()
 
 function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $lincesed, $nameofschool, $region, $district, $foodpref, $heard, $tdate)
 {
-    include 'mail.php';
+    // include 'mail.php';
 
     require '/PHPMailer/src/Exception.php';
     require '/PHPMailer/src/PHPMailer.php';
@@ -76,7 +76,7 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
     // use PHPMailer\PHPMailer\PHPMailer;
     //  use PHPMailer\PHPMailer\SMTP;
 
-    $m = new Mail();
+    // $m = new Mail();
     $olddate = $tdate;
     $tdate = date('jS F, Y', strtotime($olddate));
     include 'starter.php';
