@@ -75,7 +75,9 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
     $up = mysqli_query($conn, "UPDATE users SET title='$title', name= '$name', gender = '$gender', email='$email', contact= '$contact', telegram='$telegram', lincesed ='$lincesed', nameofschool='$nameofschool', region ='$region', district ='$district', foodpref='$foodpref',  heard ='$heard', tdate='$tdate' WHERE id='$id'  ");
     if ($up) {
         echo 'Registration Successful. Make Payment to Confirm Participation. An email has been sent to '.$email;
-        mail($email, 'TUCEE Institute of Counselling and Technology', '<html> 
+        // mail($email, 'TUCEE Institute of Counselling and Technology', '');
+        $subject = 'NTC REGISTRATION';
+        $body = '<html> 
         <head> 
             <title>TUCEE Institute of Counselling and Technology</title> 
         </head> 
@@ -85,7 +87,9 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
             <p>This message is to confirm your that registration has been <span style="color: green;">Successful. </span></p>
             <p>Please make <span style="color: green;">Payment</span> to enable you <span style="color: green;">Download</span> your <span style="color: green;">Certification of Participation</span> </p>
         </body> 
-        </html>');
+        </html>';
+
+        $mail->sendmail('tuceehub.org', $subject, $body, 'TUCEE Institute of Counselling and Technology', [$email], $reply_to = 'info@tuceehub.org', $reply_to_name = 'TUCEE HUB');
     } else {
         echo 'Failed to update record . Try again';
     }
