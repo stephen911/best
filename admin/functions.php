@@ -244,5 +244,7 @@ function unpaid()
     include 'starter.php';
     $c = mysqli_query($conn, 'SELECT * FROM transactions');
     $count = mysqli_num_rows($c);
-    echo $count;
+    $c2 = mysqli_query($conn, 'SELECT * FROM transactions');
+    $count2 = mysqli_num_rows($c2);
+    echo $count2 - $count;
 }
