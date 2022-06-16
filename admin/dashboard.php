@@ -134,10 +134,10 @@
                                                             <th colspan="2">
                                                                 <a href="javascript:void(0)"
                                                                    class="sort"
-                                                                   data-sort="js-lists-values-employee-name">Employee name</a>
+                                                                   data-sort="js-lists-values-employee-name">name</a>
                                                                 <a href="javascript:void(0)"
                                                                    class="sort"
-                                                                   data-sort="js-lists-values-employee-title">Employee title</a>
+                                                                   data-sort="js-lists-values-employee-title">Region</a>
                                                             </th>
                                                         </tr>
                                                     </thead>
@@ -145,10 +145,15 @@
                                                     <thead>
                                                         <tr>
 
-                                                            <th>Employee</th>
+                                                            <th>Name</th>
 
-                                                            <th style="width: 100px;">Active</th>
-                                                            <th style="width: 51px;">Earnings</th>
+                                                            <th style="width: 100px;">Email</th>
+                                                            <th style="width: 51px;">Contact</th>
+                                                            <th style="width: 100px;">Region</th>
+                                                            <th style="width: 51px;">District</th>
+                                                            <th style="width: 51px;">Trainin Date</th>
+                                                            <th style="width: 100px;">License Number</th>
+                                                            <th style="width: 51px;">Name of school</th>
                                                             <th style="width: 24px;"></th>
                                                         </tr>
                                                     </thead>
@@ -163,54 +168,18 @@
 
                                                             </td>
 
-                                                            <td><small class="text-muted">3 days ago</small></td>
-                                                            <td>&dollar;12,402</td>
-                                                            <td><a href="#"
-                                                                   class="text-muted"><i class="material-icons">more_vert</i></a></td>
+                                                            <td>nana@gmail.com</td>
+                                                            <td>0247678736</td>
+                                                            <td>Greater Accra</td>
+                                                            <td>Abura district</td>
+                                                            <td>14th, june 2022</td>
+                                                            <td>pt/000666/2022</td>
+                                                            <td>New sherperd school</td>
                                                         </tr>
 
-                                                        <tr>
+                                                        
 
-                                                            <td>
-
-                                                                <span class="js-lists-values-employee-name">Helen Mcdaniel</span>
-
-                                                            </td>
-
-                                                            <td><small class="text-muted">2 days ago</small></td>
-                                                            <td>&dollar;48,108</td>
-                                                            <td><a href="#"
-                                                                   class="text-muted"><i class="material-icons">more_vert</i></a></td>
-                                                        </tr>
-
-                                                        <tr>
-
-                                                            <td>
-
-                                                                <span class="js-lists-values-employee-name">Karim Hicks</span>
-
-                                                            </td>
-
-                                                            <td><small class="text-muted">1 hour ago</small></td>
-                                                            <td>&dollar;11,802</td>
-                                                            <td><a href="#"
-                                                                   class="text-muted"><i class="material-icons">more_vert</i></a></td>
-                                                        </tr>
-
-                                                        <tr>
-
-                                                            <td>
-
-                                                                <span class="js-lists-values-employee-name">Clifford Burgess</span>
-
-                                                            </td>
-
-                                                            <td><small class="text-muted">2 hours ago</small></td>
-                                                            <td>&dollar;84,401</td>
-                                                            <td><a href="#"
-                                                                   class="text-muted"><i class="material-icons">more_vert</i></a></td>
-                                                        </tr>
-
+                                                        
                                                     </tbody>
                                                 </table>
                                             </div>
