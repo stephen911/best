@@ -184,6 +184,37 @@ function registered()
         <td>'.$row['tdate'].'</td>
         <td>'.$row['lincesed'].'</td>
         <td>'.$row['nameofschool'].'</td>
+        <td>'.$row['paystatus'].'</td>
     </tr>';
+    }
+}
+
+
+function search()
+{
+    include 'starter.php';
+    $u = mysqli_query($conn, 'SELECT * FROM users');
+    while ($row = mysqli_fetch_array($u)) {
+        echo '
+        <div class="table-responsive border-bottom" data-toggle="lists" data-lists-values=\'['.$row['name'].']\'>
+                            <div class="table-responsive" data-toggle="lists" data-lists-values=\'['.$row['name'].']\'>
+                                <div class="search-form search-form--light mb-3">
+                                    <input type="text" class="form-control search" placeholder="Search">
+                                    <button class="btn" type="button" role="button"><i class="material-icons">search</i></button>
+                                </div>
+
+                                <table class="table mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">
+                                                <a href="javascript:void(0)" class="sort" data-sort="\'['.$row['name'].']\'">name</a>
+                                                <a href="javascript:void(0)" class="sort" data-sort="\'['.$row['region'].']\'">Region</a>
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+        
+        
+    ';
     }
 }
