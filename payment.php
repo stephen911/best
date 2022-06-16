@@ -27,7 +27,10 @@ if (isset($_GET['ref'])) {
     <title>Payment History</title>
 
     <!-- Prevent the demo from appearing in search engines (REMOVE THIS) -->
-    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+
+         <meta name="robots" content="noindex">
 
     <!-- Custom Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,700%7CRoboto:400,500%7CRoboto:400,500&amp;display=swap" rel="stylesheet">
