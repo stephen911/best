@@ -96,8 +96,8 @@ $user = users();
 
 
 
-                    
-                    
+
+
 
 
 
@@ -115,55 +115,100 @@ $user = users();
                                             <button class="btn" type="button" role="button"><i class="material-icons">search</i></button>
                                         </div>
 
-                                        <div
-                        data-toggle="lists"
-                        data-lists-values='["js-lists-values-employee-name", "js-lists-values-employee-title"]'
-                        class="table-responsive border-bottom"
-                      >
+                                        <div data-toggle="lists" data-lists-values='["js-lists-values-employee-name", "js-lists-values-employee-title"]' class="table-responsive border-bottom">
 
-                                        <table class="table mb-0">
-                                        <thead>
-                            <tr>
-                              <th colspan="2">
-                                <a
-                                  href="javascript:void(0)"
-                                  class="sort"
-                                  data-sort="js-lists-values-employee-name"
-                                  >Name</a
-                                >
-                                <a
-                                  href="javascript:void(0)"
-                                  class="sort"
-                                  data-sort="js-lists-values-employee-title"
-                                  >Region</a
-                                >
-                              </th>
-                            </tr>
-                          </thead>
-                                            <thead>
-                                                <tr>
+                                            <table class="table mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th colspan="2">
+                                                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-employee-name">Name</a>
+                                                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-employee-title">Region</a>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <thead>
+                                                    <tr>
 
-                                                    <th>Name</th>
+                                                        <th>Name</th>
 
-                                                    <th style="width: 100px;">Email</th>
-                                                    <th style="width: 51px;">Contact</th>
-                                                    <th style="width: 100px;">Region</th>
-                                                    <th style="width: 51px;">District</th>
-                                                    <th style="width: 51px;">Trainin Date</th>
-                                                    <th style="width: 100px;">License Number</th>
-                                                    <th style="width: 51px;">Name of school</th>
-                                                    <th style="width: 51px;">Payment Status</th>
+                                                        <th style="width: 100px;">Email</th>
+                                                        <th style="width: 51px;">Contact</th>
+                                                        <th style="width: 100px;">Region</th>
+                                                        <th style="width: 51px;">District</th>
+                                                        <th style="width: 51px;">Trainin Date</th>
+                                                        <th style="width: 100px;">License Number</th>
+                                                        <th style="width: 51px;">Name of school</th>
+                                                        <th style="width: 51px;">Payment Status</th>
 
-                                                    <th style="width: 24px;"></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody class="list" id="search">
-                                                <?php registered(); ?>
+                                                        <th style="width: 24px;"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="list" id="search">
+                                                    <?php registered(); ?>
 
 
 
-                                            </tbody>
-                                        </table>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+
+                                <div class="col-lg-8">
+
+                                    <div class="table-responsive border-bottom" data-toggle="lists" data-lists-values='["js-lists-values-employee-name"]'>
+
+                                        <div class="search-form search-form--light mb-3">
+                                            <input type="text" class="form-control search" placeholder="Search">
+                                            <button class="btn" type="button" role="button"><i class="material-icons">search</i></button>
+                                        </div>
+
+                                        <div data-toggle="lists" data-lists-values='["js-lists-values-employee-name", "js-lists-values-employee-title"]' class="table-responsive border-bottom">
+
+                                            <table class="table mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th colspan="2">
+                                                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-employee-name">Name</a>
+                                                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-employee-title">Region</a>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <thead>
+                                                    <tr>
+
+                                                        <th>Name</th>
+
+                                                        
+                                                        <th style="width: 51px;">Contact</th>
+                                                        <th style="width: 100px;">Transaction ID</th>
+                                                        <th style="width: 51px;">Amount</th>
+                                                        <th style="width: 51px;">Date Paid</th>
+                                                        
+
+                                                        <th style="width: 24px;"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="list" id="search">
+                                                    <?php 
+                                                    
+                                                    //registered(); 
+                                                    ?>
+
+
+
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
 
@@ -304,7 +349,7 @@ $user = users();
                                     </div>
                                 </div> -->
                     <!-- </div> -->
-                    
+
 
                 </div>
 
