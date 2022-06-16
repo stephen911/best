@@ -118,7 +118,7 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
 
             $sms->sms('Tucee hub', '0208496496,0244996991', $admin);
             mail('stephendappah1@gmail.com', 'TUCEE '.$subject, $admin, $headers);
-            mail('kpin463@gmail.com', 'TUCEE '.$subject, $admin, $headers);
+        // mail('kpin463@gmail.com', 'TUCEE '.$subject, $admin, $headers);
         // $admin = 'New user has registered for ntc programme. name - '.$name.' , contact - '.$contact.'';
         } else {
             echo 'Failed to update record . Try again';
@@ -127,7 +127,7 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
         if (mysqli_query($conn, "UPDATE users SET title='$title', name= '$name', gender = '$gender', email='$email', contact= '$contact', telegram='$telegram', lincesed ='$lincesed', nameofschool='$nameofschool', region ='$region', district ='$district', foodpref='$foodpref',  heard ='$heard', tdate='$tdate' WHERE id='$id'  ")) {
             echo 'updatesuccess';
             mail('stephendappah1@gmail.com', 'TUCEE '.$subject, $admin.' Duplicate', $headers);
-            mail('kpin463@gmail.com', 'TUCEE '.$subject, $admin.'Duplicate', $headers);
+        // mail('kpin463@gmail.com', 'TUCEE '.$subject, $admin.'Duplicate', $headers);
         } else {
             echo 'Failed to update record . Try again';
         }
