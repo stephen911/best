@@ -105,63 +105,110 @@ $user = users();
                         </div>
                     </div>
 
-
-
-
-
-
-
-
-
                     <div class="card">
-                        <div class="card-body">
-                            <div class="row">
+                        <div class="card-header">
+                            <div class="media align-items-center">
+                                <div class="media-body">
+                                    <h4 class="card-title">Statistics</h4>
+                                    <p class="card-subtitle">Your Statistics</p>
+                                </div>
+                                <!-- <div class="media-right">
+                                    <a class="btn btn-sm btn-primary" href="#">Quiz results</a>
+                                </div> -->
+                            </div>
+                        </div>
 
-                                <div class="col-lg-8">
+                        <ul class="list-group list-group-fit mb-0">
 
-                                    <div class="table-responsive border-bottom" data-toggle="lists" data-lists-values='["js-lists-values-employee-name", "js-lists-values-employee-title", "js-lists-values-employee-district", "js-lists-values-employee-paid"]'>
+                            
 
-                                        <div class="search-form search-form--light mb-3">
-                                            <input type="text" class="form-control search" placeholder="Search by Name, Region, District or Paid Status">
-                                            <button class="btn" type="button" role="button"><i class="material-icons">search</i></button>
-                                        </div>
+                            <li class="list-group-item">
+                                <div class="media align-items-center">
+                                    <div class="media-body">
+                                        <a class="text-body" href="student-quiz-results.html"><strong>Total Users</strong></a><br>
+                                        <!-- <div class="d-flex align-items-center">
+                                            <small class="text-black-50 text-uppercase mr-2">Course</small>
+                                            <a href="student-take-course.html">Angular in Steps</a>
+                                        </div> -->
+                                    </div>
+                                    <div class="media-right text-center d-flex align-items-center">
+                                        <!-- <span class="text-black-50 mr-3">Great</span> -->
+                                        <h4 class="mb-0 text-success">9.8</h4>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="media align-items-center">
+                                    <div class="media-body">
+                                        <a class="text-body" href="student-quiz-results.html"><strong>Paid Users</strong></a><br>
+                                        <!-- <div class="d-flex align-items-center">
+                                            <small class="text-black-50 text-uppercase mr-2">Course</small>
+                                            <a href="student-take-course.html">Angular in Steps</a>
+                                        </div> -->
+                                    </div>
+                                    <div class="media-right text-center d-flex align-items-center">
+                                        <!-- <span class="text-black-50 mr-3">Great</span> -->
+                                        <h4 class="mb-0 text-success">9.8</h4>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="media align-items-center">
+                                    <div class="media-body">
+                                        <a class="text-body" href="student-quiz-results.html"><strong>Unpaid Users</strong></a><br>
+                                        <!-- <div class="d-flex align-items-center">
+                                            <small class="text-black-50 text-uppercase mr-2">Course</small>
+                                            <a href="student-take-course.html">Angular in Steps</a>
+                                        </div> -->
+                                    </div>
+                                    <div class="media-right text-center d-flex align-items-center">
+                                        <!-- <span class="text-black-50 mr-3">Great</span> -->
+                                        <h4 class="mb-0 text-success">9.8</h4>
+                                    </div>
+                                </div>
+                            </li>
 
-                                        <div data-toggle="lists" data-lists-values='["js-lists-values-employee-name", "js-lists-values-employee-title"]' class="table-responsive border-bottom">
+                            
 
-                                            <table class="table mb-0" id="datadownload" class="display nowrap" style="width:100%">
-                                                <thead>
-                                                    <tr>
-                                                        <th colspan="2">
-                                                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-employee-name">Name</a>
-                                                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-employee-title">Region</a>
-                                                        </th>
-                                                    </tr>
-                                                </thead>
-                                                <thead>
-                                                    <tr>
-
-                                                        <th>Name</th>
-
-                                                        <th style="width: 100px;">Email</th>
-                                                        <th style="width: 51px;">Contact</th>
-                                                        <th style="width: 100px;">Region</th>
-                                                        <th style="width: 51px;">District</th>
-                                                        <th style="width: 51px;">Trainin Date</th>
-                                                        <th style="width: 100px;">License Number</th>
-                                                        <th style="width: 51px;">Name of school</th>
-                                                        <th style="width: 51px;">Payment Status</th>
-
-                                                        <th style="width: 24px;"></th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody class="list" id="search">
-                                                    <?php registered(); ?>
+                        </ul>
+                    </div>
+               
 
 
 
-                                                </tbody>
 
-                                                <tfoot>
+
+
+
+
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+
+                            <div class="col-lg-8">
+
+                                <div class="table-responsive border-bottom" data-toggle="lists" data-lists-values='["js-lists-values-employee-name", "js-lists-values-employee-title", "js-lists-values-employee-district", "js-lists-values-employee-paid"]'>
+
+                                    <div class="search-form search-form--light mb-3">
+                                        <input type="text" class="form-control search" placeholder="Search by Name, Region, District or Paid Status">
+                                        <button class="btn" type="button" role="button"><i class="material-icons">search</i></button>
+                                    </div>
+
+                                    <div data-toggle="lists" data-lists-values='["js-lists-values-employee-name", "js-lists-values-employee-title"]' class="table-responsive border-bottom">
+
+                                        <table class="table mb-0" id="datadownload" class="display nowrap" style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="2">
+                                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-employee-name">Name</a>
+                                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-employee-title">Region</a>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <thead>
+                                                <tr>
+
                                                     <th>Name</th>
 
                                                     <th style="width: 100px;">Email</th>
@@ -174,107 +221,129 @@ $user = users();
                                                     <th style="width: 51px;">Payment Status</th>
 
                                                     <th style="width: 24px;"></th>
-                                                    </tr>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="list" id="search">
+                                                <?php registered(); ?>
 
-                                                </tfoot>
-                                            </table>
-                                        </div>
+
+
+                                            </tbody>
+
+                                            <tfoot>
+                                                <th>Name</th>
+
+                                                <th style="width: 100px;">Email</th>
+                                                <th style="width: 51px;">Contact</th>
+                                                <th style="width: 100px;">Region</th>
+                                                <th style="width: 51px;">District</th>
+                                                <th style="width: 51px;">Trainin Date</th>
+                                                <th style="width: 100px;">License Number</th>
+                                                <th style="width: 51px;">Name of school</th>
+                                                <th style="width: 51px;">Payment Status</th>
+
+                                                <th style="width: 24px;"></th>
+                                                </tr>
+
+                                            </tfoot>
+                                        </table>
                                     </div>
-
                                 </div>
+
                             </div>
                         </div>
-
                     </div>
 
-
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="row">
-
-                                <div class="col-lg-8">
-
-                                    <div class="table-responsive border-bottom" data-toggle="lists" data-lists-values='["js-lists-values-employee-name"]'>
-
-                                        <div class="search-form search-form--light mb-3">
-                                            <input type="text" class="form-control search" placeholder="Search">
-                                            <button class="btn" type="button" role="button"><i class="material-icons">search</i></button>
-                                        </div>
-
-                                        <div data-toggle="lists" data-lists-values='["js-lists-values-employee-name", "js-lists-values-employee-title"]' class="table-responsive border-bottom">
-
-                                            <table class="table mb-0">
-                                                <thead>
-                                                    <tr>
-                                                        <th colspan="2">
-                                                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-employee-name">Name</a>
-                                                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-employee-title">Region</a>
-                                                        </th>
-                                                    </tr>
-                                                </thead>
-                                                <thead>
-                                                    <tr>
-
-                                                        <th>Name</th>
+                </div>
 
 
-                                                        <th style="width: 51px;">Contact</th>
-                                                        <th style="width: 100px;">Transaction ID</th>
-                                                        <th style="width: 51px;">Amount</th>
-                                                        <th style="width: 51px;">Date Paid</th>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
 
+                            <div class="col-lg-8">
 
-                                                        <th style="width: 24px;"></th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody class="list" id="search">
-                                                    <?php
+                                <div class="table-responsive border-bottom" data-toggle="lists" data-lists-values='["js-lists-values-employee-name"]'>
 
-                                                    trans();
-                                                    ?>
-
-
-
-                                                </tbody>
-
-                                                <tfoot>
-                                                    <tr>
-
-                                                        <th>Name</th>
-
-
-                                                        <th style="width: 51px;">Contact</th>
-                                                        <th style="width: 100px;">Transaction ID</th>
-                                                        <th style="width: 51px;">Amount</th>
-                                                        <th style="width: 51px;">Date Paid</th>
-
-
-                                                        <th style="width: 24px;"></th>
-                                                    </tr>
-
-                                                </tfoot>
-                                            </table>
-                                        </div>
+                                    <div class="search-form search-form--light mb-3">
+                                        <input type="text" class="form-control search" placeholder="Search">
+                                        <button class="btn" type="button" role="button"><i class="material-icons">search</i></button>
                                     </div>
 
+                                    <div data-toggle="lists" data-lists-values='["js-lists-values-employee-name", "js-lists-values-employee-title"]' class="table-responsive border-bottom">
+
+                                        <table class="table mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="2">
+                                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-employee-name">Name</a>
+                                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-employee-title">Region</a>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <thead>
+                                                <tr>
+
+                                                    <th>Name</th>
+
+
+                                                    <th style="width: 51px;">Contact</th>
+                                                    <th style="width: 100px;">Transaction ID</th>
+                                                    <th style="width: 51px;">Amount</th>
+                                                    <th style="width: 51px;">Date Paid</th>
+
+
+                                                    <th style="width: 24px;"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="list" id="search">
+                                                <?php
+
+                                                trans();
+                                                ?>
+
+
+
+                                            </tbody>
+
+                                            <tfoot>
+                                                <tr>
+
+                                                    <th>Name</th>
+
+
+                                                    <th style="width: 51px;">Contact</th>
+                                                    <th style="width: 100px;">Transaction ID</th>
+                                                    <th style="width: 51px;">Amount</th>
+                                                    <th style="width: 51px;">Date Paid</th>
+
+
+                                                    <th style="width: 24px;"></th>
+                                                </tr>
+
+                                            </tfoot>
+                                        </table>
+                                    </div>
                                 </div>
+
                             </div>
                         </div>
-
                     </div>
 
-
-
-
-                    
-
+                </div>
 
 
 
 
 
 
-                    <!-- <div class="col-lg-5">
+
+
+
+
+
+
+                <!-- <div class="col-lg-5">
 
                                     
 
@@ -398,20 +467,20 @@ $user = users();
                                         </ul>
                                     </div>
                                 </div> -->
-                    <!-- </div> -->
+                <!-- </div> -->
 
-
-                </div>
 
             </div>
 
-
-            <?php include 'sidebar.php'; ?>
-
-            <!-- App Settings FAB -->
-
-
         </div>
+
+
+        <?php include 'sidebar.php'; ?>
+
+        <!-- App Settings FAB -->
+
+
+    </div>
     </div>
 
 
@@ -477,7 +546,6 @@ $user = users();
                 ]
             });
         });
-        
     </script>
 
 
