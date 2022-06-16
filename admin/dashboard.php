@@ -160,22 +160,7 @@
                                                     <tbody class="list"
                                                            id="search">
 
-                                                        <tr>
-
-                                                            <td>
-
-                                                                <span class="js-lists-values-employee-name">Kalum Atherton</span>
-
-                                                            </td>
-
-                                                            <td>nana@gmail.com</td>
-                                                            <td>0247678736</td>
-                                                            <td>Greater Accra</td>
-                                                            <td>Abura district</td>
-                                                            <td>14th, june 2022</td>
-                                                            <td>pt/000666/2022</td>
-                                                            <td>New sherperd school</td>
-                                                        </tr>
+                                                       <?php registered(); ?>
 
                                                         
 
