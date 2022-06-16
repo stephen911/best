@@ -88,6 +88,17 @@
                             </div>
                         </div>
                         <div class="form-group">
+                            <label class="form-label" for="name">Other Name:</label>
+                            <div class="input-group input-group-merge">
+                                <input id="name" type="text" required="" class="form-control form-control-prepended" placeholder="Other name" name="oname">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <span class="far fa-user"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <label class="form-label" for="name">Last Name:</label>
                             <div class="input-group input-group-merge">
                                 <input id="name" type="text" required="" class="form-control form-control-prepended" placeholder="Your last name" name="lname">

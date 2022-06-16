@@ -9,11 +9,11 @@
                             <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">account_box</i> Dashboard
                         </a>
                     </li>
-                    <li class="sidebar-menu-item active">
+                    <!-- <li class="sidebar-menu-item active">
                         <a class="sidebar-menu-button" href="ntcreg.php">
                             <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">account_box</i> Set Date
                         </a>
-                    </li>
+                    </li> -->
                     <!-- <li class="sidebar-menu-item active">
                                             <a class="sidebar-menu-button"
                                                href="renewal.php">
