@@ -265,10 +265,10 @@ $user = users();
 
                                 <div class="table-responsive border-bottom" data-toggle="lists" data-lists-values='["js-lists-values-employee-name"]'>
 
-                                    <!-- <div class="search-form search-form--light mb-3">
+                                    <div class="search-form search-form--light mb-3">
                                         <input type="text" class="form-control search" placeholder="Search">
                                         <button class="btn" type="button" role="button"><i class="material-icons">search</i></button>
-                                    </div> -->
+                                    </div>
 
                                     <div data-toggle="lists" data-lists-values='["js-lists-values-employee-name", "js-lists-values-employee-title"]' class="table-responsive border-bottom">
 
@@ -293,7 +293,7 @@ $user = users();
                                                     <th style="width: 51px;">Date Paid</th>
 
 
-                                                    <th style="width: 24px;"></th>
+                                                    <!-- <th style="width: 24px;"></th> -->
                                                 </tr>
                                             </thead>
                                             <tbody class="list">
@@ -318,7 +318,7 @@ $user = users();
                                                     <th style="width: 51px;">Date Paid</th>
 
 
-                                                    <th style="width: 24px;"></th>
+                                                    <!-- <th style="width: 24px;"></th> -->
                                                 </tr>
 
                                             </tfoot>
