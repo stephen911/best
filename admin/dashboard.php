@@ -296,7 +296,7 @@ $user = users();
                                                     <th style="width: 24px;"></th>
                                                 </tr>
                                             </thead>
-                                            <tbody class="list" id="search">
+                                            <tbody class="list">
                                                 <?php
 
                                                 trans();
