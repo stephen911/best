@@ -192,12 +192,7 @@ function registered()
                                         </td>
 
 
-                                        <td>
-                                        <div class="media-right mt-2 mt-xs-plus-0">
-                                                                        <a class="btn btn-sm btn-success"
-                                                                                            href="update_user.php?id=' . $row['id'] . '">Update</a>
-                                                                        </div>
-                                                                        </td>
+                                        
     </tr>';
     }
 }
