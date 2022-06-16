@@ -115,7 +115,7 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
             // $m->sendmail('www.phpyolk.com', $subject, $body, 'TUCEE Institute of Counselling and Technology', $mym, 'info@tuceehub.org', 'TUCEE HUB');
 
         } else {
-            echo '';
+            
         }
     } else {
         echo 'Failed to update record . Try again';
