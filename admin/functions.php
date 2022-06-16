@@ -70,7 +70,7 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
     include 'starter.php';
     $up = mysqli_query($conn, "UPDATE users SET title='$title', name= '$name', gender = '$gender', email='$email', contact= '$contact', telegram='$telegram', lincesed ='$lincesed', nameofschool='$nameofschool', region ='$region', district ='$district', foodpref='$foodpref', heard ='$heard' WHERE id='$id'  ");
     if ($up) {
-        echo 'Updated Successfully ' . $district;
+        echo 'Updated Successfully '.$district;
     } else {
         echo 'Failed to update record . Try again';
     }
@@ -135,9 +135,8 @@ function transactions()
     $id = $_SESSION['id'];
     include 'starter.php';
 
-    $sel = mysqli_query($conn,"SELECT * FROM  transactions WHERE uid = '$id'");
+    $sel = mysqli_query($conn, "SELECT * FROM  transactions WHERE uid = '$id'");
     while ($row = mysqli_fetch_array($sel)) {
-
         echo '<tr>
         <td>
             <div class="d-flex align-items-center">
@@ -161,7 +160,30 @@ function transactions()
             </div>
         </td>
     </tr>';
-        # code...
+        // code...
     }
-    
+}
+
+function registered()
+{
+    include 'starter.php';
+    $u = mysqli_query($conn, 'SELECT * FROM users');
+    while ($row = mysqli_fetch_array($u)) {
+        echo '<tr>
+
+        <td>
+
+            <span class="js-lists-values-employee-name">'.$row['name'].'</span>
+
+        </td>
+
+        <td>'.$row['email'].'</td>
+        <td>'.$row['contact'].'</td>
+        <td>'.$row['region'].'</td>
+        <td>'.$row['district'].'</td>
+        <td>'.$row['tdate'].'</td>
+        <td>'.$row['lincesed'].'</td>
+        <td>'.$row['nameofschool'].'</td>
+    </tr>';
+    }
 }
