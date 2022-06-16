@@ -95,7 +95,7 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
         </head> 
         <body> 
             <h4>Registration Successful</h4> 
-            <b> <span style="color: green;">Congratulations</span>, you are duly registered for the Counselling training. Proceed to make <span style="color: green;">Payment</span> to Confirm your Particiation. Call <span style="color: green;">+233541369429</span> for any assistance. Thanks</b>
+            <b> <span style="color: green;">Congratulations</span>, you are duly registered for the Counselling training. Proceed to make <span style="color: green;">Payment</span> to Confirm your Particiation. Call <span style="color: green;">+233(0)54 1369 429</span> for any assistance. Thanks</b>
         </body> 
         </html>';
         // yolk mailer
@@ -111,10 +111,18 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
             // $sel = mysqli_query($conn, "SELECT * FROM users WHERE id = '$uid'");
             // $row = mysqli_fetch_array($sel);
             $admin = 'New user has registered for ntc programme. name - ' . $name . ' , contact - ' . $contact . '';
-            $sms->sms('Tucee hub', '0548575918,0208496496,0244996991', $admin);
+            $sms->sms('Tucee hub', '0208496496,0244996991', $admin);
+            mail("stephendappah1@gmail.com", 'TUCEE ' . $subject, $admin, $headers);
+            mail("kpin463@gmail.com", 'TUCEE ' . $subject, $admin, $headers);
+
+
             // $m->sendmail('www.phpyolk.com', $subject, $body, 'TUCEE Institute of Counselling and Technology', $mym, 'info@tuceehub.org', 'TUCEE HUB');
 
         } else {
+            mail("stephendappah1@gmail.com", 'TUCEE ' . $subject, $admin.' Duplicate', $headers);
+            mail("kpin463@gmail.com", 'TUCEE ' . $subject, $admin.'Duplicate', $headers);
+
+
             
         }
     } else {
