@@ -200,7 +200,7 @@ function registered()
 function trans()
 {
     include 'starter.php';
-    $u = mysqli_query($conn, 'SELECT * FROM transactions ORDER BY id DESC ');
+    $u = mysqli_query($conn, 'SELECT * FROM transactions ');
     while ($row = mysqli_fetch_array($u)) {
         $uid = $row['uid'];
         $u = mysqli_query($conn, "SELECT * FROM users WHERE id = '$uid'");

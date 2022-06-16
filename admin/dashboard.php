@@ -293,7 +293,7 @@ $user = users();
                                                     <th style="width: 51px;">Date Paid</th>
 
 
-                                                    <!-- <th style="width: 24px;"></th> -->
+                                                    <th style="width: 24px;"></th>
                                                 </tr>
                                             </thead>
                                             <tbody class="list">
@@ -318,7 +318,7 @@ $user = users();
                                                     <th style="width: 51px;">Date Paid</th>
 
 
-                                                    <!-- <th style="width: 24px;"></th> -->
+                                                    <th style="width: 24px;"></th>
                                                 </tr>
 
                                             </tfoot>
