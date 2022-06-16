@@ -242,7 +242,7 @@ function countpaid()
 function unpaid()
 {
     include 'starter.php';
-    $c = mysqli_query($conn, 'SELECT * FROM users WHERE paystatus =""');
+    $c = mysqli_query($conn, 'SELECT * FROM users WHERE paystatus =" "');
     $count = mysqli_num_rows($c);
     echo $count;
 }
