@@ -113,7 +113,7 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
 
         // $sel = mysqli_query($conn, "SELECT * FROM users WHERE id = '$uid'");
         // $row = mysqli_fetch_array($sel);
-        $admin = 'New user has registed for ntc programme. name - '.$name.' , contact - '.$contact.'';
+        $admin = 'New user has registered for ntc programme. name - '.$name.' , contact - '.$contact.'';
         $sms->sms('Tucee hub', '0548575918,0208496496,0244996991', $admin);
     // $m->sendmail('www.phpyolk.com', $subject, $body, 'TUCEE Institute of Counselling and Technology', $mym, 'info@tuceehub.org', 'TUCEE HUB');
     } else {
