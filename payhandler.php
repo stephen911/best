@@ -17,6 +17,7 @@ if (isset($_GET['ref'])) {
     include 'starter.php';
     $sel = mysqli_query($conn, "SELECT * FROM users WHERE id = '$uid'");
     $row = mysqli_fetch_array($sel);
+    $send->sms('Tucee hub', $row['contact'], 'Thank you for paying your NTC registration fees.');
 
     payment($uid, $ref, $amount);
     echo  '<script>window.location="payment.php"</script>';
