@@ -541,8 +541,11 @@ $user = users();
         $(document).ready(function() {
             $('#datadownload').DataTable({
                 // dom: 'Bfrtip',
-                dom: 'B<"clear">lfrtip',
-                buttons: [ 'copy', 'csv', 'excel' ]
+                // dom: 'B<"clear">lfrtip',
+                // buttons: [ 'copy', 'csv', 'excel' ]
+                buttons: {
+                    buttons: [ 'copy', 'csv', 'excel' ]
+                 }
                 // buttons: [
                 //     'copy', 'csv', 'excel', 'pdf', 'print'
                 // ]
