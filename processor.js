@@ -192,12 +192,12 @@ $(function(){
         }
 
         // var re = /\S+@\S+\.\S+/ ;
-        else if(re.test(response)){
+        else if(response == 'Updated mini'){
 
           swal({
               title: "Congratulations",
-              html: "Registration Successful. <br><b>Make Payment to Confirm Participation.</b><br> An email has been sent to "+ response,
-              timer: 10000,
+              html: "Update Successful",
+              timer: 3000,
               type: 'success',
               padding: "2em",
               onOpen: function () {
