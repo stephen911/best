@@ -13,7 +13,7 @@ $(function(){
       });
    })
 
-   var re = /\S+@\S+\.\S+/;
+  //  var re = /\S+@\S+\.\S+/;
 
     $(document).on('click', "#ddo",function(){
         swal({
@@ -190,11 +190,11 @@ $(function(){
               });
 
         }
-        else if(response == 'updatesuccess'){
+        else if(response.trim() == 'updatesuccess'){
 
           swal({
               title: "Congratulations",
-              html: "Update Successful",
+              text: "Update Successful",
               timer: 3000,
               type: 'success',
               padding: "2em",
