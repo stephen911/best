@@ -177,8 +177,8 @@ $(function(){
         else if(response == 'Updated Successfully'){
 
             swal({
-                title: "Success",
-                html: "Registration Successful. <br>Make Payment to Confirm Resgistration",
+                title: "Congratulations!",
+                html: "Registration Successful. <br><b>Make Payment to Confirm Participation.</b><br> An email has been sent to your mail.",
                 timer: 3000,
                 type: 'success',
                 padding: "2em",
