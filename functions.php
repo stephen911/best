@@ -78,6 +78,8 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
 
     // $m = new Mail();
     include 'yolksms.php';
+    include 'sms.php';
+    $sms = new sms();
     $send = new Yolksms();
     $olddate = $tdate;
     $tdate = date('jS F, Y', strtotime($olddate));
@@ -108,6 +110,11 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
         mail($email, 'TUCEE '.$subject, $body, $headers);
 
         $send->sms('Tucee hub', $contact, 'Congratulations, you are duly registered for the Counselling training. Proceed to make payment  to confirm your participation  Call 0541 369 429 for any assistance. Thanks');
+
+        // $sel = mysqli_query($conn, "SELECT * FROM users WHERE id = '$uid'");
+        // $row = mysqli_fetch_array($sel);
+        $admin = 'New user has registed for ntc programme. name - '.$name.' , contact - '.$contact.'';
+        $sms->sms('Tucee hub', '0548575918,0208496496,0244996991', $admin);
     // $m->sendmail('www.phpyolk.com', $subject, $body, 'TUCEE Institute of Counselling and Technology', $mym, 'info@tuceehub.org', 'TUCEE HUB');
     } else {
         echo 'Failed to update record . Try again';
