@@ -167,7 +167,7 @@ function transactions()
 function registered()
 {
     include 'starter.php';
-    $u = mysqli_query($conn, 'SELECT * FROM users');
+    $u = mysqli_query($conn, 'SELECT * FROM users ORDER BY id DESC ');
     while ($row = mysqli_fetch_array($u)) {
         echo '<tr>
 
@@ -189,4 +189,28 @@ function registered()
     }
 }
 
+function trans()
+{
+    include 'starter.php';
+    $u = mysqli_query($conn, 'SELECT * FROM transactions ORDER BY id DESC ');
+    while ($row = mysqli_fetch_array($u)) {
+        $uid = $row['uid'];
+        $u = mysqli_query($conn, "SELECT * FROM users WHERE id = '$uid'");
+        $rr = mysqli_fetch_array($u);
+        echo '<tr>
 
+        <td>
+
+            <span class="js-lists-values-employee-name">'.$rr['name'].'</span>
+
+        </td>
+
+        
+        <td>'.$rr['contact'].'</td>
+        <td>'.$row['transid'].'</td>
+        <td>'.$row['amount'].'</td>
+        <td>'.$row['dateadded'].'</td>
+        
+    </tr>';
+    }
+}
