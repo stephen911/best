@@ -540,15 +540,10 @@ $user = users();
     <script>
         $(document).ready(function() {
             $('#datadownload').DataTable({
-                // dom: 'Bfrtip',
-                // dom: 'B<"clear">lfrtip',
-                // buttons: [ 'copy', 'csv', 'excel' ]
-                buttons: {
-                    buttons: [ 'copy', 'csv', 'excel' ]
-                 }
-                // buttons: [
-                //     'copy', 'csv', 'excel', 'pdf', 'print'
-                // ]
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'csv', 'excel', 'pdf', 'print'
+                ]
             });
         });
     </script>
