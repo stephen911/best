@@ -70,7 +70,7 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
     include 'starter.php';
     $up = mysqli_query($conn, "UPDATE users SET title='$title', name= '$name', gender = '$gender', email='$email', contact= '$contact', telegram='$telegram', lincesed ='$lincesed', nameofschool='$nameofschool', region ='$region', district ='$district', foodpref='$foodpref', heard ='$heard' WHERE id='$id'  ");
     if ($up) {
-        echo 'Updated Successfully '.$district;
+        echo 'Updated Successfully ' . $district;
     } else {
         echo 'Failed to update record . Try again';
     }
@@ -142,7 +142,7 @@ function transactions()
             <div class="d-flex align-items-center">
                 <small class="text-uppercase text-muted mr-2">Transaction Amount</small>
                 <a href="student-invoice.php"
-                   class="text-body small"><span class="js-lists-values-document">'.$row['amount'].'</span></a>
+                   class="text-body small"><span class="js-lists-values-document">' . $row['amount'] . '</span></a>
             </div>
         </td>
         
@@ -156,7 +156,7 @@ function transactions()
         <td class="text-right">
             <div class="d-flex align-items-center text-right">
                 <small class="text-uppercase text-muted mr-2">Date</small>
-                <small class="text-uppercase js-lists-values-date">'.$row['dateadded'].'</small>
+                <small class="text-uppercase js-lists-values-date">' . $row['dateadded'] . '</small>
             </div>
         </td>
     </tr>';
@@ -173,20 +173,18 @@ function registered()
 
         <td>
 
-            <span class="js-lists-values-employee-name">'.$row['name'].'</span>
+            <span class="js-lists-values-employee-name">' . $row['name'] . '</span>
 
         </td>
 
-        <td>'.$row['email'].'</td>
-        <td>'.$row['contact'].'</td>
-        <td>'.$row['region'].'</td>
-        <td>'.$row['district'].'</td>
-        <td>'.$row['tdate'].'</td>
-        <td>'.$row['lincesed'].'</td>
-        <td>'.$row['nameofschool'].'</td>
-        <td>'.$row['paystatus'].'</td>
+        <td>' . $row['email'] . '</td>
+        <td>' . $row['contact'] . '</td>
+        <td><span class="js-lists-values-employee-title">' . $row['region'] . '</span></td>
+        <td>' . $row['district'] . '</td>
+        <td>' . $row['tdate'] . '</td>
+        <td>' . $row['lincesed'] . '</td>
+        <td>' . $row['nameofschool'] . '</td>
+        <td>' . $row['paystatus'] . '</td>
     </tr>';
     }
 }
-
-
