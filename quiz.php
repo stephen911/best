@@ -13,7 +13,10 @@
         <title>Quiz</title>
 
         <!-- Prevent the demo from appearing in search engines (REMOVE THIS) -->
-        <meta name="robots"
+        <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+
+         <meta name="robots"
               content="noindex">
 
         <!-- Custom Fonts -->

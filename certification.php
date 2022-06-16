@@ -31,7 +31,10 @@ if (isset($_GET['ref'])) {
         <title>Certification</title>
 
         <!-- Prevent the demo from appearing in search engines (REMOVE THIS) -->
-        <meta name="robots"
+        <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+
+         <meta name="robots"
               content="noindex">
         <script src="https://unpkg.com/pdf-lib@1.4.0"></script>
         <script src="https://unpkg.com/downloadjs@1.4.7"></script>
