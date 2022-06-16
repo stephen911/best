@@ -16,7 +16,7 @@ $user = users();
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Dashboard</title>
 
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
 
 
          <meta name="robots" content="noindex">
@@ -111,10 +111,10 @@ $user = users();
 
                                 <div class="col-lg-8">
 
-                                    <div class="table-responsive border-bottom" data-toggle="lists" data-lists-values='["js-lists-values-employee-name"]'>
+                                    <div class="table-responsive border-bottom" data-toggle="lists" data-lists-values='["js-lists-values-employee-name", "js-lists-values-employee-title"]'>
 
                                         <div class="search-form search-form--light mb-3">
-                                            <input type="text" class="form-control search" placeholder="Search">
+                                            <input type="text" class="form-control search" placeholder="Search by Name or Region">
                                             <button class="btn" type="button" role="button"><i class="material-icons">search</i></button>
                                         </div>
 

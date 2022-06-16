@@ -179,7 +179,7 @@ function registered()
 
         <td>'.$row['email'].'</td>
         <td>'.$row['contact'].'</td>
-        <td>'.$row['region'].'</td>
+        <td><span class="js-lists-values-employee-title">'.$row['region'].'</span></td>
         <td>'.$row['district'].'</td>
         <td>'.$row['tdate'].'</td>
         <td>'.$row['lincesed'].'</td>
