@@ -13,6 +13,8 @@ $(function(){
       });
    })
 
+   var re = /\S+@\S+\.\S+/;
+
     $(document).on('click', "#ddo",function(){
         swal({
             title: "Done!",
@@ -188,6 +190,24 @@ $(function(){
               });
 
         }
+
+        // var re = /\S+@\S+\.\S+/ ;
+        else if(re.test(response)){
+
+          swal({
+              title: "Congratulations",
+              html: "Registration Successful. <br><b>Make Payment to Confirm Participation.</b><br> An email has been sent to "+ response,
+              timer: 10000,
+              type: 'success',
+              padding: "2em",
+              onOpen: function () {
+                swal.showLoading();
+              },
+            }).then(function (result) {
+              window.location.reload();
+            });
+
+      }
 
 
 
