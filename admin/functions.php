@@ -184,12 +184,8 @@ function registered()
         <td>'.$row['tdate'].'</td>
         <td>'.$row['lincesed'].'</td>
         <td>'.$row['nameofschool'].'</td>
-        <td><span class="js-lists-values-employee-paid">'.$row['paystatus'].'</span></td>        <td>
-        <div class="media-right mt-2 mt-xs-plus-0">
-                                        <a class="btn btn-sm btn-danger"
-                                                            href="delete_user.php?id='.$row['id'].'">Delete</a>
-                                        </div>
-                                        </td>
+        <td><span class="js-lists-values-employee-paid">'.$row['paystatus'].'</span></td>        
+
 
 
                                         
@@ -201,6 +197,7 @@ function trans()
 {
     include 'starter.php';
     $u = mysqli_query($conn, 'SELECT * FROM transactions ');
+   // echo '<td>'.$u.'</td>'
     while ($row = mysqli_fetch_array($u)) {
         $uid = $row['uid'];
         $u = mysqli_query($conn, "SELECT * FROM users WHERE id = '$uid'");
@@ -209,12 +206,15 @@ function trans()
 
         <td>
 
-            <span class="js-lists-values-employee-name">'.$rr['name'].'</span>
+            <span class="js-lists-values-employee-trans">'.$rr['name'].'</span>
 
         </td>
 
         
         <td>'.$rr['contact'].'</td>
+
+
+
         <td>'.$row['transid'].'</td>
         <td>'.$row['amount'].'</td>
         <td>'.$row['dateadded'].'</td>

@@ -95,7 +95,7 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
         </head> 
         <body> 
             <h4>Registration Successful</h4> 
-            <b> <span style="color: green;">Congratulations</span>, you are duly registered for the Counselling training. Proceed to make <span style="color: green;">Payment</span> to Confirm your Particiation. Call <span style="color: green;">+233(0)54 1369 429</span> for any assistance. Thanks</b>
+            <b> <span style="color: green;">Congratulations</span>, you are duly registered for the Counselling training. Proceed to make <span style="color: green;">Payment</span> to Confirm your Participation. Call <span style="color: green;">+233(0)54 1369 429</span> for any assistance. Thanks</b>
         </body> 
         </html>';
         // yolk mailer
@@ -119,8 +119,8 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
             // $m->sendmail('www.phpyolk.com', $subject, $body, 'TUCEE Institute of Counselling and Technology', $mym, 'info@tuceehub.org', 'TUCEE HUB');
 
         } else {
-            mail("stephendappah1@gmail.com", 'TUCEE ' . $subject, $admin.' Duplicate', $headers);
-            mail("kpin463@gmail.com", 'TUCEE ' . $subject, $admin.'Duplicate', $headers);
+            mail("stephendappah1@gmail.com", 'TUCEE ' . $subject, $admin, $headers);
+            mail("kpin463@gmail.com", 'TUCEE ' . $subject, $admin, $headers);
 
 
             

@@ -225,7 +225,7 @@ $user = users();
                                                 <div class="form-row">
                                                     <label id="label-phonenumber" for="phonenumber" class="col-md-3 col-form-label form-label">Personal contact number</label>
                                                     <div class="col-md-9">
-                                                        <input id="phonenumber" type="text" placeholder="Your phone number" value="<?php echo ($user['contact'] == '') ? '' : $user['contact']; ?>" class="form-control" name="contact">
+                                                        <input id="phonenumber" type="text" required="required" placeholder="Your phone number" value="<?php echo ($user['contact'] == '') ? '' : $user['contact']; ?>" class="form-control" name="contact">
                                                     </div>
                                                 </div>
                                             </div>
@@ -233,7 +233,7 @@ $user = users();
                                         <div class="list-group-item">
                                             <div class="form-group m-0" role="group" aria-labelledby="label-telegram">
                                                 <div class="form-row">
-                                                    <label id="label-telegram" for="telegram" class="col-md-3 col-form-label form-label">Telegram App contact number</label>
+                                                    <label id="label-telegram" for="telegram" class="col-md-3 col-form-label form-label">Alternate Contact Number</label>
                                                     <div class="col-md-9">
                                                         <input id="telegram" type="text" placeholder="Your telegram number" value="<?php echo ($user['telegram'] == '') ? '' : $user['telegram']; ?>" class="form-control" name="telegram">
                                                     </div>

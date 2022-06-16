@@ -24,11 +24,51 @@ $user = users();
     <!-- Custom Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,700%7CRoboto:400,500%7CRoboto:400,500&amp;display=swap" rel="stylesheet">
 
+    <script src="//code.jquery.com/jquery-3.5.1.js"></script>
 
 
-    <link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
 
-    <link href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css" rel="stylesheet">
+    <link href="//cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css" rel="stylesheet">
+    <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="//cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="//cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
+    <script src="//cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
+
+    <script src="////cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable({
+                "searching": true,
+                "paging": true,
+                "order": [
+                    [0, "asc"]
+                ],
+                "ordering": true,
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'csv', 'excel'
+                ],
+
+
+                "columnDefa": [{
+                    "targeta": [3], //column index/
+                    "orderable": false
+                }],
+            });
+        });
+    </script>
+
+
+
+
+
+
 
 
 
@@ -95,7 +135,7 @@ $user = users();
                                     <i class="material-icons text-muted-light">account_box</i>
                                 </div>
                                 <div class="media-body" style="min-width: 180px">
-                                    Your are welcome Admin! <strong><?php echo $user['title'].' '.$user['name']; ?></strong>
+                                    Your are welcome Admin! <strong><?php echo $user['title'] . ' ' . $user['name']; ?></strong>
                                 </div>
                                 <!-- <div class="media-right mt-2 mt-xs-plus-0">
                                         <a class="btn btn-sm btn-danger"
@@ -120,7 +160,7 @@ $user = users();
 
                         <ul class="list-group list-group-fit mb-0">
 
-                            
+
 
                             <li class="list-group-item">
                                 <div class="media align-items-center">
@@ -168,11 +208,10 @@ $user = users();
                                 </div>
                             </li>
 
-                            
+
 
                         </ul>
                     </div>
-               
 
 
 
@@ -182,33 +221,59 @@ $user = users();
 
 
 
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row">
 
-                            <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
 
-                                <div class="table-responsive border-bottom" data-toggle="lists" data-lists-values='["js-lists-values-employee-name", "js-lists-values-employee-title", "js-lists-values-employee-district", "js-lists-values-employee-paid"]'>
+                                <div class="col-lg-8">
 
-                                    <div class="search-form search-form--light mb-3">
-                                        <input type="text" class="form-control search" placeholder="Search by Name, Region, District or Paid Status">
-                                        <button class="btn" type="button" role="button"><i class="material-icons">search</i></button>
-                                    </div>
+                                    <div class="table-responsive border-bottom" data-toggle="lists" data-lists-values='["js-lists-values-employee-name", "js-lists-values-employee-title", "js-lists-values-employee-district", "js-lists-values-employee-paid"]'>
 
-                                    <div data-toggle="lists" data-lists-values='["js-lists-values-employee-name", "js-lists-values-employee-title"]' class="table-responsive border-bottom">
+                                        <div class="search-form search-form--light mb-3">
+                                            <input type="text" class="form-control search" placeholder="Search by Name, Region, District or Paid Status">
+                                            <button class="btn" type="button" role="button"><i class="material-icons">search</i></button>
+                                        </div>
 
-                                        <table class="table mb-0" id="datadownload" class="display nowrap" style="width:100%">
-                                            <thead>
-                                                <tr>
-                                                    <th colspan="2">
-                                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-employee-name">Name</a>
-                                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-employee-title">Region</a>
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <thead>
-                                                <tr>
+                                        <div data-toggle="lists" data-lists-values='["js-lists-values-employee-name", "js-lists-values-employee-title"]' class="table-responsive border-bottom">
 
+                                            <table class="table mb-0" id="datadownload" class="display nowrap" style="width:100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th colspan="2">
+                                                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-employee-name">Name</a>
+                                                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-employee-title">Region</a>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <thead>
+                                                    <tr>
+
+                                                        <th>Name</th>
+
+                                                        <th style="width: 100px;">Email</th>
+                                                        <th style="width: 51px;">Contact</th>
+                                                        <th style="width: 100px;">Region</th>
+                                                        <th style="width: 51px;">District</th>
+                                                        <th style="width: 51px;">Trainin Date</th>
+                                                        <th style="width: 100px;">License Number</th>
+                                                        <th style="width: 51px;">Name of school</th>
+                                                        <th style="width: 51px;">Payment Status</th>
+                                                        <th style="width: 51px;">Payment Status</th>
+                                                        <th style="width: 51px;">delete</th>
+
+
+                                                        <th style="width: 24px;"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="list" id="search">
+                                                    <?php registered(); ?>
+
+
+
+                                                </tbody>
+
+                                                <tfoot>
                                                     <th>Name</th>
 
                                                     <th style="width: 100px;">Email</th>
@@ -219,118 +284,146 @@ $user = users();
                                                     <th style="width: 100px;">License Number</th>
                                                     <th style="width: 51px;">Name of school</th>
                                                     <th style="width: 51px;">Payment Status</th>
+                                                    <th style="width: 51px;">delete</th>
 
                                                     <th style="width: 24px;"></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody class="list" id="search">
-                                                <?php registered(); ?>
+                                                    </tr>
 
-
-
-                                            </tbody>
-
-                                            <tfoot>
-                                                <th>Name</th>
-
-                                                <th style="width: 100px;">Email</th>
-                                                <th style="width: 51px;">Contact</th>
-                                                <th style="width: 100px;">Region</th>
-                                                <th style="width: 51px;">District</th>
-                                                <th style="width: 51px;">Trainin Date</th>
-                                                <th style="width: 100px;">License Number</th>
-                                                <th style="width: 51px;">Name of school</th>
-                                                <th style="width: 51px;">Payment Status</th>
-
-                                                <th style="width: 24px;"></th>
-                                                </tr>
-
-                                            </tfoot>
-                                        </table>
+                                                </tfoot>
+                                            </table>
+                                        </div>
                                     </div>
-                                </div>
 
+                                </div>
                             </div>
                         </div>
+
                     </div>
 
-                </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+
+                                <div class="col-lg-8">
+
+                                    <div class="table-responsive border-bottom" data-toggle="lists" data-lists-values='["js-lists-values-employee-trans"]'>
+
+                                        <div class="search-form search-form--light mb-3">
+                                            <input type="text" class="form-control search" placeholder="Search">
+                                            <button class="btn" type="button" role="button"><i class="material-icons">search</i></button>
+                                        </div>
+
+                                        <div data-toggle="lists" data-lists-values='["js-lists-values-employee-trans"]' class="table-responsive border-bottom">
+
+                                            <table class="table mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th colspan="2">
+                                                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-employee-trans">Name</a>
+                                                            <!-- <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-employee-title">Region</a> -->
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <thead>
+                                                    <tr>
+
+                                                        <th>Name</th>
 
 
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row">
+                                                        <th style="width: 51px;">Contact</th>
+                                                        <th style="width: 100px;">Transaction ID</th>
+                                                        <th style="width: 51px;">Amount</th>
+                                                        <th style="width: 51px;">Date Paid</th>
 
-                            <div class="col-lg-8">
 
-                                <div class="table-responsive border-bottom" data-toggle="lists" data-lists-values='["js-lists-values-employee-name"]'>
+                                                        <th style="width: 24px;"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="list">
+                                                    <?php
 
-                                    <div class="search-form search-form--light mb-3">
-                                        <input type="text" class="form-control search" placeholder="Search">
-                                        <button class="btn" type="button" role="button"><i class="material-icons">search</i></button>
+                                                    trans();
+                                                    ?>
+
+
+
+                                                </tbody>
+
+                                                <tfoot>
+                                                    <tr>
+
+                                                        <th>Name</th>
+
+
+                                                        <th style="width: 51px;">Contact</th>
+                                                        <th style="width: 100px;">Transaction ID</th>
+                                                        <th style="width: 51px;">Amount</th>
+                                                        <th style="width: 51px;">Date Paid</th>
+
+
+                                                        <th style="width: 24px;"></th>
+                                                    </tr>
+
+                                                </tfoot>
+                                            </table>
+                                        </div>
                                     </div>
 
-                                    <div data-toggle="lists" data-lists-values='["js-lists-values-employee-name", "js-lists-values-employee-title"]' class="table-responsive border-bottom">
-
-                                        <table class="table mb-0">
-                                            <thead>
-                                                <tr>
-                                                    <th colspan="2">
-                                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-employee-name">Name</a>
-                                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-employee-title">Region</a>
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <thead>
-                                                <tr>
-
-                                                    <th>Name</th>
-
-
-                                                    <th style="width: 51px;">Contact</th>
-                                                    <th style="width: 100px;">Transaction ID</th>
-                                                    <th style="width: 51px;">Amount</th>
-                                                    <th style="width: 51px;">Date Paid</th>
-
-
-                                                    <th style="width: 24px;"></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody class="list">
-                                                <?php
-
-                                                trans();
-                                                ?>
-
-
-
-                                            </tbody>
-
-                                            <tfoot>
-                                                <tr>
-
-                                                    <th>Name</th>
-
-
-                                                    <th style="width: 51px;">Contact</th>
-                                                    <th style="width: 100px;">Transaction ID</th>
-                                                    <th style="width: 51px;">Amount</th>
-                                                    <th style="width: 51px;">Date Paid</th>
-
-
-                                                    <th style="width: 24px;"></th>
-                                                </tr>
-
-                                            </tfoot>
-                                        </table>
-                                    </div>
                                 </div>
-
                             </div>
                         </div>
+
                     </div>
 
-                </div>
+                    <table id="example">
+                        <thead>
+                            <tr>
+
+                                <th>Name</th>
+
+                                <!-- <th>Name</th> -->
+
+                                <th >Email</th>
+                                <th>Contact</th>
+                                <th>Region</th>
+                                <th>District</th>
+                                <th>Trainin Date</th>
+                                <th >License Number</th>
+                                <th>Name of school</th>
+                                <th>Payment Status</th>
+                                <!-- <th style="width: 51px;">Payment Status</th> -->
+                                <!-- <th style="width: 51px;">delete</th> -->
+
+
+                                <!-- <th style="width: 24px;"></th> -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php registered(); ?>
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+
+                                <th>Name</th>
+
+                                <th >Email</th>
+                                <th>Contact</th>
+                                <th>Region</th>
+                                <th>District</th>
+                                <th>Trainin Date</th>
+                                <th >License Number</th>
+                                <th>Name of school</th>
+                                <th>Payment Status</th>
+                                <!-- <th style="width: 51px;">Payment Status</th> -->
+                                <!-- <th style="width: 51px;">delete</th> -->
+
+
+                                <!-- <th style="width: 24px;"></th> -->
+                            </tr>
+                        </tfoot>
+                    </table>
 
 
 
@@ -343,7 +436,7 @@ $user = users();
 
 
 
-                <!-- <div class="col-lg-5">
+                    <!-- <div class="col-lg-5">
 
                                     
 
@@ -467,24 +560,24 @@ $user = users();
                                         </ul>
                                     </div>
                                 </div> -->
-                <!-- </div> -->
+                    <!-- </div> -->
 
+
+                </div>
 
             </div>
 
+
+            <?php include 'sidebar.php'; ?>
+
+            <!-- App Settings FAB -->
+
+
         </div>
-
-
-        <?php include 'sidebar.php'; ?>
-
-        <!-- App Settings FAB -->
-
-
-    </div>
     </div>
 
 
-    <script>
+    <!-- <script>
         $(document).ready(function() {
             $('#example').DataTable({
                 dom: 'Bfrtip',
@@ -493,10 +586,10 @@ $user = users();
                 ]
             });
         });
-    </script>
+    </script> -->
 
     <!-- jQuery -->
-    <script src="../assets/vendor/jquery.min.js"></script>
+    <!-- <script src="../assets/vendor/jquery.min.js"></script> -->
 
     <!-- Bootstrap -->
     <script src="../assets/vendor/popper.min.js"></script>
@@ -526,27 +619,8 @@ $user = users();
     <script src="../assets/js/toggle-check-all.js"></script>
     <script src="../assets/js/check-selected-row.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
 
-
-
-    <script>
-        $(document).ready(function() {
-            $('#datadownload').DataTable({
-                dom: 'Bfrtip',
-                buttons: [
-                    'copy', 'csv', 'excel', 'pdf', 'print'
-                ]
-            });
-        });
-    </script>
+    
 
 
 
