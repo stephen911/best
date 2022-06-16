@@ -41,6 +41,35 @@ $user = users();
     <script src="////cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
 
 
+
+
+
+
+
+    <!-- <link rel="icon" href="default/files/assets/images/favicon.ico" type="image/x-icon"> -->
+    <!-- Google font-->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet"> -->
+    <!-- Required Fremwork -->
+    <!-- <link rel="stylesheet" type="text/css" href="default/files/bower_components/bootstrap/dist/css/bootstrap.min.css"> -->
+    <!-- themify-icons line icon -->
+    <!-- <link rel="stylesheet" type="text/css" href="default/files/assets/icon/themify-icons/themify-icons.css"> -->
+    <!-- ico font -->
+    <!-- <link rel="stylesheet" type="text/css" href="default/files/assets/icon/icofont/css/icofont.css"> -->
+    <!-- feather Awesome -->
+    <!-- <link rel="stylesheet" type="text/css" href="default/files/assets/icon/feather/css/feather.css"> -->
+    <!-- Data Table Css -->
+    <link rel="stylesheet" type="text/css"
+        href="default/files/bower_components/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="default/files/assets/pages/data-table/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="default/files/bower_components/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="default/files/assets/pages/data-table/extensions/buttons/css/buttons.dataTables.min.css">
+    <!-- Style.css -->
+    <!-- <link rel="stylesheet" type="text/css" href="default/files/assets/css/style.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="default/files/assets/css/jquery.mCustomScrollbar.css"> -->
+
+
     <script>
         $(document).ready(function() {
             $('#example').DataTable({
@@ -52,7 +81,7 @@ $user = users();
                 "ordering": true,
                 dom: 'Bfrtip',
                 buttons: [
-                    'copy', 'csv', 'excel'
+                    'copy', 'csv', 'excel', 'pdf', 'print'
                 ],
 
 
@@ -427,7 +456,7 @@ $user = users();
 
 
 
-
+                    
 
 
 
@@ -480,7 +509,7 @@ $user = users();
                                                             </a>
                                                             <a href="student-profile.html"
                                                                class="forum-thread-user">
-                                                                <img src="../assets/images/people/50/guy-1.jpg"
+                                                                <img src="default/assets/images/people/50/guy-1.jpg"
                                                                      alt=""
                                                                      width="20"
                                                                      class="rounded-circle">
@@ -509,7 +538,7 @@ $user = users();
                                                             </a>
                                                             <a href="student-profile.html"
                                                                class="forum-thread-user">
-                                                                <img src="../assets/images/people/50/guy-2.jpg"
+                                                                <img src="default/assets/images/people/50/guy-2.jpg"
                                                                      alt=""
                                                                      width="20"
                                                                      class="rounded-circle">
@@ -538,7 +567,7 @@ $user = users();
                                                             </a>
                                                             <a href="student-profile.html"
                                                                class="forum-thread-user">
-                                                                <img src="../assets/images/people/50/woman-1.jpg"
+                                                                <img src="default/assets/images/people/50/woman-1.jpg"
                                                                      alt=""
                                                                      width="20"
                                                                      class="rounded-circle">
@@ -589,7 +618,7 @@ $user = users();
     </script> -->
 
     <!-- jQuery -->
-    <!-- <script src="../assets/vendor/jquery.min.js"></script> -->
+    <!-- <script src="default/assets/vendor/jquery.min.js"></script> -->
 
     <!-- Bootstrap -->
     <script src="../assets/vendor/popper.min.js"></script>
@@ -620,8 +649,54 @@ $user = users();
     <script src="../assets/js/check-selected-row.js"></script>
 
 
+
+
+
+
+    <script type="text/javascript" src="default/files/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="default/files/bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="default/files/bower_components/popper.js/dist/umd/popper.min.js"></script>
+    <script type="text/javascript" src="default/files/bower_components/bootstrap/dist/js/bootstrap.min.js"></script> -->
+    <!-- jquery slimscroll js -->
+    <script type="text/javascript" src="default/files/bower_components/jquery-slimscroll/jquery.slimscroll.js"></script>
+    <!-- modernizr js -->
+    <script type="text/javascript" src="default/files/bower_components/modernizr/modernizr.js"></script>
+    <script type="text/javascript" src="default/files/bower_components/modernizr/feature-detects/css-scrollbars.js"></script>
+    <!-- data-table js -->
+    <script src="default/files/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="default/files/bower_components/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="default/files/assets/pages/data-table/js/jszip.min.js"></script>
+    <script src="default/files/assets/pages/data-table/js/pdfmake.min.js"></script>
+    <script src="default/files/assets/pages/data-table/js/vfs_fonts.js"></script>
+    <script src="default/files/assets/pages/data-table/extensions/buttons/js/dataTables.buttons.min.js"></script>
+    <script src="default/files/assets/pages/data-table/extensions/buttons/js/buttons.flash.min.js"></script>
+    <script src="default/files/assets/pages/data-table/extensions/buttons/js/jszip.min.js"></script>
+    <script src="default/files/assets/pages/data-table/extensions/buttons/js/vfs_fonts.js"></script>
+    <script src="default/files/assets/pages/data-table/extensions/buttons/js/buttons.colVis.min.js"></script>
+    <script src="default/files/bower_components/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="default/files/bower_components/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="default/files/assets/pages/data-table/js/dataTables.bootstrap4.min.js"></script>
+    <script src="default/files/bower_components/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="default/files/bower_components/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+    <!-- <-- <i18next.min.js --> -->
+    <!-- <script type="text/javascript" src="default/files/bower_components/i18next/i18next.min.js"></script> -->
+    <!-- <script type="text/javascript" -->
+        <!-- src="default/files/bower_components/i18next-xhr-backend/i18nextXHRBackend.min.js"></script> -->
+    <!-- <script type="text/javascript" -->
+        <!-- src="default/files/bower_components/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.min.js"></script> -->
+    <!-- <script type="text/javascript" src="default/files/bower_components/jquery-i18next/jquery-i18next.min.js"></script> -->
+    <!-- Custom js -->
+    <!-- <script src="default/files/assets/pages/data-table/extensions/buttons/js/extension-btns-custom.js"></script> -->
+    <!-- <script src="default/files/assets/js/pcoded.min.js"></script> -->
+    <!-- <script src="default/files/assets/js/vartical-layout.min.js"></script> -->
+    <!-- <script src="default/files/assets/js/jquery.mCustomScrollbar.concat.min.js"></script> -->
+    <!-- <script type="text/javascript" src="default/files/assets/js/script.js"></script> -->
+
+
     
 
+
+    
 
 
 
