@@ -86,7 +86,7 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
     include 'starter.php';
     $up = mysqli_query($conn, "UPDATE users SET title='$title', name= '$name', gender = '$gender', email='$email', contact= '$contact', telegram='$telegram', lincesed ='$lincesed', nameofschool='$nameofschool', region ='$region', district ='$district', foodpref='$foodpref',  heard ='$heard', tdate='$tdate' WHERE id='$id'  ");
     if ($up) {
-        echo 'Registration Successful. Make Payment to Confirm Participation. An email has been sent to '.$email;
+        echo $email;
         // mail($email, 'TUCEE Institute of Counselling and Technology', '');
         $subject = 'NTC REGISTRATION';
         $body = '<html> 

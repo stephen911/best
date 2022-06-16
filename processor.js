@@ -195,9 +195,9 @@ $(function(){
         else if(re.test(response)){
 
           swal({
-              title: "Success",
-              html: "Registration Successful. <br>Make Payment to Confirm Resgistration",
-              timer: 3000,
+              title: "Congratulations",
+              html: "Registration Successful. <br><b>Make Payment to Confirm Participation.</b><br> An email has been sent to "+ response,
+              timer: 10000,
               type: 'success',
               padding: "2em",
               onOpen: function () {
