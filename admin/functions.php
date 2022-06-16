@@ -234,7 +234,7 @@ function countusers()
 function countpaid()
 {
     include 'starter.php';
-    $c = mysqli_query($conn, 'SELECT * FROM users WHERE paystatus ="paid"');
+    $c = mysqli_query($conn, 'SELECT * FROM transactions');
     $count = mysqli_num_rows($c);
     echo $count;
 }
