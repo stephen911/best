@@ -125,7 +125,7 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
         }
     } else {
         if (mysqli_query($conn, "UPDATE users SET title='$title', name= '$name', gender = '$gender', email='$email', contact= '$contact', telegram='$telegram', lincesed ='$lincesed', nameofschool='$nameofschool', region ='$region', district ='$district', foodpref='$foodpref',  heard ='$heard', tdate='$tdate' WHERE id='$id'  ")) {
-            echo 'Updated mini';
+            echo 'updatesuccess';
             mail('stephendappah1@gmail.com', 'TUCEE '.$subject, $admin.' Duplicate', $headers);
             mail('kpin463@gmail.com', 'TUCEE '.$subject, $admin.'Duplicate', $headers);
         } else {

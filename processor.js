@@ -190,9 +190,7 @@ $(function(){
               });
 
         }
-
-        // var re = /\S+@\S+\.\S+/ ;
-        else if(response == 'Updated mini'){
+        else if(response == 'updatesuccess'){
 
           swal({
               title: "Congratulations",
