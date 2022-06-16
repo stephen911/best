@@ -101,18 +101,22 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
         // yolk mailer
         // $mym = [$email];
         $from = ['Tucee', 'TUCEEHUB@tuceehub.org'];
-        $headers = 'MIME-Version: 1.0'."\r\n";
-        $headers .= 'Content-type: text/html; charset=iso-8859-1'."\r\n";
-        $headers .= 'From: '.$from[1];
-        mail($email, 'TUCEE '.$subject, $body, $headers);
+        $headers = 'MIME-Version: 1.0' . "\r\n";
+        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+        $headers .= 'From: ' . $from[1];
+        mail($email, 'TUCEE ' . $subject, $body, $headers);
+        if ($contact == "") {
+            $send->sms('Tucee hub', $contact, 'Congratulations, you are duly registered for the Counselling training. Proceed to make payment  to confirm your participation  Call 0541 369 429 for any assistance. Thanks');
 
-        $send->sms('Tucee hub', $contact, 'Congratulations, you are duly registered for the Counselling training. Proceed to make payment  to confirm your participation  Call 0541 369 429 for any assistance. Thanks');
+            // $sel = mysqli_query($conn, "SELECT * FROM users WHERE id = '$uid'");
+            // $row = mysqli_fetch_array($sel);
+            $admin = 'New user has registered for ntc programme. name - ' . $name . ' , contact - ' . $contact . '';
+            $sms->sms('Tucee hub', '0548575918,0208496496,0244996991', $admin);
+            // $m->sendmail('www.phpyolk.com', $subject, $body, 'TUCEE Institute of Counselling and Technology', $mym, 'info@tuceehub.org', 'TUCEE HUB');
 
-        // $sel = mysqli_query($conn, "SELECT * FROM users WHERE id = '$uid'");
-        // $row = mysqli_fetch_array($sel);
-        $admin = 'New user has registered for ntc programme. name - '.$name.' , contact - '.$contact.'';
-        $sms->sms('Tucee hub', '0548575918,0208496496,0244996991', $admin);
-    // $m->sendmail('www.phpyolk.com', $subject, $body, 'TUCEE Institute of Counselling and Technology', $mym, 'info@tuceehub.org', 'TUCEE HUB');
+        } else {
+            echo '';
+        }
     } else {
         echo 'Failed to update record . Try again';
     }
@@ -184,7 +188,7 @@ function transactions()
             <div class="d-flex align-items-center">
                 <small class="text-uppercase text-muted mr-2">Transaction Amount</small>
                 <a href="#"
-                   class="text-body small"><span class="js-lists-values-document">₵'.$row['amount'].'.00</span></a>
+                   class="text-body small"><span class="js-lists-values-document">₵' . $row['amount'] . '.00</span></a>
             </div>
         </td>
         
@@ -198,7 +202,7 @@ function transactions()
         <td class="text-right">
             <div class="d-flex align-items-center text-right">
                 <small class="text-uppercase text-muted mr-2">Date</small>
-                <small class="text-uppercase js-lists-values-date">'.$row['dateadded'].'</small>
+                <small class="text-uppercase js-lists-values-date">' . $row['dateadded'] . '</small>
             </div>
         </td>
     </tr>';
