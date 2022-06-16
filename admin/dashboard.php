@@ -95,7 +95,7 @@ $user = users();
                                     <i class="material-icons text-muted-light">account_box</i>
                                 </div>
                                 <div class="media-body" style="min-width: 180px">
-                                    Your are welcome Admin! <strong><?php echo $user['title'] . ' ' . $user['name']; ?></strong>
+                                    Your are welcome Admin! <strong><?php echo $user['title'].' '.$user['name']; ?></strong>
                                 </div>
                                 <!-- <div class="media-right mt-2 mt-xs-plus-0">
                                         <a class="btn btn-sm btn-danger"
@@ -133,7 +133,7 @@ $user = users();
                                     </div>
                                     <div class="media-right text-center d-flex align-items-center">
                                         <!-- <span class="text-black-50 mr-3">Great</span> -->
-                                        <h4 class="mb-0 text-success">9.8</h4>
+                                        <h4 class="mb-0 text-success"><?php countusers(); ?></h4>
                                     </div>
                                 </div>
                             </li>
@@ -148,7 +148,7 @@ $user = users();
                                     </div>
                                     <div class="media-right text-center d-flex align-items-center">
                                         <!-- <span class="text-black-50 mr-3">Great</span> -->
-                                        <h4 class="mb-0 text-success">9.8</h4>
+                                        <h4 class="mb-0 text-success"><?php countpaid(); ?></h4>
                                     </div>
                                 </div>
                             </li>
@@ -163,7 +163,7 @@ $user = users();
                                     </div>
                                     <div class="media-right text-center d-flex align-items-center">
                                         <!-- <span class="text-black-50 mr-3">Great</span> -->
-                                        <h4 class="mb-0 text-success">9.8</h4>
+                                        <h4 class="mb-0 text-success"><?php unpaid(); ?></h4>
                                     </div>
                                 </div>
                             </li>
@@ -296,7 +296,7 @@ $user = users();
                                                     <th style="width: 24px;"></th>
                                                 </tr>
                                             </thead>
-                                            <tbody class="list" id="search">
+                                            <tbody class="list">
                                                 <?php
 
                                                 trans();
