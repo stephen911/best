@@ -180,17 +180,24 @@ function registered()
         <td>' . $row['email'] . '</td>
         <td>' . $row['contact'] . '</td>
         <td><span class="js-lists-values-employee-title">' . $row['region'] . '</span></td>
-        <td>' . $row['district'] . '</td>
+        <td><span class="js-lists-values-employee-district">' . $row['district'] . '</span>
         <td>' . $row['tdate'] . '</td>
         <td>' . $row['lincesed'] . '</td>
         <td>' . $row['nameofschool'] . '</td>
-        <td>' . $row['paystatus'] . '</td>
-        <td>
+        <td><span class="js-lists-values-employee-paid">' . $row['paystatus'] . '</span></td>        <td>
         <div class="media-right mt-2 mt-xs-plus-0">
                                         <a class="btn btn-sm btn-danger"
                                                             href="delete_user.php?id=' . $row['id'] . '">Delete</a>
                                         </div>
                                         </td>
+
+
+                                        <td>
+                                        <div class="media-right mt-2 mt-xs-plus-0">
+                                                                        <a class="btn btn-sm btn-success"
+                                                                                            href="update_user.php?id=' . $row['id'] . '">Update</a>
+                                                                        </div>
+                                                                        </td>
     </tr>';
     }
 }
