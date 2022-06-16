@@ -19,7 +19,7 @@ if (isset($_GET['ref'])) {
     $row = mysqli_fetch_array($sel);
     $send->sms('Tucee hub', $row['contact'], 'Thank you for paying your NTC registration fees.');
     $admin = 'User '.$row['name'].'( '.$row['contact'].' Has paid NTC registration fees';
-    $send->sms('Tucee hub', '0556676471,0208496496,0244996991', $admin);
+    $send->sms('Tucee hub', '0548575918,0208496496,0244996991', $admin);
     payment($uid, $ref, $amount);
     echo  '<script>window.location="payment.php"</script>';
 }
