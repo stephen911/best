@@ -21,7 +21,7 @@ if (isset($_POST['btnlogin'])) {
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 
 
-         <meta name="robots" content="noindex">
+    <meta name="robots" content="noindex">
 
     <!-- Custom Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,700%7CRoboto:400,500%7CRoboto:400,500&amp;display=swap" rel="stylesheet">
@@ -73,7 +73,8 @@ if (isset($_POST['btnlogin'])) {
             <div class="card navbar-shadow">
                 <div class="card-header text-center">
                     <h4 class="card-title">Login</h4>
-                    <p class="card-subtitle">Access your account</p>
+                    <a class="btn btn-sm btn-danger" href="signup.php">Register</a>
+                    <!-- <p class="card-subtitle">Access your account</p> -->
                 </div>
                 <div class="card-body">
 

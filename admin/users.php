@@ -197,6 +197,10 @@ $user = users();
                                             <th >License Number</th>
                                             <th>Name of school</th>
                                             <th>Payment Status</th>
+                                            <th>Food</th>
+                                            <th>Registration Date</th>
+                                            <th>Edit</th>
+
                                             <th>Actions</th>
                                             <!-- <th style="width: 51px;">Payment Status</th> -->
                                             <!-- <th style="width: 51px;">delete</th> -->
@@ -222,6 +226,10 @@ $user = users();
                                             <th >License Number</th>
                                             <th>Name of school</th>
                                             <th>Payment Status</th>
+                                            <th>Food</th>
+                                            <th>Registration Date</th>
+                                            <th>Edit</th>
+
                                             <th>Actions</th>
                                             <!-- <th style="width: 51px;">Payment Status</th> -->
                                             

@@ -76,6 +76,18 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
     }
 }
 
+function confirmuser($id, $confirm)
+{
+    include 'starter.php';
+    $id = $_GET['id'];
+    $conf = mysqli_query($conn, "UPDATE users SET confirm ='$confirm' WHERE id='$id'  ");
+    if ($conf) {
+        echo 'Participation Confirmed ';
+    } else {
+        echo 'Failed to update record . Try again';
+    }
+}
+
 function register($name, $email, $password)
 {
     $password = md5($password);
@@ -185,7 +197,11 @@ function registered()
         <td>'.$row['lincesed'].'</td>
         <td>'.$row['nameofschool'].'</td>
         <td><span class="js-lists-values-employee-paid">'.$row['paystatus'].'</span></td>  
+        <td>'.$row['foodpref'].'</td>
+        <td>'.$row['dateadded'].'</td>
+        <td><a class="btn btn-success" href="update_user.php?id='.$row['id'].'"><i class="fa fa-edit"></i></a></td>      
         <td><a class="btn btn-danger" href="delete_user.php?id='.$row['id'].'"><i class="fa fa-trash"></i></a></td>      
+
 
 
 
@@ -215,6 +231,9 @@ function paidusers()
         <td>'.$row['lincesed'].'</td>
         <td>'.$row['nameofschool'].'</td>
         <td><span class="js-lists-values-employee-paid">'.$row['paystatus'].'</span></td>  
+        <td>'.$row['foodpref'].'</td>
+        <td>'.$row['dateadded'].'</td>
+        <td><a class="btn btn-success" href="update_user.php?id='.$row['id'].'"><i class="fa fa-edit"></i></a></td>      
         <td><a class="btn btn-danger" href="delete_user.php?id='.$row['id'].'"><i class="fa fa-trash"></i></a></td>      
 
 

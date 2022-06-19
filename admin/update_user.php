@@ -23,9 +23,9 @@ $user = users();
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>NTC CPD Training</title>
+    <title>Update User</title>
 
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
 
 
          <meta name="robots" content="noindex">
@@ -34,23 +34,23 @@ $user = users();
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,700%7CRoboto:400,500%7CRoboto:400,500&amp;display=swap" rel="stylesheet">
 
     <!-- Perfect Scrollbar -->
-    <link type="text/css" href="assets/vendor/perfect-scrollbar.css" rel="stylesheet">
+    <link type="text/css" href="../assets/vendor/perfect-scrollbar.css" rel="stylesheet">
 
     <!-- Material Design Icons -->
-    <link type="text/css" href="assets/css/material-icons.css" rel="stylesheet">
+    <link type="text/css" href="../assets/css/material-icons.css" rel="stylesheet">
 
     <!-- Font Awesome Icons -->
-    <link type="text/css" href="assets/css/fontawesome.css" rel="stylesheet">
+    <link type="text/css" href="../assets/css/fontawesome.css" rel="stylesheet">
 
 
     <!-- sweetalert -->
-    <link type="text/css" href="assets/css/sweetalert2.min.css" rel="stylesheet">
+    <link type="text/css" href="../assets/css/sweetalert2.min.css" rel="stylesheet">
 
     <!-- Preloader -->
-    <link type="text/css" href="assets/vendor/spinkit.css" rel="stylesheet">
+    <link type="text/css" href="../assets/vendor/spinkit.css" rel="stylesheet">
 
     <!-- App CSS -->
-    <link type="text/css" href="assets/css/app.css" rel="stylesheet">
+    <link type="text/css" href="../assets/css/app.css" rel="stylesheet">
 
 </head>
 
@@ -90,63 +90,15 @@ $user = users();
                         <div class="col-lg container-fluid page__container">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="dashboard.php">Home</a></li>
-                                <li class="breadcrumb-item active">NTC CPD Training</li>
+                                <li class="breadcrumb-item active">Update User</li>
                             </ol>
 
-                            <div class="card border-left-3 border-left-primary card-2by1">
-                                <div class="card-body">
-                                    <div class="media flex-wrap align-items-center">
-                                        <div class="media-left">
-                                            <i class="material-icons text-muted-light">account_box</i>
-                                        </div>
-                                        <div class="media-body" style="min-width: 180px">
-                                            <strong>Fill your NTC CPD Training forms</strong>
-                                        </div>
-                                        <div class="media-right mt-2 mt-xs-plus-0">
-                                            <a class="btn btn-success" href="dashboard.php">Go to Dashboard</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <?php
-                            if ($user['paystatus'] == 'paid') {
-                                echo '<div class="card border-left-3 border-left-primary card-2by1">
-                                <div class="card-body">
-                                    <div class="media flex-wrap align-items-center">
-                                        <div class="media-left">
-                                            <i class="material-icons text-muted-light">credit_card</i>
-                                        </div>
-                                        <div class="media-body"
-                                             style="min-width: 180px">
-                                             <small><b>Congratulations, you are duly registered for the Counselling training. Proceed to make payment to confirm your particiation. Call +233541369429 for any assistance. Thanks</b></small>
-                                        </div>
-                                        
-                                        
-                                    </div>
-                                </div>
-                            </div>';
-                            } else {
-                                echo '<div class="card border-left-3 border-left-danger card-2by1">
-                                <div class="card-body">
-                                    <div class="media align-items-center">
-                                        <div class="media-body">
-                                            No Payment has been made yet
-                                            
-                                        </div>
-                                        <div class="media-right">
-                                            '.$yolk->handler().'
-                                            '.$yolk->payscript($user['title'], $user['name'], $user['email'], $user['contact'], 70, $ref = '').'
-                                            '.$yolk->pay('Pay Now').'
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>';
-                            }
-                            ?>
+                            
+                            
 
 
 
-                            <h1 class="h2">NTC CPD Training</h1>
+                            <h1 class="h2">Update</h1>
                             <form action="" method="POST" class="updateuser">
                                 <div class="card">
                                     <div class="list-group list-group-fit">
@@ -935,13 +887,11 @@ $user = users();
                                 </div>
 
 
-                                <div class="page-nav__content"  style="display: inline;">
-                                    <button type="submit" name="btnupdate" class="btn btn-success">Save</button>
+                                <div class="page-nav__content"  >
+                                    <button type="submit" name="btnupdate" class="btn btn-success">Update</button>
                                 </div>
 
-                                <div class="page-nav__content" style="display: inline;">
-                                    <button type="submit" name="btnupdate" class="btn btn-success">Confirm Participation</button>
-                                </div>
+                                
 
                             </form>
                             <!-- <form action="" method="post">
@@ -983,11 +933,9 @@ $user = users();
                                 <div class="page-section pt-lg-32pt">
                                     <ul class="nav page-nav__menu">
                                         <li class="nav-item">
-                                            <a href="#" class="nav-link active">NTC CPD Training</a>
+                                            <a href="#" class="nav-link active">Update User</a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a href="payment.php" class="nav-link">Payment</a>
-                                        </li>
+                                        
                                         <!-- activate certification -->
                                         <!-- <li class="nav-item">
                                             <a href="certification.php" class="nav-link">Certification</a>
@@ -1017,33 +965,33 @@ $user = users();
     </div>
 
     <!-- jQuery -->
-    <script src="assets/vendor/jquery.min.js"></script>
+    <script src="../assets/vendor/jquery.min.js"></script>
 
 
     <!-- Bootstrap -->
-    <script src="assets/vendor/popper.min.js"></script>
-    <script src="assets/vendor/bootstrap.min.js"></script>
+    <script src="../assets/vendor/popper.min.js"></script>
+    <script src="../assets/vendor/bootstrap.min.js"></script>
 
 
     <!-- Perfect Scrollbar -->
-    <script src="assets/vendor/perfect-scrollbar.min.js"></script>
+    <script src="../assets/vendor/perfect-scrollbar.min.js"></script>
 
     <!-- MDK -->
-    <script src="assets/vendor/dom-factory.js"></script>
-    <script src="assets/vendor/material-design-kit.js"></script>
+    <script src="../assets/vendor/dom-factory.js"></script>
+    <script src="../assets/vendor/material-design-kit.js"></script>
 
     <!-- App JS -->
-    <script src="assets/js/app.js"></script>
-    <script src="assets/js/sweetalert2.all.min.js"></script>
-    <script src="assets/js/regions.js"></script>
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/sweetalert2.all.min.js"></script>
+    <script src="../assets/js/regions.js"></script>
 
-    <script src="assets/js/view.js"></script>
+    <script src="../assets/js/view.js"></script>
 
     <!-- Highlight.js -->
-    <script src="assets/js/hljs.js"></script>
+    <script src="../assets/js/hljs.js"></script>
 
     <!-- App Settings (safe to remove) -->
-    <script src="assets/js/app-settings.js"></script>
+    <script src="../assets/js/app-settings.js"></script>
 
 
 
