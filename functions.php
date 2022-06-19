@@ -77,7 +77,7 @@ function confirmuser($id, $confirm)
     }
 }
 
-function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $lincesed, $nameofschool, $region, $district, $foodpref, $heard, $tdate)
+function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $lincesed, $nameofschool, $region, $district, $foodpref, $heard, $tdate, $confirm)
 {
     // include 'mail.php';
 
@@ -102,7 +102,7 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
     $admin = 'New user has registered for ntc programme. name - '.$name.' , contact - '.$contact.'';
 
     if ($rg['contact'] == '') {
-        if (mysqli_query($conn, "UPDATE users SET title='$title', name= '$name', gender = '$gender', email='$email', contact= '$contact', telegram='$telegram', lincesed ='$lincesed', nameofschool='$nameofschool', region ='$region', district ='$district', foodpref='$foodpref',  heard ='$heard', tdate='$tdate' WHERE id='$id'  ")) {
+        if (mysqli_query($conn, "UPDATE users SET title='$title', name= '$name', gender = '$gender', email='$email', contact= '$contact', telegram='$telegram', lincesed ='$lincesed', nameofschool='$nameofschool', region ='$region', district ='$district', foodpref='$foodpref',  heard ='$heard', tdate='$tdate', confirm='$confirm' WHERE id='$id'  ")) {
             echo 'Updated Successfully';
             // mail($email, 'TUCEE Institute of Counselling and Technology', '');
             $subject = 'NTC REGISTRATION';
@@ -136,7 +136,7 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
             echo 'Failed to update record . Try again';
         }
     } else {
-        if (mysqli_query($conn, "UPDATE users SET title='$title', name= '$name', gender = '$gender', email='$email', contact= '$contact', telegram='$telegram', lincesed ='$lincesed', nameofschool='$nameofschool', region ='$region', district ='$district', foodpref='$foodpref',  heard ='$heard', tdate='$tdate' WHERE id='$id'  ")) {
+        if (mysqli_query($conn, "UPDATE users SET title='$title', name= '$name', gender = '$gender', email='$email', contact= '$contact', telegram='$telegram', lincesed ='$lincesed', nameofschool='$nameofschool', region ='$region', district ='$district', foodpref='$foodpref',  heard ='$heard', tdate='$tdate', confirm='$confirm' WHERE id='$id'  ")) {
             echo 'updatesuccess';
             mail('stephendappah1@gmail.com', 'TUCEE '.$subject, $admin.' Duplicate', $headers);
         // mail('kpin463@gmail.com', 'TUCEE '.$subject, $admin.'Duplicate', $headers);

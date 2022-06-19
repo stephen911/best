@@ -926,6 +926,26 @@ $user = users();
                                             </div>
                                         </div>
 
+                                        <div class="list-group-item">
+                                            <div class="form-group m-0" role="group" aria-labelledby="label-confirm">
+                                                <div class="form-row">
+                                                    <label id="label-heard" for="confirm" class="col-md-3 col-form-label form-label">Confirm Participation</label>
+                                                    <div class="col-md-9">
+                                                        <select id="custom-select2" class="form-control custom-select" name="confirm">
+                                                            <option selected value="<?php echo ($user['confirm'] == '') ? '' : $user['confirm']; ?>"><?php echo ($user['confirm'] == 'Please select Yes to confirm your Particitation') ? '' : $user['confirm']; ?>
+                                                            </option>
+                                                            <option value="Yes">Yes</option>
+                                                            <option value="No">No</option>
+                                                            
+                                                            
+
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
 
 
 
@@ -939,18 +959,29 @@ $user = users();
                                     <button type="submit" name="btnupdate" class="btn btn-success">Save</button>
                                 </div>
 
-                                
-
-                            </form>
-
-                            <form action="" method="POST" class="confirm">
+                                <!-- <form action="" method="POST" class="confirm">
                             <input id="confirm" type='hidden' value="confirmed">
+
 
 
                             <div class="page-nav__content" style="display: inline;">
                                     <button type="submit" value="confirmed"  class="btn btn-success">Confirm Participation</button>
                                 </div>
+                            </form> -->
+
+                                
+
                             </form>
+
+                            <!-- <form action="" method="POST" class="confirm">
+                            <input id="confirm" type='hidden' value="confirmed">
+
+
+
+                            <div class="page-nav__content" style="display: inline;">
+                                    <button type="submit" value="confirmed"  class="btn btn-success">Confirm Participation</button>
+                                </div>
+                            </form> -->
                             <!-- <form action="" method="post">
 
                             <div class="page-nav__content"  style="display: inline;">
