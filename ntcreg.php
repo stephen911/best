@@ -944,9 +944,11 @@ $user = users();
                             </form>
 
                             <form action="" method="POST" class="confirm">
+                            <input id="confirm" type='hidden' value="confirmed">
+
 
                             <div class="page-nav__content" style="display: inline;">
-                                    <button type="submit" name="btnupdate" class="btn btn-success">Confirm Participation</button>
+                                    <button type="submit" value="confirmed"  class="btn btn-success">Confirm Participation</button>
                                 </div>
                             </form>
                             <!-- <form action="" method="post">

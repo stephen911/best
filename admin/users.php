@@ -193,10 +193,11 @@ $user = users();
                                             <th>Contact</th>
                                             <th>Region</th>
                                             <th>District</th>
-                                            <th>Trainin Date</th>
+                                            <th>Training Date</th>
                                             <th >License Number</th>
                                             <th>Name of school</th>
                                             <th>Payment Status</th>
+                                            <th>Confirmation</th>
                                             <th>Food</th>
                                             <th>Registration Date</th>
                                             <th>Edit</th>
@@ -222,10 +223,11 @@ $user = users();
                                             <th>Contact</th>
                                             <th>Region</th>
                                             <th>District</th>
-                                            <th>Trainin Date</th>
+                                            <th>Training Date</th>
                                             <th >License Number</th>
                                             <th>Name of school</th>
                                             <th>Payment Status</th>
+                                            <th>Confirmation</th>
                                             <th>Food</th>
                                             <th>Registration Date</th>
                                             <th>Edit</th>

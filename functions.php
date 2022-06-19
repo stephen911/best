@@ -65,6 +65,18 @@ function users()
     return $row;
 }
 
+function confirmuser($id, $confirm)
+{
+    include 'starter.php';
+    // $id = $_SESSION['id'];
+    $conf = mysqli_query($conn, "UPDATE users SET confirm ='$confirm' WHERE id='$id'  ");
+    if ($conf) {
+        echo 'Updated Successfully';
+    } else {
+        echo 'Failed to update record . Try again';
+    }
+}
+
 function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $lincesed, $nameofschool, $region, $district, $foodpref, $heard, $tdate)
 {
     // include 'mail.php';

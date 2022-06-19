@@ -200,6 +200,8 @@ function registered()
         <td>'.$row['lincesed'].'</td>
         <td>'.$row['nameofschool'].'</td>
         <td><span class="js-lists-values-employee-paid">'.$row['paystatus'].'</span></td>  
+        <td>'.$row['confirm'].'</td>
+
         <td>'.$row['foodpref'].'</td>
         <td>'.$row['dateadded'].'</td>
         <td><a class="btn btn-success" href="update_user.php?id='.$row['id'].'"><i class="fa fa-edit"></i></a></td>      
