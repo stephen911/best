@@ -49,7 +49,7 @@ function checker()
     session_start();
     if (!isset($_SESSION['id'])) {
         echo '<script>
-        alert("You need to login first");
+        alert("You need to login");
         window.location="index.php"</script>';
     }
 }
@@ -71,7 +71,7 @@ function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $l
     include 'starter.php';
     // $id = $_GET['id'];
     extract($_POST);
-    $up = mysqli_query($conn, "UPDATE users SET title='$title', name= '$name', gender = '$gender', email='$email', contact= '$contact', telegram='$telegram', lincesed ='$lincesed', nameofschool='$nameofschool', region ='$region', district ='$district', foodpref='$foodpref',  heard ='$heard', tdate='$tdate', confirm='$confirm', WHERE id='$id'  ");
+    $up = mysqli_query($conn, "UPDATE users SET title='$title', name= '$name', gender = '$gender', email='$email', contact= '$contact', telegram='$telegram', lincesed ='$lincesed', nameofschool='$nameofschool', region ='$region', district ='$district', foodpref='$foodpref',  heard ='$heard', tdate='$tdate', confirm='$confirm' WHERE id='$id'  ");
     if ($up) {
         echo 'Updated Successfully ';
     } else {

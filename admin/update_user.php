@@ -878,6 +878,26 @@ $user = users();
                                             </div>
                                         </div>
 
+                                        <div class="list-group-item">
+                                            <div class="form-group m-0" role="group" aria-labelledby="label-confirm">
+                                                <div class="form-row">
+                                                    <label id="label-heard" for="confirm" class="col-md-3 col-form-label form-label">Confirm Participation</label>
+                                                    <div class="col-md-9">
+                                                        <select id="custom-select2" class="form-control custom-select" name="confirm">
+                                                            <option selected value="<?php echo ($user['confirm'] == '') ? '' : $user['confirm']; ?>"><?php echo ($user['confirm'] == 'Please select Yes to confirm your Particitation') ? '' : $user['confirm']; ?>
+                                                            </option>
+                                                            <option value="Yes">Yes</option>
+                                                            <option value="No">No</option>
+                                                            
+                                                            
+
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
 
 
 
