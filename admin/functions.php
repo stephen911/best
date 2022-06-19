@@ -68,9 +68,10 @@ function users()
 function updateuser($id, $title, $name, $gender, $email, $contact, $telegram, $lincesed, $nameofschool, $region, $district, $foodpref, $heard)
 {
     include 'starter.php';
+    $id = $_GET['id'];
     $up = mysqli_query($conn, "UPDATE users SET title='$title', name= '$name', gender = '$gender', email='$email', contact= '$contact', telegram='$telegram', lincesed ='$lincesed', nameofschool='$nameofschool', region ='$region', district ='$district', foodpref='$foodpref', heard ='$heard' WHERE id='$id'  ");
     if ($up) {
-        echo 'Updated Successfully '.$district;
+        echo 'Updated Successfully ';
     } else {
         echo 'Failed to update record . Try again';
     }
