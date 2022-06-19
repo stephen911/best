@@ -939,10 +939,15 @@ $user = users();
                                     <button type="submit" name="btnupdate" class="btn btn-success">Save</button>
                                 </div>
 
-                                <div class="page-nav__content" style="display: inline;">
+                                
+
+                            </form>
+
+                            <form action="" method="POST" class="confirm">
+
+                            <div class="page-nav__content" style="display: inline;">
                                     <button type="submit" name="btnupdate" class="btn btn-success">Confirm Participation</button>
                                 </div>
-
                             </form>
                             <!-- <form action="" method="post">
 
